@@ -1,0 +1,29 @@
+language: java
+dist: trusty
+sudo: false
+
+-os: linux
+
+cache:
+  - "$HOME/.m2/repository"
+  - "$HOME/.sonar/cache"
+
+jdk:
+  - oraclejdk9
+
+before_script:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+env:
+  - TEST=test
+  - TEST=spotbugs:check
+
+script: "mvn $TEST -B"
+
+addons:
+  sonarcloud:
+    organization: "brunodasilvabelo-github"
+    token:
+      secure: "$SONAR_TOKEN"
+  script:
+    - mvn clean jacoco:prepare-agent install sonar:sonar
