@@ -1,22 +1,20 @@
 language: java
 dist: trusty
+sudo: false
 
 jdk:
   - oraclejdk9
-  - oraclejdk8
 
 before_script:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
-matrix:
-  include:
-    - os: linux
-      env:
-        - Junit
-      script:
-        - mvn test -B
-    - os: linux
-      env:
-        - Spotbugs
-      script:
-        - mvn spotbugs:check
+- os: linux
+  env:
+    - TEST="Junit"
+  script:
+    - mvn test -B
+- os: linux
+  env:
+    - TEST="Spotbugs"
+  script:
+    - mvn spotbugs:check -B
