@@ -1,20 +1,20 @@
 package util;
 
 public class RGBPixel {
-    public static int get_blue(int pixel) {
-        return get_pixel(pixel, 0);
+    public static int getBlue(int pixel) {
+        return getPixel(pixel, 0);
     }
 
-    public static int get_green(int pixel) {
-        return get_pixel(pixel, 1 << 3);
+    public static int getGreen(int pixel) {
+        return getPixel(pixel, 1 << 3);
     }
 
-    private static int get_pixel(int pixel, int mask) {
+    private static int getPixel(int pixel, int mask) {
         return (pixel >> mask) & 0xff;
     }
 
-    public static int get_red(int pixel) {
-        return get_pixel(pixel, 1 << 4);
+    public static int getRed(int pixel) {
+        return getPixel(pixel, 1 << 4);
     }
 
     private RGBPixel() {

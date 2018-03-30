@@ -2,7 +2,6 @@ package util;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.OptionalInt;
 
 public class Histogram {
     int[] bins;
@@ -42,7 +41,7 @@ public class Histogram {
     }
 
     public int[] getData() {
-        return bins;
+        return bins.clone();
     }
 
     public void put(int value) {
@@ -55,9 +54,9 @@ public class Histogram {
     public final void set(int[] list) {
         bins = new int[bins.length];
 
-        OptionalInt min = Arrays.stream(list).min();
-        if (min.getAsInt() < 0) {
-            offset = Math.abs(min.getAsInt());
+        int min = Arrays.stream(list).min().getAsInt();
+        if (min < 0) {
+            offset = Math.abs(min);
         }
         Arrays.stream(list).forEach(item -> ++bins[(item + offset) / width]);
     }

@@ -3,6 +3,7 @@ package gui;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
@@ -23,6 +24,7 @@ public class Portrait extends JPanel {
         frame.setVisible(true);
     }
 
+    @Override
     public void paint(Graphics g) {
         BufferedImage img;
         try {
@@ -31,7 +33,7 @@ public class Portrait extends JPanel {
                                              new Grayscale()),
                         0, 0, this);
         } catch (IOException e) {
-            e.printStackTrace();
+            Logger.getLogger(Portrait.class.getName()).severe(e.getMessage());
         }
     }
 }

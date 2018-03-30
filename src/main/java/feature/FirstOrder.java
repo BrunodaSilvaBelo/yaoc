@@ -83,7 +83,7 @@ public class FirstOrder {
         histogram = new Histogram(buffer, 256);
     }
 
-    public Map<Feature, Double> getAllFeatures() throws Exception {
+    public Map<Feature, Double> getAllFeatures() {
         if (!isFeatureInit) {
             for (Feature f : Feature.values()) {
                 getFeature(f);
@@ -92,7 +92,7 @@ public class FirstOrder {
         return features;
     }
 
-    public Double getFeature(Feature f) throws Exception {
+    public Double getFeature(Feature f) {
         Double result = features.get(f);
         if (result != null) {
             return result;
