@@ -6,14 +6,13 @@ import java.util.List;
 
 @FunctionalInterface
 public interface BaseMorphology {
-    static BufferedImage apply(BufferedImage img, BaseMorphology... morphs) {
-        return apply(img, Arrays.asList(morphs));
+    static BaseMorphology reduce(BaseMorphology... morphs) {
+        return reduce(Arrays.asList(morphs));
     }
 
-    static BufferedImage apply(BufferedImage img, List<BaseMorphology> morphs) {
+    static BaseMorphology reduce(List<BaseMorphology> morphs) {
         return morphs.stream().reduce(e -> new Identity().apply(e),
-                                      BaseMorphology::compose)
-                     .apply(img);
+                                      BaseMorphology::compose);
     }
 
     public BufferedImage apply(BufferedImage img);
