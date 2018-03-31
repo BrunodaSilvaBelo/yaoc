@@ -29,8 +29,8 @@ public class Portrait extends JPanel {
         BufferedImage img;
         try {
             img = ImageIO.read(ClassLoader.getSystemResource("hamster.jpg"));
-            g.drawImage(BaseMorphology.apply(img, new Identity(),
-                                             new Grayscale()),
+            g.drawImage(BaseMorphology.reduce(new Identity(),
+                                             new Grayscale()).apply(img),
                         0, 0, this);
         } catch (IOException e) {
             Logger.getLogger(Portrait.class.getName()).severe(e.getMessage());
