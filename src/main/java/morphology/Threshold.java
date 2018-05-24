@@ -23,6 +23,11 @@ public class Threshold implements BaseMorphology {
         }
         BufferedImageOp op = new LookupOp(new ByteLookupTable(0, threshs),
                                           null);
-        return op.filter(img, null);
+
+        BufferedImage result = new BufferedImage(img.getWidth(),
+                                                 img.getHeight(),
+                                                 BufferedImage.TYPE_BYTE_BINARY);
+        result.setData(op.filter(img, null).getData());
+        return result;
     }
 }

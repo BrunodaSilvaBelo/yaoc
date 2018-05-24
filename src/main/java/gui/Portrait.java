@@ -11,8 +11,12 @@ import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
 import morphology.BaseMorphology;
+import morphology.ConvolutionKernel;
+import morphology.Erode;
 import morphology.Grayscale;
 import morphology.Identity;
+import morphology.Sobel;
+import morphology.Threshold;
 
 public class Portrait extends JPanel {
 
@@ -29,8 +33,8 @@ public class Portrait extends JPanel {
         BufferedImage img;
         try {
             img = ImageIO.read(ClassLoader.getSystemResource("hamster.jpg"));
-            g.drawImage(BaseMorphology.reduce(new Identity(),
-                                             new Grayscale()).apply(img),
+            g.drawImage(BaseMorphology.reduce()
+                                      .apply(img),
                         0, 0, this);
         } catch (IOException e) {
             Logger.getLogger(Portrait.class.getName()).severe(e.getMessage());

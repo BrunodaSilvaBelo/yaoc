@@ -3,7 +3,7 @@ package morphology;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class Sobel extends Kernel {
+public class Sobel extends ConvolutionKernel {
     public enum Direction {
                            UP, DOWN, LEFT, RIGHT
     }
