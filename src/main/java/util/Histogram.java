@@ -14,6 +14,7 @@ public class Histogram {
 
     public Histogram(int size, int width) {
         assert size > 0 : "Size must be greater than 0";
+        assert width > 0 : "Width must be greater than 0";
         this.width = width;
         bins = new int[size];
     }
