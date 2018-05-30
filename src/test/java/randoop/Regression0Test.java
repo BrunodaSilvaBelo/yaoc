@@ -1,4 +1,5 @@
 package randoop;
+
 import org.junit.jupiter.api.Test;
 
 public class Regression0Test {
@@ -10,7 +11,10 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test001");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.GEOMETRICMEAN;
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.GEOMETRICMEAN + "'", feature0.equals(feature.FirstOrder.Feature.GEOMETRICMEAN));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.GEOMETRICMEAN
+                                    + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.GEOMETRICMEAN));
     }
 
     @Test
@@ -18,7 +22,9 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test002");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.LOGSUM;
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.LOGSUM + "'", feature0.equals(feature.FirstOrder.Feature.LOGSUM));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.LOGSUM + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.LOGSUM));
     }
 
     @Test
@@ -26,16 +32,20 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test003");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-        java.lang.Integer[] intArray7 = new java.lang.Integer[] { 1, 1, 10, (-1) };
+        java.lang.Integer[] intArray7 = new java.lang.Integer[] { 1, 1, 10,
+                                                                  (-1) };
         java.util.ArrayList<java.lang.Integer> intList8 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean9 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList8, intArray7);
+        boolean boolean9 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList8,
+                                                        intArray7);
         try {
-// flaky:             histogram2.set((java.util.List<java.lang.Integer>) intList8);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -2");
+            // flaky: histogram2.set((java.util.List<java.lang.Integer>) intList8);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: -2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray7);
-        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + true + "'", boolean9 == true);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + true + "'",
+                                    boolean9 == true);
     }
 
     @Test
@@ -58,7 +68,7 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test005");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         java.util.List<java.lang.Integer> intList5 = null;
         try {
             histogram2.set(intList5);
@@ -72,33 +82,41 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test006");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.SIZE;
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.SIZE + "'", feature0.equals(feature.FirstOrder.Feature.SIZE));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.SIZE + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.SIZE));
     }
 
     @Test
     public void test007() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test007");
-        java.lang.Integer[] intArray5 = new java.lang.Integer[] { 1, 0, 0, 1, 0 };
+        java.lang.Integer[] intArray5 = new java.lang.Integer[] { 1, 0, 0, 1,
+                                                                  0 };
         java.util.ArrayList<java.lang.Integer> intList6 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean7 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList6, intArray5);
+        boolean boolean7 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList6,
+                                                        intArray5);
         try {
-            util.Histogram histogram9 = new util.Histogram((java.util.List<java.lang.Integer>) intList6, 1);
+            util.Histogram histogram9 = new util.Histogram((java.util.List<java.lang.Integer>) intList6,
+                                                           1);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 1");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray5);
-        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + true + "'", boolean7 == true);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + true + "'",
+                                    boolean7 == true);
     }
 
     @Test
     public void test008() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test008");
-        int[] intArray6 = new int[] { 10, (-1), (byte) 0, (short) -1, ' ', 'a' };
+        int[] intArray6 = new int[] { 10, (-1), (byte) 0, (short) -1, ' ',
+                                      'a' };
         try {
             util.Histogram histogram9 = null; // flaky: new util.Histogram(intArray6, 10, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray6);
@@ -109,7 +127,9 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test009");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.STDDEV;
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.STDDEV + "'", feature0.equals(feature.FirstOrder.Feature.STDDEV));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.STDDEV + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.STDDEV));
     }
 
     @Test
@@ -118,7 +138,9 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test010");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.MOMENT1;
         java.lang.Class<?> wildcardClass1 = feature0.getClass();
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.MOMENT1 + "'", feature0.equals(feature.FirstOrder.Feature.MOMENT1));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.MOMENT1 + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.MOMENT1));
         org.junit.Assert.assertNotNull(wildcardClass1);
     }
 
@@ -128,14 +150,17 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test011");
         java.lang.Integer[] intArray3 = new java.lang.Integer[] { (-1), 0, 0 };
         java.util.ArrayList<java.lang.Integer> intList4 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean5 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList4, intArray3);
+        boolean boolean5 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList4,
+                                                        intArray3);
         try {
             util.Histogram histogram7 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList4, (int) (short) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray3);
-        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + true + "'", boolean5 == true);
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + true + "'",
+                                    boolean5 == true);
     }
 
     @Test
@@ -145,7 +170,8 @@ public class Regression0Test {
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
         try {
             int int4 = 0; // flaky: histogram2.get((int) (short) 100);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 100");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 100");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -175,7 +201,9 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test015");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.MOMENT3;
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.MOMENT3 + "'", feature0.equals(feature.FirstOrder.Feature.MOMENT3));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.MOMENT3 + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.MOMENT3));
     }
 
     @Test
@@ -185,7 +213,8 @@ public class Regression0Test {
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
         try {
             int int3 = 0; // flaky: histogram1.get((int) (byte) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -1");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: -1");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -195,7 +224,9 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test017");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.SKEWNESS;
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.SKEWNESS + "'", feature0.equals(feature.FirstOrder.Feature.SKEWNESS));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.SKEWNESS + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.SKEWNESS));
     }
 
     @Test
@@ -203,7 +234,9 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test018");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.KURTOSIS;
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.KURTOSIS + "'", feature0.equals(feature.FirstOrder.Feature.KURTOSIS));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.KURTOSIS + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.KURTOSIS));
     }
 
     @Test
@@ -211,7 +244,9 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test019");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.MEAN;
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.MEAN + "'", feature0.equals(feature.FirstOrder.Feature.MEAN));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.MEAN + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.MEAN));
     }
 
     @Test
@@ -221,7 +256,8 @@ public class Regression0Test {
         int[] intArray2 = new int[] { (short) 0, (byte) 1 };
         try {
             util.Histogram histogram4 = null; // flaky: new util.Histogram(intArray2, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray2);
@@ -232,14 +268,15 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test021");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
         try {
             util.Histogram histogram8 = null; // flaky: new util.Histogram(intArray5, (int) (short) 1, (int) (short) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
     }
 
     @Test
@@ -262,7 +299,9 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test023");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.MOMENT2;
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.MOMENT2 + "'", feature0.equals(feature.FirstOrder.Feature.MOMENT2));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.MOMENT2 + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.MOMENT2));
     }
 
     @Test
@@ -270,10 +309,11 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test024");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         try {
-// flaky:             histogram2.put((int) '#');
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: histogram2.put((int) '#');
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -284,8 +324,9 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test025");
         util.Histogram histogram2 = null; // flaky: new util.Histogram((int) ' ', 0);
         try {
-// flaky:             histogram2.setSize((int) (short) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: histogram2.setSize((int) (short) -1);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -295,19 +336,22 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test026");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
         try {
             util.Histogram histogram14 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, 0, 10);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -324,8 +368,9 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test028");
         util.Histogram histogram2 = null; // flaky: new util.Histogram((int) ' ', 0);
         try {
-// flaky:             histogram2.put((int) (short) 100);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: histogram2.put((int) (short) 100);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
     }
@@ -335,18 +380,22 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test029");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.MOMENT4;
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.MOMENT4 + "'", feature0.equals(feature.FirstOrder.Feature.MOMENT4));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.MOMENT4 + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.MOMENT4));
     }
 
     @Test
     public void test030() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test030");
-        int[] intArray5 = new int[] { (byte) 1, (short) 10, (byte) -1, '#', (byte) 10 };
+        int[] intArray5 = new int[] { (byte) 1, (short) 10, (byte) -1, '#',
+                                      (byte) 10 };
         util.Histogram histogram7 = new util.Histogram(intArray5, (int) 'a');
         try {
             util.Histogram histogram9 = null; // flaky: new util.Histogram(intArray5, (int) (short) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray5);
@@ -357,19 +406,22 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test031");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
         try {
             util.Histogram histogram14 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) -1, 100);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -380,10 +432,11 @@ public class Regression0Test {
         int[] intArray3 = null; // flaky: histogram2.getData();
         try {
             util.Histogram histogram5 = null; // flaky: new util.Histogram(intArray3, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray3);
+        // flaky: org.junit.Assert.assertNotNull(intArray3);
     }
 
     @Test
@@ -404,7 +457,9 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test034");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.VARIANCE;
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.VARIANCE + "'", feature0.equals(feature.FirstOrder.Feature.VARIANCE));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.VARIANCE + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.VARIANCE));
     }
 
     @Test
@@ -413,8 +468,9 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test035");
         util.Histogram histogram2 = null; // flaky: new util.Histogram((int) (byte) 100, 0);
         try {
-// flaky:             histogram2.put((int) '#');
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: histogram2.put((int) '#');
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
     }
@@ -424,19 +480,22 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test036");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
         try {
             util.Histogram histogram14 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) -1, 10);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -444,14 +503,15 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test037");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
         try {
             util.Histogram histogram8 = null; // flaky: new util.Histogram(intArray5, (int) ' ', (int) (byte) 100);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
     }
 
     @Test
@@ -460,20 +520,25 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test038");
         util.Histogram histogram2 = null; // flaky: new util.Histogram((int) (byte) 100, 0);
         util.Histogram histogram4 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram4.setSize((int) (short) 10);
-// flaky:         histogram4.setSize((int) (byte) 100);
+        // flaky: histogram4.setSize((int) (short) 10);
+        // flaky: histogram4.setSize((int) (byte) 100);
         java.lang.Integer[] intArray11 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList12 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12, intArray11);
-// flaky:         histogram4.set((java.util.List<java.lang.Integer>) intList12);
-        util.Histogram histogram17 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, (int) (short) 10, (int) (byte) 10);
+        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12,
+                                                         intArray11);
+        // flaky: histogram4.set((java.util.List<java.lang.Integer>) intList12);
+        util.Histogram histogram17 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         try {
-// flaky:             histogram2.set((java.util.List<java.lang.Integer>) intList12);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: histogram2.set((java.util.List<java.lang.Integer>) intList12);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray11);
-        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'",
+                                    boolean13 == true);
     }
 
     @Test
@@ -494,7 +559,9 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test040");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.SUM;
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.SUM + "'", feature0.equals(feature.FirstOrder.Feature.SUM));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.SUM + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.SUM));
     }
 
     @Test
@@ -503,7 +570,9 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test041");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.MAX;
         java.lang.Class<?> wildcardClass1 = feature0.getClass();
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.MAX + "'", feature0.equals(feature.FirstOrder.Feature.MAX));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.MAX + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.MAX));
         org.junit.Assert.assertNotNull(wildcardClass1);
     }
 
@@ -515,10 +584,11 @@ public class Regression0Test {
         int[] intArray3 = null; // flaky: histogram2.getData();
         try {
             util.Histogram histogram5 = null; // flaky: new util.Histogram(intArray3, (int) 'a');
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray3);
+        // flaky: org.junit.Assert.assertNotNull(intArray3);
     }
 
     @Test
@@ -526,7 +596,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test043");
         int int1 = util.RGBPixel.getBlue(100);
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 100 + "'", int1 == 100);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 100 + "'",
+                                    int1 == 100);
     }
 
     @Test
@@ -543,19 +614,22 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test045");
         util.Histogram histogram2 = null; // flaky: new util.Histogram((int) (byte) 100, 0);
         util.Histogram histogram4 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram4.setSize((int) (short) 10);
-// flaky:         histogram4.setSize((int) (byte) 100);
+        // flaky: histogram4.setSize((int) (short) 10);
+        // flaky: histogram4.setSize((int) (byte) 100);
         java.lang.Integer[] intArray11 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList12 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12, intArray11);
-// flaky:         histogram4.set((java.util.List<java.lang.Integer>) intList12);
+        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12,
+                                                         intArray11);
+        // flaky: histogram4.set((java.util.List<java.lang.Integer>) intList12);
         try {
-// flaky:             histogram2.set((java.util.List<java.lang.Integer>) intList12);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: histogram2.set((java.util.List<java.lang.Integer>) intList12);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray11);
-        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'",
+                                    boolean13 == true);
     }
 
     @Test
@@ -563,7 +637,10 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test046");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.INVERSESUM;
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.INVERSESUM + "'", feature0.equals(feature.FirstOrder.Feature.INVERSESUM));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.INVERSESUM
+                                    + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.INVERSESUM));
     }
 
     @Test
@@ -572,20 +649,24 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test047");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
         util.Histogram histogram4 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram4.setSize((int) (short) 10);
-// flaky:         histogram4.setSize((int) (byte) 100);
+        // flaky: histogram4.setSize((int) (short) 10);
+        // flaky: histogram4.setSize((int) (byte) 100);
         java.lang.Integer[] intArray11 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList12 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12, intArray11);
-// flaky:         histogram4.set((java.util.List<java.lang.Integer>) intList12);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, (int) 'a');
+        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12,
+                                                         intArray11);
+        // flaky: histogram4.set((java.util.List<java.lang.Integer>) intList12);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        (int) 'a');
         try {
-// flaky:             histogram2.set((java.util.List<java.lang.Integer>) intList12);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -2");
+            // flaky: histogram2.set((java.util.List<java.lang.Integer>) intList12);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: -2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray11);
-        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'",
+                                    boolean13 == true);
     }
 
     @Test
@@ -594,7 +675,8 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test048");
         try {
             util.Histogram histogram1 = null; // flaky: new util.Histogram((int) (byte) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -604,7 +686,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test049");
         int int1 = util.RGBPixel.getBlue((-1));
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 255 + "'", int1 == 255);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 255 + "'",
+                                    int1 == 255);
     }
 
     @Test
@@ -612,18 +695,19 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test050");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
-// flaky:         histogram2.setOffset((int) (byte) 10);
+        // flaky: histogram2.setOffset((int) (byte) 10);
         int[] intArray8 = null; // flaky: histogram2.getData();
         int[] intArray14 = new int[] { (short) -1, (short) 10, 1, (-1), ' ' };
         try {
-// flaky:             histogram2.set(intArray14);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: histogram2.set(intArray14);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
-// flaky:         org.junit.Assert.assertNotNull(intArray8);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray8);
         org.junit.Assert.assertNotNull(intArray14);
     }
 
@@ -632,7 +716,9 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test051");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.MEDIAN;
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.MEDIAN + "'", feature0.equals(feature.FirstOrder.Feature.MEDIAN));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.MEDIAN + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.MEDIAN));
     }
 
     @Test
@@ -641,8 +727,9 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test052");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
         try {
-// flaky:             histogram1.put((int) (short) 10);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 10");
+            // flaky: histogram1.put((int) (short) 10);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 10");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -652,19 +739,23 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test053");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
         try {
-            util.Histogram histogram14 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) -1, (int) (short) 100);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            util.Histogram histogram14 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) -1, (int)
+                                               // (short) 100);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -682,7 +773,8 @@ public class Regression0Test {
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
         try {
             int int4 = 0; // flaky: histogram2.get(0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -722,20 +814,24 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test058");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
         try {
             util.Histogram histogram16 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (-1), (int) (short) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -746,10 +842,11 @@ public class Regression0Test {
         int[] intArray3 = null; // flaky: histogram2.getData();
         try {
             util.Histogram histogram6 = null; // flaky: new util.Histogram(intArray3, 0, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray3);
+        // flaky: org.junit.Assert.assertNotNull(intArray3);
     }
 
     @Test
@@ -757,14 +854,15 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test060");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
         try {
             util.Histogram histogram7 = null; // flaky: new util.Histogram(intArray5, 10);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
     }
 
     @Test
@@ -784,7 +882,8 @@ public class Regression0Test {
         int[] intArray2 = histogram1.getData();
         try {
             util.Histogram histogram5 = null; // flaky: new util.Histogram(intArray2, (-1), (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray2);
@@ -795,25 +894,31 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test063");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         try {
-            util.Histogram histogram26 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) 'a', (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            util.Histogram histogram26 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) 'a', (int) (byte)
+                                               // 0);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
     }
 
     @Test
@@ -830,7 +935,9 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.RIGHT + "'", direction0.equals(morphology.Sobel.Direction.RIGHT));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.RIGHT + "'",
+                                    direction0.equals(morphology.Sobel.Direction.RIGHT));
         org.junit.Assert.assertNotNull(baseMorphology3);
     }
 
@@ -857,20 +964,24 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test066");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
-// flaky:         histogram1.setSize(0);
-        java.lang.Integer[] intArray15 = new java.lang.Integer[] { 1, 0, (-1), 0, 255 };
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize(0);
+        java.lang.Integer[] intArray15 = new java.lang.Integer[] { 1, 0, (-1),
+                                                                   0, 255 };
         java.util.ArrayList<java.lang.Integer> intList16 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean17 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList16, intArray15);
+        boolean boolean17 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList16,
+                                                         intArray15);
         try {
-// flaky:             histogram1.set((java.util.List<java.lang.Integer>) intList16);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 2");
+            // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList16);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray15);
-        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + true + "'", boolean17 == true);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + true + "'",
+                                    boolean17 == true);
     }
 
     @Test
@@ -886,10 +997,11 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test068");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (short) 10);
         try {
             int int5 = 0; // flaky: histogram1.get((int) (byte) 10);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 10");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 10");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -899,20 +1011,25 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test069");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
         try {
-            util.Histogram histogram16 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) (short) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            util.Histogram histogram16 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) (short)
+                                               // 0);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -920,11 +1037,12 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test070");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setWidth(0);
-// flaky:         histogram1.setOffset((int) '#');
+        // flaky: histogram1.setWidth(0);
+        // flaky: histogram1.setOffset((int) '#');
         try {
-// flaky:             histogram1.put((int) (byte) 1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: histogram1.put((int) (byte) 1);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
     }
@@ -934,7 +1052,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test071");
         int int1 = util.RGBPixel.getBlue((int) (short) -1);
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 255 + "'", int1 == 255);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 255 + "'",
+                                    int1 == 255);
     }
 
     @Test
@@ -958,7 +1077,8 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test073");
         try {
             util.Histogram histogram1 = null; // flaky: new util.Histogram((int) (short) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -969,7 +1089,8 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test074");
         try {
             util.Histogram histogram2 = null; // flaky: new util.Histogram((int) (short) -1, (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -979,20 +1100,24 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test075");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
         try {
-            util.Histogram histogram15 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 1);
+            util.Histogram histogram15 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                            (int) (byte) 1);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -1015,11 +1140,12 @@ public class Regression0Test {
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
         int[] intArray3 = null; // flaky: histogram2.getData();
         try {
-// flaky:             histogram2.put((-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: histogram2.put((-1));
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray3);
+        // flaky: org.junit.Assert.assertNotNull(intArray3);
     }
 
     @Test
@@ -1027,12 +1153,13 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test078");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         try {
             int int9 = 0; // flaky: histogram1.get((int) (short) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -1");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: -1");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -1050,15 +1177,16 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test080");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
-// flaky:         histogram2.setOffset((int) (byte) 10);
+        // flaky: histogram2.setOffset((int) (byte) 10);
         try {
             int int9 = 0; // flaky: histogram2.get((int) 'a');
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 97");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 97");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
     }
 
     @Test
@@ -1082,7 +1210,7 @@ public class Regression0Test {
         morphology.ConvolutionKernel convolutionKernel3 = null; // flaky: new morphology.ConvolutionKernel(floatArray2);
         java.lang.Class<?> wildcardClass4 = null; // flaky: convolutionKernel3.getClass();
         org.junit.Assert.assertNotNull(floatArray2);
-// flaky:         org.junit.Assert.assertNotNull(wildcardClass4);
+        // flaky: org.junit.Assert.assertNotNull(wildcardClass4);
     }
 
     @Test
@@ -1099,7 +1227,9 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.RIGHT + "'", direction0.equals(morphology.Sobel.Direction.RIGHT));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.RIGHT + "'",
+                                    direction0.equals(morphology.Sobel.Direction.RIGHT));
         org.junit.Assert.assertNotNull(baseMorphology3);
     }
 
@@ -1108,21 +1238,22 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test084");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setOffset((int) (byte) 1);
-// flaky:         histogram1.setOffset((int) '4');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setOffset((int) (byte) 1);
+        // flaky: histogram1.setOffset((int) '4');
         int[] intArray10 = null; // flaky: histogram1.getData();
         util.Histogram histogram13 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram13.setWidth((int) 'a');
+        // flaky: histogram13.setWidth((int) 'a');
         int[] intArray16 = null; // flaky: histogram13.getData();
         try {
-// flaky:             histogram1.set(intArray16);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: histogram1.set(intArray16);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray10);
-// flaky:         org.junit.Assert.assertNotNull(intArray16);
+        // flaky: org.junit.Assert.assertNotNull(intArray10);
+        // flaky: org.junit.Assert.assertNotNull(intArray16);
     }
 
     @Test
@@ -1132,7 +1263,8 @@ public class Regression0Test {
         java.util.List<java.lang.Integer> intList0 = null;
         try {
             util.Histogram histogram3 = null; // flaky: new util.Histogram(intList0, (-1), (-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -1150,7 +1282,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test087");
         int int1 = util.RGBPixel.getBlue((int) (byte) 10);
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 10 + "'", int1 == 10);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 10 + "'",
+                                    int1 == 10);
     }
 
     @Test
@@ -1158,26 +1291,32 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test088");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) ' ');
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) ' ');
         try {
             util.Histogram histogram27 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (byte) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
     }
 
     @Test
@@ -1186,7 +1325,9 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test089");
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.MIN;
         java.lang.Class<?> wildcardClass1 = feature0.getClass();
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.MIN + "'", feature0.equals(feature.FirstOrder.Feature.MIN));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.MIN + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.MIN));
         org.junit.Assert.assertNotNull(wildcardClass1);
     }
 
@@ -1204,8 +1345,9 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test091");
         util.Histogram histogram2 = null; // flaky: new util.Histogram((int) ' ', 0);
         try {
-// flaky:             histogram2.put((int) (short) 10);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: histogram2.put((int) (short) 10);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
     }
@@ -1215,15 +1357,16 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test092");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setOffset((int) (byte) 1);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setOffset((int) (byte) 1);
         util.Histogram histogram9 = new util.Histogram((int) ' ');
         int[] intArray10 = histogram9.getData();
-// flaky:         histogram1.set(intArray10);
+        // flaky: histogram1.set(intArray10);
         try {
             util.Histogram histogram13 = null; // flaky: new util.Histogram(intArray10, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray10);
@@ -1234,7 +1377,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test093");
         int int1 = util.RGBPixel.getBlue((int) 'a');
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 97 + "'", int1 == 97);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 97 + "'",
+                                    int1 == 97);
     }
 
     @Test
@@ -1258,23 +1402,29 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test096");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, 10);
-        util.Histogram histogram28 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, 1, (int) '4');
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        10);
+        util.Histogram histogram28 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        1, (int) '4');
         histogram28.setSize((int) 'a');
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
     }
 
     @Test
@@ -1282,21 +1432,26 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test097");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) 'a');
         try {
-            util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 1);
+            util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                            1);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -1321,9 +1476,9 @@ public class Regression0Test {
         org.junit.Assert.assertNotNull(floatArray2);
         org.junit.Assert.assertNotNull(floatArray6);
         org.junit.Assert.assertNotNull(floatArray10);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology12);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology13);
-// flaky:         org.junit.Assert.assertNotNull(wildcardClass14);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology12);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology13);
+        // flaky: org.junit.Assert.assertNotNull(wildcardClass14);
     }
 
     @Test
@@ -1331,20 +1486,25 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test099");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         try {
             util.Histogram histogram16 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -1369,13 +1529,14 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test101");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         int int9 = 0; // flaky: histogram1.get((int) (short) 0);
         try {
-// flaky:             histogram1.put((int) (short) 100);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 100");
+            // flaky: histogram1.put((int) (short) 100);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 100");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
@@ -1395,13 +1556,18 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test103");
         java.lang.Integer[] intArray2 = new java.lang.Integer[] { 10, 1 };
         java.util.ArrayList<java.lang.Integer> intList3 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3, intArray2);
-        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3, (int) '#', (int) (byte) 100);
+        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3,
+                                                        intArray2);
+        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3,
+                                                       (int) '#',
+                                                       (int) (byte) 100);
         histogram7.put((int) '#');
         int int11 = histogram7.get((int) (short) 1);
         org.junit.Assert.assertNotNull(intArray2);
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'", boolean4 == true);
-        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 0 + "'", int11 == 0);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'",
+                                    boolean4 == true);
+        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 0 + "'",
+                                    int11 == 0);
     }
 
     @Test
@@ -1437,7 +1603,9 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.RIGHT + "'", direction0.equals(morphology.Sobel.Direction.RIGHT));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.RIGHT + "'",
+                                    direction0.equals(morphology.Sobel.Direction.RIGHT));
     }
 
     @Test
@@ -1445,17 +1613,18 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test107");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
-// flaky:         histogram2.setOffset((int) (byte) 10);
+        // flaky: histogram2.setOffset((int) (byte) 10);
         int[] intArray8 = null; // flaky: histogram2.getData();
         try {
-// flaky:             histogram2.put(0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: histogram2.put(0);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
-// flaky:         org.junit.Assert.assertNotNull(intArray8);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray8);
     }
 
     @Test
@@ -1466,10 +1635,11 @@ public class Regression0Test {
         int[] intArray3 = null; // flaky: histogram2.getData();
         try {
             util.Histogram histogram6 = null; // flaky: new util.Histogram(intArray3, (int) (byte) 100, 100);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray3);
+        // flaky: org.junit.Assert.assertNotNull(intArray3);
     }
 
     @Test
@@ -1495,13 +1665,15 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test110");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
-// flaky:         histogram2.setWidth(100);
-        int[] intArray12 = new int[] { (byte) 1, (short) 10, (byte) -1, '#', (byte) 10 };
+        // flaky: histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth(100);
+        int[] intArray12 = new int[] { (byte) 1, (short) 10, (byte) -1, '#',
+                                       (byte) 10 };
         util.Histogram histogram14 = new util.Histogram(intArray12, (int) 'a');
         try {
-// flaky:             histogram2.set(intArray12);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: histogram2.set(intArray12);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray12);
@@ -1512,14 +1684,15 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test111");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
         try {
             util.Histogram histogram7 = null; // flaky: new util.Histogram(intArray5, (int) 'a');
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
     }
 
     @Test
@@ -1551,26 +1724,32 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test115");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, 10);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        10);
         try {
             util.Histogram histogram28 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 0, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
     }
 
     @Test
@@ -1592,21 +1771,25 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test117");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) ' ', 100);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) ' ', 100);
         try {
             int int18 = histogram16.get((int) '4');
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 52");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -1623,7 +1806,8 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test119");
         try {
             util.Histogram histogram2 = null; // flaky: new util.Histogram((-1), (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -1656,14 +1840,15 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test122");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
         try {
             util.Histogram histogram8 = null; // flaky: new util.Histogram(intArray5, 100, 255);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
     }
 
     @Test
@@ -1686,8 +1871,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test124");
         util.Histogram histogram2 = null; // flaky: new util.Histogram((int) (byte) 100, 0);
-// flaky:         histogram2.setOffset(10);
-// flaky:         histogram2.setSize(100);
+        // flaky: histogram2.setOffset(10);
+        // flaky: histogram2.setSize(100);
     }
 
     @Test
@@ -1695,7 +1880,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test125");
         int int1 = util.RGBPixel.getRed((-1));
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 255 + "'", int1 == 255);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 255 + "'",
+                                    int1 == 255);
     }
 
     @Test
@@ -1704,8 +1890,9 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test126");
         util.Histogram histogram2 = null; // flaky: new util.Histogram((int) '#', (int) (short) 0);
         try {
-// flaky:             histogram2.put((int) (short) 1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: histogram2.put((int) (short) 1);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
     }
@@ -1736,19 +1923,23 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test128");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) ' ');
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) ' ');
         histogram25.setOffset((int) (byte) 100);
         histogram25.setWidth((int) (short) 100);
         try {
@@ -1757,7 +1948,8 @@ public class Regression0Test {
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
     }
 
     @Test
@@ -1765,35 +1957,45 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test129");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) 'a');
         int[] intArray17 = histogram16.getData();
         util.Histogram histogram19 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram19.setSize((int) (short) 10);
-// flaky:         histogram19.setSize((int) (byte) 100);
+        // flaky: histogram19.setSize((int) (short) 10);
+        // flaky: histogram19.setSize((int) (byte) 100);
         java.lang.Integer[] intArray26 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList27 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27, intArray26);
-// flaky:         histogram19.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (byte) 100);
+        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27,
+                                                         intArray26);
+        // flaky: histogram19.set((java.util.List<java.lang.Integer>) intList27);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (byte) 100);
         histogram16.set((java.util.List<java.lang.Integer>) intList27);
         try {
             util.Histogram histogram37 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList27, (-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray17);
         org.junit.Assert.assertNotNull(intArray26);
-        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'", boolean28 == true);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'",
+                                    boolean28 == true);
     }
 
     @Test
@@ -1801,33 +2003,42 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test130");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram14.put((int) (short) 10);
         util.Histogram histogram18 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram18.setSize((int) (short) 10);
-// flaky:         histogram18.setSize((int) (byte) 100);
+        // flaky: histogram18.setSize((int) (short) 10);
+        // flaky: histogram18.setSize((int) (byte) 100);
         java.lang.Integer[] intArray25 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList26 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean27 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList26, intArray25);
-// flaky:         histogram18.set((java.util.List<java.lang.Integer>) intList26);
-        util.Histogram histogram31 = new util.Histogram((java.util.List<java.lang.Integer>) intList26, (int) (short) 10, (int) (byte) 10);
+        boolean boolean27 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList26,
+                                                         intArray25);
+        // flaky: histogram18.set((java.util.List<java.lang.Integer>) intList26);
+        util.Histogram histogram31 = new util.Histogram((java.util.List<java.lang.Integer>) intList26,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray32 = histogram31.getData();
         histogram14.set(intArray32);
         try {
             util.Histogram histogram36 = null; // flaky: new util.Histogram(intArray32, (int) (byte) -1, (-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray25);
-        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + true + "'", boolean27 == true);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + true + "'",
+                                    boolean27 == true);
         org.junit.Assert.assertNotNull(intArray32);
     }
 
@@ -1836,26 +2047,32 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test131");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) ' ');
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) ' ');
         try {
             util.Histogram histogram27 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList17, (-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
     }
 
     @Test
@@ -1863,11 +2080,12 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test132");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         try {
-// flaky:             histogram1.put((int) (short) 100);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 100");
+            // flaky: histogram1.put((int) (short) 100);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 100");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -1908,33 +2126,42 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test136");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram14.put((int) (short) 10);
         util.Histogram histogram18 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram18.setSize((int) (short) 10);
-// flaky:         histogram18.setSize((int) (byte) 100);
+        // flaky: histogram18.setSize((int) (short) 10);
+        // flaky: histogram18.setSize((int) (byte) 100);
         java.lang.Integer[] intArray25 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList26 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean27 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList26, intArray25);
-// flaky:         histogram18.set((java.util.List<java.lang.Integer>) intList26);
-        util.Histogram histogram31 = new util.Histogram((java.util.List<java.lang.Integer>) intList26, (int) (short) 10, (int) (byte) 10);
+        boolean boolean27 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList26,
+                                                         intArray25);
+        // flaky: histogram18.set((java.util.List<java.lang.Integer>) intList26);
+        util.Histogram histogram31 = new util.Histogram((java.util.List<java.lang.Integer>) intList26,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray32 = histogram31.getData();
         histogram14.set(intArray32);
         try {
             util.Histogram histogram35 = null; // flaky: new util.Histogram(intArray32, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 2");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray25);
-        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + true + "'", boolean27 == true);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + true + "'",
+                                    boolean27 == true);
         org.junit.Assert.assertNotNull(intArray32);
     }
 
@@ -1943,21 +2170,26 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test137");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) ' ', 100);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) ' ', 100);
         try {
-            util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 1);
+            util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                            (int) (short) 1);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -1965,21 +2197,25 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test138");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) ' ', 100);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) ' ', 100);
         try {
             int int18 = histogram16.get((int) ' ');
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 32");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -2010,43 +2246,54 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test141");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         util.Histogram histogram25 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram25.setSize((int) (short) 10);
-// flaky:         histogram25.setSize((int) (byte) 100);
-// flaky:         histogram25.setSize((int) 'a');
+        // flaky: histogram25.setSize((int) (short) 10);
+        // flaky: histogram25.setSize((int) (byte) 100);
+        // flaky: histogram25.setSize((int) 'a');
         util.Histogram histogram33 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram33.setSize((int) (short) 10);
-// flaky:         histogram33.setSize((int) (byte) 100);
+        // flaky: histogram33.setSize((int) (short) 10);
+        // flaky: histogram33.setSize((int) (byte) 100);
         java.lang.Integer[] intArray40 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList41 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41, intArray40);
-// flaky:         histogram33.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram25.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 10);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, (int) '4');
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList41);
+        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41,
+                                                         intArray40);
+        // flaky: histogram33.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram25.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        10);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, (int) '4');
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList41);
         try {
-            util.Histogram histogram55 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (byte) 1);
+            util.Histogram histogram55 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                            (int) (byte) 1);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
         org.junit.Assert.assertNotNull(intArray40);
-        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'", boolean42 == true);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'",
+                                    boolean42 == true);
     }
 
     @Test
@@ -2054,35 +2301,45 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test142");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) 'a');
         int[] intArray17 = histogram16.getData();
         util.Histogram histogram19 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram19.setSize((int) (short) 10);
-// flaky:         histogram19.setSize((int) (byte) 100);
+        // flaky: histogram19.setSize((int) (short) 10);
+        // flaky: histogram19.setSize((int) (byte) 100);
         java.lang.Integer[] intArray26 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList27 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27, intArray26);
-// flaky:         histogram19.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (byte) 100);
+        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27,
+                                                         intArray26);
+        // flaky: histogram19.set((java.util.List<java.lang.Integer>) intList27);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (byte) 100);
         histogram16.set((java.util.List<java.lang.Integer>) intList27);
         try {
             util.Histogram histogram38 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (byte) -1, 100);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray17);
         org.junit.Assert.assertNotNull(intArray26);
-        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'", boolean28 == true);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'",
+                                    boolean28 == true);
     }
 
     @Test
@@ -2128,9 +2385,9 @@ public class Regression0Test {
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
         int[] intArray3 = null; // flaky: histogram2.getData();
         java.lang.Class<?> wildcardClass4 = null; // flaky: histogram2.getClass();
-// flaky:         histogram2.setOffset((int) 'a');
-// flaky:         org.junit.Assert.assertNotNull(intArray3);
-// flaky:         org.junit.Assert.assertNotNull(wildcardClass4);
+        // flaky: histogram2.setOffset((int) 'a');
+        // flaky: org.junit.Assert.assertNotNull(intArray3);
+        // flaky: org.junit.Assert.assertNotNull(wildcardClass4);
     }
 
     @Test
@@ -2139,23 +2396,28 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test147");
         util.Histogram histogram2 = null; // flaky: new util.Histogram((int) ' ', 0);
         util.Histogram histogram4 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram4.setSize((int) (short) 10);
-// flaky:         histogram4.setSize((int) (byte) 100);
+        // flaky: histogram4.setSize((int) (short) 10);
+        // flaky: histogram4.setSize((int) (byte) 100);
         java.lang.Integer[] intArray11 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList12 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12, intArray11);
-// flaky:         histogram4.set((java.util.List<java.lang.Integer>) intList12);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, (int) 'a');
-        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, (int) '4', (int) 'a');
+        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12,
+                                                         intArray11);
+        // flaky: histogram4.set((java.util.List<java.lang.Integer>) intList12);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        (int) 'a');
+        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        (int) '4', (int) 'a');
         int[] intArray20 = histogram19.getData();
         util.Histogram histogram22 = new util.Histogram(intArray20, 97);
         try {
-// flaky:             histogram2.set(intArray20);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: histogram2.set(intArray20);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray11);
-        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'",
+                                    boolean13 == true);
         org.junit.Assert.assertNotNull(intArray20);
     }
 
@@ -2164,7 +2426,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test148");
         int int1 = util.RGBPixel.getBlue((int) (short) 100);
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 100 + "'", int1 == 100);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 100 + "'",
+                                    int1 == 100);
     }
 
     @Test
@@ -2193,15 +2456,16 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test150");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
-// flaky:         histogram1.setSize(0);
-// flaky:         histogram1.setWidth(10);
-// flaky:         histogram1.setWidth((int) (short) -1);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize(0);
+        // flaky: histogram1.setWidth(10);
+        // flaky: histogram1.setWidth((int) (short) -1);
         try {
-// flaky:             histogram1.put(255);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -255");
+            // flaky: histogram1.put(255);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: -255");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -2223,7 +2487,7 @@ public class Regression0Test {
         }
         org.junit.Assert.assertNotNull(floatArray2);
         org.junit.Assert.assertNotNull(floatArray6);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology8);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology8);
     }
 
     @Test
@@ -2231,21 +2495,27 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test152");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) 'a');
         try {
-            util.Histogram histogram19 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) ' ', (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            util.Histogram histogram19 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) ' ', (int) (byte)
+                                               // 0);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -2253,7 +2523,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test153");
         int int1 = util.RGBPixel.getBlue((int) '4');
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 52 + "'", int1 == 52);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 52 + "'",
+                                    int1 == 52);
     }
 
     @Test
@@ -2269,26 +2540,27 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test155");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setOffset((int) (byte) 1);
-// flaky:         histogram1.setOffset((int) '4');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setOffset((int) (byte) 1);
+        // flaky: histogram1.setOffset((int) '4');
         int[] intArray10 = null; // flaky: histogram1.getData();
         util.Histogram histogram12 = null; // flaky: new util.Histogram(intArray10, (int) 'a');
         util.Histogram histogram14 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram14.setSize((int) (short) 10);
-// flaky:         histogram14.setSize((int) (byte) 100);
-// flaky:         histogram14.setOffset((int) (byte) 1);
-// flaky:         histogram14.setOffset((int) '4');
+        // flaky: histogram14.setSize((int) (short) 10);
+        // flaky: histogram14.setSize((int) (byte) 100);
+        // flaky: histogram14.setOffset((int) (byte) 1);
+        // flaky: histogram14.setOffset((int) '4');
         int[] intArray23 = null; // flaky: histogram14.getData();
-// flaky:         histogram12.set(intArray23);
+        // flaky: histogram12.set(intArray23);
         try {
             util.Histogram histogram26 = null; // flaky: new util.Histogram(intArray23, (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray10);
-// flaky:         org.junit.Assert.assertNotNull(intArray23);
+        // flaky: org.junit.Assert.assertNotNull(intArray10);
+        // flaky: org.junit.Assert.assertNotNull(intArray23);
     }
 
     @Test
@@ -2296,16 +2568,20 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test156");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) 'a');
         int[] intArray17 = histogram16.getData();
-        util.Histogram histogram19 = new util.Histogram(intArray17, (int) (short) 10);
+        util.Histogram histogram19 = new util.Histogram(intArray17,
+                                                        (int) (short) 10);
         java.util.List<java.lang.Integer> intList20 = null;
         try {
             histogram19.set(intList20);
@@ -2313,7 +2589,8 @@ public class Regression0Test {
         } catch (java.lang.NullPointerException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray17);
     }
 
@@ -2343,12 +2620,13 @@ public class Regression0Test {
         int[] intArray3 = null; // flaky: histogram2.getData();
         java.lang.Class<?> wildcardClass4 = null; // flaky: histogram2.getClass();
         try {
-// flaky:             histogram2.setSize((int) (short) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: histogram2.setSize((int) (short) -1);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray3);
-// flaky:         org.junit.Assert.assertNotNull(wildcardClass4);
+        // flaky: org.junit.Assert.assertNotNull(intArray3);
+        // flaky: org.junit.Assert.assertNotNull(wildcardClass4);
     }
 
     @Test
@@ -2356,34 +2634,44 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test159");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
         util.Histogram histogram20 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram20.setSize((int) (short) 10);
-// flaky:         histogram20.setSize((int) (byte) 100);
+        // flaky: histogram20.setSize((int) (short) 10);
+        // flaky: histogram20.setSize((int) (byte) 100);
         java.lang.Integer[] intArray27 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList28 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28, intArray27);
-// flaky:         histogram20.set((java.util.List<java.lang.Integer>) intList28);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) 'a');
+        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28,
+                                                         intArray27);
+        // flaky: histogram20.set((java.util.List<java.lang.Integer>) intList28);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) 'a');
         histogram18.set((java.util.List<java.lang.Integer>) intList28);
         java.lang.Class<?> wildcardClass34 = intList28.getClass();
         try {
             util.Histogram histogram36 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList28, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 2");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray27);
-        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'", boolean29 == true);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'",
+                                    boolean29 == true);
         org.junit.Assert.assertNotNull(wildcardClass34);
     }
 
@@ -2407,7 +2695,7 @@ public class Regression0Test {
         }
         org.junit.Assert.assertNotNull(floatArray3);
         org.junit.Assert.assertNotNull(floatArray6);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology10);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology10);
     }
 
     @Test
@@ -2415,20 +2703,28 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test161");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
-        util.Histogram histogram20 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) ' ');
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
+        util.Histogram histogram20 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) ' ');
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4');
         histogram22.put((int) (short) 10);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -2438,33 +2734,39 @@ public class Regression0Test {
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
         int[] intArray3 = null; // flaky: histogram2.getData();
         util.Histogram histogram5 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram5.setSize((int) (short) 10);
-// flaky:         histogram5.setSize((int) (byte) 100);
+        // flaky: histogram5.setSize((int) (short) 10);
+        // flaky: histogram5.setSize((int) (byte) 100);
         util.Histogram histogram11 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram11.setSize((int) (short) 10);
-// flaky:         histogram11.setSize((int) (byte) 100);
+        // flaky: histogram11.setSize((int) (short) 10);
+        // flaky: histogram11.setSize((int) (byte) 100);
         java.lang.Integer[] intArray18 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList19 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean20 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList19, intArray18);
-// flaky:         histogram11.set((java.util.List<java.lang.Integer>) intList19);
-        util.Histogram histogram23 = new util.Histogram((java.util.List<java.lang.Integer>) intList19, (int) 'a');
-        util.Histogram histogram26 = new util.Histogram((java.util.List<java.lang.Integer>) intList19, 97, 255);
-// flaky:         histogram5.set((java.util.List<java.lang.Integer>) intList19);
+        boolean boolean20 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList19,
+                                                         intArray18);
+        // flaky: histogram11.set((java.util.List<java.lang.Integer>) intList19);
+        util.Histogram histogram23 = new util.Histogram((java.util.List<java.lang.Integer>) intList19,
+                                                        (int) 'a');
+        util.Histogram histogram26 = new util.Histogram((java.util.List<java.lang.Integer>) intList19,
+                                                        97, 255);
+        // flaky: histogram5.set((java.util.List<java.lang.Integer>) intList19);
         try {
-// flaky:             histogram2.set((java.util.List<java.lang.Integer>) intList19);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -2");
+            // flaky: histogram2.set((java.util.List<java.lang.Integer>) intList19);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: -2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray3);
+        // flaky: org.junit.Assert.assertNotNull(intArray3);
         org.junit.Assert.assertNotNull(intArray18);
-        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + true + "'", boolean20 == true);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + true + "'",
+                                    boolean20 == true);
     }
 
     @Test
     public void test163() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test163");
-        util.Histogram histogram2 = new util.Histogram((int) (short) 10, (int) (short) 10);
+        util.Histogram histogram2 = new util.Histogram((int) (short) 10,
+                                                       (int) (short) 10);
         histogram2.setSize((int) (byte) 1);
     }
 
@@ -2473,46 +2775,57 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test164");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         util.Histogram histogram25 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram25.setSize((int) (short) 10);
-// flaky:         histogram25.setSize((int) (byte) 100);
-// flaky:         histogram25.setSize((int) 'a');
+        // flaky: histogram25.setSize((int) (short) 10);
+        // flaky: histogram25.setSize((int) (byte) 100);
+        // flaky: histogram25.setSize((int) 'a');
         util.Histogram histogram33 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram33.setSize((int) (short) 10);
-// flaky:         histogram33.setSize((int) (byte) 100);
+        // flaky: histogram33.setSize((int) (short) 10);
+        // flaky: histogram33.setSize((int) (byte) 100);
         java.lang.Integer[] intArray40 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList41 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41, intArray40);
-// flaky:         histogram33.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram25.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 10);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, (int) '4');
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList41);
-// flaky:         histogram1.setWidth((int) (byte) 1);
+        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41,
+                                                         intArray40);
+        // flaky: histogram33.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram25.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        10);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, (int) '4');
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList41);
+        // flaky: histogram1.setWidth((int) (byte) 1);
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
         org.junit.Assert.assertNotNull(intArray40);
-        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'", boolean42 == true);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'",
+                                    boolean42 == true);
     }
 
     @Test
     public void test165() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test165");
-        int[] intArray5 = new int[] { (byte) 1, (short) 10, (byte) -1, '#', (byte) 10 };
+        int[] intArray5 = new int[] { (byte) 1, (short) 10, (byte) -1, '#',
+                                      (byte) 10 };
         util.Histogram histogram7 = new util.Histogram(intArray5, (int) 'a');
         try {
             util.Histogram histogram9 = new util.Histogram(intArray5, 10);
@@ -2557,19 +2870,20 @@ public class Regression0Test {
         histogram3.setWidth((int) (byte) 100);
         histogram3.setOffset((int) (short) 100);
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
-// flaky:         histogram9.setOffset((int) (byte) 1);
-// flaky:         histogram9.setOffset((int) '4');
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setOffset((int) (byte) 1);
+        // flaky: histogram9.setOffset((int) '4');
         int[] intArray18 = null; // flaky: histogram9.getData();
-// flaky:         histogram3.set(intArray18);
+        // flaky: histogram3.set(intArray18);
         util.Histogram histogram21 = null; // flaky: new util.Histogram(intArray18, (int) (short) 100);
         try {
-// flaky:             histogram1.set(intArray18);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: histogram1.set(intArray18);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray18);
+        // flaky: org.junit.Assert.assertNotNull(intArray18);
     }
 
     @Test
@@ -2577,13 +2891,16 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test169");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram14.setOffset(10);
         try {
             int int18 = histogram14.get(10);
@@ -2591,7 +2908,8 @@ public class Regression0Test {
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -2607,22 +2925,28 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test171");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram14.put((int) (short) 10);
         util.Histogram histogram18 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram18.setSize((int) (short) 10);
-// flaky:         histogram18.setSize((int) (byte) 100);
+        // flaky: histogram18.setSize((int) (short) 10);
+        // flaky: histogram18.setSize((int) (byte) 100);
         java.lang.Integer[] intArray25 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList26 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean27 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList26, intArray25);
-// flaky:         histogram18.set((java.util.List<java.lang.Integer>) intList26);
-        util.Histogram histogram31 = new util.Histogram((java.util.List<java.lang.Integer>) intList26, (int) (short) 10, (int) (byte) 10);
+        boolean boolean27 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList26,
+                                                         intArray25);
+        // flaky: histogram18.set((java.util.List<java.lang.Integer>) intList26);
+        util.Histogram histogram31 = new util.Histogram((java.util.List<java.lang.Integer>) intList26,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray32 = histogram31.getData();
         histogram14.set(intArray32);
         try {
@@ -2631,9 +2955,11 @@ public class Regression0Test {
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray25);
-        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + true + "'", boolean27 == true);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + true + "'",
+                                    boolean27 == true);
         org.junit.Assert.assertNotNull(intArray32);
     }
 
@@ -2644,7 +2970,8 @@ public class Regression0Test {
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
         try {
             int int4 = 0; // flaky: histogram2.get((int) (byte) 1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 1");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 1");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -2667,10 +2994,12 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.UP + "'", direction0.equals(morphology.Sobel.Direction.UP));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.UP + "'",
+                                    direction0.equals(morphology.Sobel.Direction.UP));
         org.junit.Assert.assertNotNull(floatArray4);
         org.junit.Assert.assertNotNull(floatArray8);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology10);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology10);
         org.junit.Assert.assertNotNull(baseMorphology11);
     }
 
@@ -2687,7 +3016,9 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.RIGHT + "'", direction0.equals(morphology.Sobel.Direction.RIGHT));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.RIGHT + "'",
+                                    direction0.equals(morphology.Sobel.Direction.RIGHT));
     }
 
     @Test
@@ -2695,44 +3026,56 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test175");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         util.Histogram histogram25 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram25.setSize((int) (short) 10);
-// flaky:         histogram25.setSize((int) (byte) 100);
-// flaky:         histogram25.setSize((int) 'a');
+        // flaky: histogram25.setSize((int) (short) 10);
+        // flaky: histogram25.setSize((int) (byte) 100);
+        // flaky: histogram25.setSize((int) 'a');
         util.Histogram histogram33 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram33.setSize((int) (short) 10);
-// flaky:         histogram33.setSize((int) (byte) 100);
+        // flaky: histogram33.setSize((int) (short) 10);
+        // flaky: histogram33.setSize((int) (byte) 100);
         java.lang.Integer[] intArray40 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList41 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41, intArray40);
-// flaky:         histogram33.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram25.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 10);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, (int) '4');
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, 255);
+        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41,
+                                                         intArray40);
+        // flaky: histogram33.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram25.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        10);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, (int) '4');
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, 255);
         try {
             util.Histogram histogram58 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (short) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
         org.junit.Assert.assertNotNull(intArray40);
-        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'", boolean42 == true);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'",
+                                    boolean42 == true);
     }
 
     @Test
@@ -2743,43 +3086,57 @@ public class Regression0Test {
         histogram1.put((int) (byte) 10);
         histogram1.setWidth((int) (byte) 0);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
         java.lang.Integer[] intArray14 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList15 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean16 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList15, intArray14);
-// flaky:         histogram7.set((java.util.List<java.lang.Integer>) intList15);
-        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList15, (int) 'a');
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList15, (int) '4', (int) 'a');
+        boolean boolean16 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList15,
+                                                         intArray14);
+        // flaky: histogram7.set((java.util.List<java.lang.Integer>) intList15);
+        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList15,
+                                                        (int) 'a');
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList15,
+                                                        (int) '4', (int) 'a');
         int[] intArray23 = histogram22.getData();
         util.Histogram histogram25 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram25.setSize((int) (short) 10);
-// flaky:         histogram25.setSize((int) (byte) 100);
+        // flaky: histogram25.setSize((int) (short) 10);
+        // flaky: histogram25.setSize((int) (byte) 100);
         java.lang.Integer[] intArray32 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList33 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean34 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList33, intArray32);
-// flaky:         histogram25.set((java.util.List<java.lang.Integer>) intList33);
-        util.Histogram histogram38 = new util.Histogram((java.util.List<java.lang.Integer>) intList33, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram40 = new util.Histogram((java.util.List<java.lang.Integer>) intList33, (int) (byte) 100);
+        boolean boolean34 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList33,
+                                                         intArray32);
+        // flaky: histogram25.set((java.util.List<java.lang.Integer>) intList33);
+        util.Histogram histogram38 = new util.Histogram((java.util.List<java.lang.Integer>) intList33,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram40 = new util.Histogram((java.util.List<java.lang.Integer>) intList33,
+                                                        (int) (byte) 100);
         histogram22.set((java.util.List<java.lang.Integer>) intList33);
         util.Histogram histogram43 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram43.setSize((int) (short) 10);
-// flaky:         histogram43.setSize((int) (byte) 100);
+        // flaky: histogram43.setSize((int) (short) 10);
+        // flaky: histogram43.setSize((int) (byte) 100);
         java.lang.Integer[] intArray50 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList51 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean52 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList51, intArray50);
-// flaky:         histogram43.set((java.util.List<java.lang.Integer>) intList51);
-        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList51, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram58 = new util.Histogram((java.util.List<java.lang.Integer>) intList51, (int) (byte) 100);
-        util.Histogram histogram60 = new util.Histogram((java.util.List<java.lang.Integer>) intList51, 255);
+        boolean boolean52 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList51,
+                                                         intArray50);
+        // flaky: histogram43.set((java.util.List<java.lang.Integer>) intList51);
+        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList51,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram58 = new util.Histogram((java.util.List<java.lang.Integer>) intList51,
+                                                        (int) (byte) 100);
+        util.Histogram histogram60 = new util.Histogram((java.util.List<java.lang.Integer>) intList51,
+                                                        255);
         util.Histogram histogram62 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram62.setSize((int) (short) 10);
-// flaky:         histogram62.setSize((int) (byte) 100);
+        // flaky: histogram62.setSize((int) (short) 10);
+        // flaky: histogram62.setSize((int) (byte) 100);
         java.lang.Integer[] intArray69 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList70 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean71 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList70, intArray69);
-// flaky:         histogram62.set((java.util.List<java.lang.Integer>) intList70);
-        util.Histogram histogram74 = new util.Histogram((java.util.List<java.lang.Integer>) intList70, (int) 'a');
+        boolean boolean71 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList70,
+                                                         intArray69);
+        // flaky: histogram62.set((java.util.List<java.lang.Integer>) intList70);
+        util.Histogram histogram74 = new util.Histogram((java.util.List<java.lang.Integer>) intList70,
+                                                        (int) 'a');
         histogram60.set((java.util.List<java.lang.Integer>) intList70);
         histogram22.set((java.util.List<java.lang.Integer>) intList70);
         try {
@@ -2788,14 +3145,18 @@ public class Regression0Test {
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray14);
-        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'", boolean16 == true);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'",
+                                    boolean16 == true);
         org.junit.Assert.assertNotNull(intArray23);
         org.junit.Assert.assertNotNull(intArray32);
-        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + true + "'", boolean34 == true);
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + true + "'",
+                                    boolean34 == true);
         org.junit.Assert.assertNotNull(intArray50);
-        org.junit.Assert.assertTrue("'" + boolean52 + "' != '" + true + "'", boolean52 == true);
+        org.junit.Assert.assertTrue("'" + boolean52 + "' != '" + true + "'",
+                                    boolean52 == true);
         org.junit.Assert.assertNotNull(intArray69);
-        org.junit.Assert.assertTrue("'" + boolean71 + "' != '" + true + "'", boolean71 == true);
+        org.junit.Assert.assertTrue("'" + boolean71 + "' != '" + true + "'",
+                                    boolean71 == true);
     }
 
     @Test
@@ -2803,7 +3164,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test177");
         int int1 = util.RGBPixel.getBlue(52);
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 52 + "'", int1 == 52);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 52 + "'",
+                                    int1 == 52);
     }
 
     @Test
@@ -2819,7 +3181,9 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.UP + "'", direction0.equals(morphology.Sobel.Direction.UP));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.UP + "'",
+                                    direction0.equals(morphology.Sobel.Direction.UP));
     }
 
     @Test
@@ -2847,41 +3211,51 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test181");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
-// flaky:         histogram2.setOffset((int) (byte) 10);
+        // flaky: histogram2.setOffset((int) (byte) 10);
         int[] intArray8 = null; // flaky: histogram2.getData();
         util.Histogram histogram10 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram10.setSize((int) (short) 10);
-// flaky:         histogram10.setSize((int) (byte) 100);
+        // flaky: histogram10.setSize((int) (short) 10);
+        // flaky: histogram10.setSize((int) (byte) 100);
         java.lang.Integer[] intArray17 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList18 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean19 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList18, intArray17);
-// flaky:         histogram10.set((java.util.List<java.lang.Integer>) intList18);
-        util.Histogram histogram23 = new util.Histogram((java.util.List<java.lang.Integer>) intList18, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList18, (int) (byte) 100);
-        util.Histogram histogram27 = new util.Histogram((java.util.List<java.lang.Integer>) intList18, 255);
+        boolean boolean19 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList18,
+                                                         intArray17);
+        // flaky: histogram10.set((java.util.List<java.lang.Integer>) intList18);
+        util.Histogram histogram23 = new util.Histogram((java.util.List<java.lang.Integer>) intList18,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList18,
+                                                        (int) (byte) 100);
+        util.Histogram histogram27 = new util.Histogram((java.util.List<java.lang.Integer>) intList18,
+                                                        255);
         util.Histogram histogram29 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram29.setSize((int) (short) 10);
-// flaky:         histogram29.setSize((int) (byte) 100);
+        // flaky: histogram29.setSize((int) (short) 10);
+        // flaky: histogram29.setSize((int) (byte) 100);
         java.lang.Integer[] intArray36 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList37 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean38 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList37, intArray36);
-// flaky:         histogram29.set((java.util.List<java.lang.Integer>) intList37);
-        util.Histogram histogram41 = new util.Histogram((java.util.List<java.lang.Integer>) intList37, (int) 'a');
+        boolean boolean38 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList37,
+                                                         intArray36);
+        // flaky: histogram29.set((java.util.List<java.lang.Integer>) intList37);
+        util.Histogram histogram41 = new util.Histogram((java.util.List<java.lang.Integer>) intList37,
+                                                        (int) 'a');
         histogram27.set((java.util.List<java.lang.Integer>) intList37);
         java.lang.Class<?> wildcardClass43 = intList37.getClass();
         try {
-// flaky:             histogram2.set((java.util.List<java.lang.Integer>) intList37);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: histogram2.set((java.util.List<java.lang.Integer>) intList37);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
-// flaky:         org.junit.Assert.assertNotNull(intArray8);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray8);
         org.junit.Assert.assertNotNull(intArray17);
-        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + true + "'", boolean19 == true);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + true + "'",
+                                    boolean19 == true);
         org.junit.Assert.assertNotNull(intArray36);
-        org.junit.Assert.assertTrue("'" + boolean38 + "' != '" + true + "'", boolean38 == true);
+        org.junit.Assert.assertTrue("'" + boolean38 + "' != '" + true + "'",
+                                    boolean38 == true);
         org.junit.Assert.assertNotNull(wildcardClass43);
     }
 
@@ -2890,27 +3264,32 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test182");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
         java.lang.Integer[] intArray14 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList15 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean16 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList15, intArray14);
-// flaky:         histogram7.set((java.util.List<java.lang.Integer>) intList15);
-        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList15, (int) 'a');
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList15, (int) '4', (int) 'a');
+        boolean boolean16 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList15,
+                                                         intArray14);
+        // flaky: histogram7.set((java.util.List<java.lang.Integer>) intList15);
+        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList15,
+                                                        (int) 'a');
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList15,
+                                                        (int) '4', (int) 'a');
         int[] intArray23 = histogram22.getData();
         util.Histogram histogram25 = new util.Histogram(intArray23, 97);
         try {
-// flaky:             histogram2.set(intArray23);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: histogram2.set(intArray23);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
         org.junit.Assert.assertNotNull(intArray14);
-        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'", boolean16 == true);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'",
+                                    boolean16 == true);
         org.junit.Assert.assertNotNull(intArray23);
     }
 
@@ -2919,44 +3298,56 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test183");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         util.Histogram histogram25 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram25.setSize((int) (short) 10);
-// flaky:         histogram25.setSize((int) (byte) 100);
-// flaky:         histogram25.setSize((int) 'a');
+        // flaky: histogram25.setSize((int) (short) 10);
+        // flaky: histogram25.setSize((int) (byte) 100);
+        // flaky: histogram25.setSize((int) 'a');
         util.Histogram histogram33 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram33.setSize((int) (short) 10);
-// flaky:         histogram33.setSize((int) (byte) 100);
+        // flaky: histogram33.setSize((int) (short) 10);
+        // flaky: histogram33.setSize((int) (byte) 100);
         java.lang.Integer[] intArray40 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList41 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41, intArray40);
-// flaky:         histogram33.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram25.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 10);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, (int) '4');
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, 255);
+        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41,
+                                                         intArray40);
+        // flaky: histogram33.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram25.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        10);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, (int) '4');
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, 255);
         try {
             util.Histogram histogram59 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (byte) 0, (-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -2");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: -2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
         org.junit.Assert.assertNotNull(intArray40);
-        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'", boolean42 == true);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'",
+                                    boolean42 == true);
     }
 
     @Test
@@ -2976,19 +3367,20 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test185");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
-// flaky:         histogram2.setOffset((int) (byte) 10);
-// flaky:         histogram2.setSize((int) (short) 0);
-// flaky:         histogram2.setWidth(255);
+        // flaky: histogram2.setOffset((int) (byte) 10);
+        // flaky: histogram2.setSize((int) (short) 0);
+        // flaky: histogram2.setWidth(255);
         int[] intArray12 = null; // flaky: histogram2.getData();
         try {
             util.Histogram histogram14 = null; // flaky: new util.Histogram(intArray12, (int) ' ');
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
-// flaky:         org.junit.Assert.assertNotNull(intArray12);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray12);
     }
 
     @Test
@@ -3019,7 +3411,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test188");
         int int1 = util.RGBPixel.getGreen((-1));
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 255 + "'", int1 == 255);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 255 + "'",
+                                    int1 == 255);
     }
 
     @Test
@@ -3043,20 +3436,25 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test190");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, (int) (byte) 1);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
         try {
             util.Histogram histogram16 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 2");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -3089,51 +3487,63 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test193");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
-// flaky:         histogram2.setOffset((int) (byte) 10);
+        // flaky: histogram2.setOffset((int) (byte) 10);
         int[] intArray8 = null; // flaky: histogram2.getData();
         util.Histogram histogram10 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram10.setSize((int) (short) 10);
-// flaky:         histogram10.setSize((int) (byte) 100);
-// flaky:         histogram10.setSize((int) 'a');
+        // flaky: histogram10.setSize((int) (short) 10);
+        // flaky: histogram10.setSize((int) (byte) 100);
+        // flaky: histogram10.setSize((int) 'a');
         util.Histogram histogram18 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram18.setSize((int) (short) 10);
-// flaky:         histogram18.setSize((int) (byte) 100);
+        // flaky: histogram18.setSize((int) (short) 10);
+        // flaky: histogram18.setSize((int) (byte) 100);
         java.lang.Integer[] intArray25 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList26 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean27 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList26, intArray25);
-// flaky:         histogram18.set((java.util.List<java.lang.Integer>) intList26);
-        util.Histogram histogram31 = new util.Histogram((java.util.List<java.lang.Integer>) intList26, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram10.set((java.util.List<java.lang.Integer>) intList26);
+        boolean boolean27 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList26,
+                                                         intArray25);
+        // flaky: histogram18.set((java.util.List<java.lang.Integer>) intList26);
+        util.Histogram histogram31 = new util.Histogram((java.util.List<java.lang.Integer>) intList26,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram10.set((java.util.List<java.lang.Integer>) intList26);
         util.Histogram histogram34 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram34.setSize((int) (short) 10);
-// flaky:         histogram34.setSize((int) (byte) 100);
-// flaky:         histogram34.setSize((int) 'a');
+        // flaky: histogram34.setSize((int) (short) 10);
+        // flaky: histogram34.setSize((int) (byte) 100);
+        // flaky: histogram34.setSize((int) 'a');
         util.Histogram histogram42 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram42.setSize((int) (short) 10);
-// flaky:         histogram42.setSize((int) (byte) 100);
+        // flaky: histogram42.setSize((int) (short) 10);
+        // flaky: histogram42.setSize((int) (byte) 100);
         java.lang.Integer[] intArray49 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList50 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean51 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList50, intArray49);
-// flaky:         histogram42.set((java.util.List<java.lang.Integer>) intList50);
-        util.Histogram histogram55 = new util.Histogram((java.util.List<java.lang.Integer>) intList50, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram34.set((java.util.List<java.lang.Integer>) intList50);
-        util.Histogram histogram58 = new util.Histogram((java.util.List<java.lang.Integer>) intList50, 10);
-        util.Histogram histogram61 = new util.Histogram((java.util.List<java.lang.Integer>) intList50, 1, (int) '4');
-// flaky:         histogram10.set((java.util.List<java.lang.Integer>) intList50);
-        util.Histogram histogram65 = new util.Histogram((java.util.List<java.lang.Integer>) intList50, 1, 255);
+        boolean boolean51 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList50,
+                                                         intArray49);
+        // flaky: histogram42.set((java.util.List<java.lang.Integer>) intList50);
+        util.Histogram histogram55 = new util.Histogram((java.util.List<java.lang.Integer>) intList50,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram34.set((java.util.List<java.lang.Integer>) intList50);
+        util.Histogram histogram58 = new util.Histogram((java.util.List<java.lang.Integer>) intList50,
+                                                        10);
+        util.Histogram histogram61 = new util.Histogram((java.util.List<java.lang.Integer>) intList50,
+                                                        1, (int) '4');
+        // flaky: histogram10.set((java.util.List<java.lang.Integer>) intList50);
+        util.Histogram histogram65 = new util.Histogram((java.util.List<java.lang.Integer>) intList50,
+                                                        1, 255);
         try {
-// flaky:             histogram2.set((java.util.List<java.lang.Integer>) intList50);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: histogram2.set((java.util.List<java.lang.Integer>) intList50);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
-// flaky:         org.junit.Assert.assertNotNull(intArray8);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray8);
         org.junit.Assert.assertNotNull(intArray25);
-        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + true + "'", boolean27 == true);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + true + "'",
+                                    boolean27 == true);
         org.junit.Assert.assertNotNull(intArray49);
-        org.junit.Assert.assertTrue("'" + boolean51 + "' != '" + true + "'", boolean51 == true);
+        org.junit.Assert.assertTrue("'" + boolean51 + "' != '" + true + "'",
+                                    boolean51 == true);
     }
 
     @Test
@@ -3141,17 +3551,22 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test194");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4');
         histogram16.setOffset((int) (byte) -1);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -3185,7 +3600,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test197");
         int int1 = util.RGBPixel.getBlue((int) (byte) 100);
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 100 + "'", int1 == 100);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 100 + "'",
+                                    int1 == 100);
     }
 
     @Test
@@ -3228,7 +3644,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test201");
         util.Histogram histogram1 = new util.Histogram(255);
-        int[] intArray7 = new int[] { (byte) 1, (short) 10, (byte) -1, '#', (byte) 10 };
+        int[] intArray7 = new int[] { (byte) 1, (short) 10, (byte) -1, '#',
+                                      (byte) 10 };
         util.Histogram histogram9 = new util.Histogram(intArray7, (int) 'a');
         util.Histogram histogram11 = new util.Histogram(intArray7, 100);
         histogram1.set(intArray7);
@@ -3240,43 +3657,57 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test202");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) 'a');
         int[] intArray17 = histogram16.getData();
         util.Histogram histogram19 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram19.setSize((int) (short) 10);
-// flaky:         histogram19.setSize((int) (byte) 100);
+        // flaky: histogram19.setSize((int) (short) 10);
+        // flaky: histogram19.setSize((int) (byte) 100);
         java.lang.Integer[] intArray26 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList27 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27, intArray26);
-// flaky:         histogram19.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (byte) 100);
+        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27,
+                                                         intArray26);
+        // flaky: histogram19.set((java.util.List<java.lang.Integer>) intList27);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (byte) 100);
         histogram16.set((java.util.List<java.lang.Integer>) intList27);
         util.Histogram histogram37 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram37.setSize((int) (short) 10);
-// flaky:         histogram37.setSize((int) (byte) 100);
+        // flaky: histogram37.setSize((int) (short) 10);
+        // flaky: histogram37.setSize((int) (byte) 100);
         java.lang.Integer[] intArray44 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList45 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean46 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList45, intArray44);
-// flaky:         histogram37.set((java.util.List<java.lang.Integer>) intList45);
-        util.Histogram histogram50 = new util.Histogram((java.util.List<java.lang.Integer>) intList45, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList45, (int) (byte) 100);
-        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList45, 255);
+        boolean boolean46 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList45,
+                                                         intArray44);
+        // flaky: histogram37.set((java.util.List<java.lang.Integer>) intList45);
+        util.Histogram histogram50 = new util.Histogram((java.util.List<java.lang.Integer>) intList45,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList45,
+                                                        (int) (byte) 100);
+        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList45,
+                                                        255);
         util.Histogram histogram56 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram56.setSize((int) (short) 10);
-// flaky:         histogram56.setSize((int) (byte) 100);
+        // flaky: histogram56.setSize((int) (short) 10);
+        // flaky: histogram56.setSize((int) (byte) 100);
         java.lang.Integer[] intArray63 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList64 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean65 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList64, intArray63);
-// flaky:         histogram56.set((java.util.List<java.lang.Integer>) intList64);
-        util.Histogram histogram68 = new util.Histogram((java.util.List<java.lang.Integer>) intList64, (int) 'a');
+        boolean boolean65 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList64,
+                                                         intArray63);
+        // flaky: histogram56.set((java.util.List<java.lang.Integer>) intList64);
+        util.Histogram histogram68 = new util.Histogram((java.util.List<java.lang.Integer>) intList64,
+                                                        (int) 'a');
         histogram54.set((java.util.List<java.lang.Integer>) intList64);
         histogram16.set((java.util.List<java.lang.Integer>) intList64);
         try {
@@ -3285,14 +3716,18 @@ public class Regression0Test {
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray17);
         org.junit.Assert.assertNotNull(intArray26);
-        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'", boolean28 == true);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'",
+                                    boolean28 == true);
         org.junit.Assert.assertNotNull(intArray44);
-        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + true + "'", boolean46 == true);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + true + "'",
+                                    boolean46 == true);
         org.junit.Assert.assertNotNull(intArray63);
-        org.junit.Assert.assertTrue("'" + boolean65 + "' != '" + true + "'", boolean65 == true);
+        org.junit.Assert.assertTrue("'" + boolean65 + "' != '" + true + "'",
+                                    boolean65 == true);
     }
 
     @Test
@@ -3300,52 +3735,65 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test203");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
         util.Histogram histogram20 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram20.setSize((int) (short) 10);
-// flaky:         histogram20.setSize((int) (byte) 100);
+        // flaky: histogram20.setSize((int) (short) 10);
+        // flaky: histogram20.setSize((int) (byte) 100);
         java.lang.Integer[] intArray27 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList28 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28, intArray27);
-// flaky:         histogram20.set((java.util.List<java.lang.Integer>) intList28);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) 'a');
+        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28,
+                                                         intArray27);
+        // flaky: histogram20.set((java.util.List<java.lang.Integer>) intList28);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) 'a');
         histogram18.set((java.util.List<java.lang.Integer>) intList28);
         util.Histogram histogram35 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram35.setSize((int) (short) 10);
-// flaky:         histogram35.setSize((int) (byte) 100);
+        // flaky: histogram35.setSize((int) (short) 10);
+        // flaky: histogram35.setSize((int) (byte) 100);
         java.lang.Integer[] intArray42 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList43 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43, intArray42);
-// flaky:         histogram35.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 10, (int) (byte) 10);
+        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43,
+                                                         intArray42);
+        // flaky: histogram35.set((java.util.List<java.lang.Integer>) intList43);
+        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram18.set((java.util.List<java.lang.Integer>) intList43);
         util.Histogram histogram51 = new util.Histogram((int) ' ');
         histogram51.setWidth((int) (byte) 100);
         histogram51.setOffset((int) (short) 100);
         util.Histogram histogram57 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram57.setSize((int) (short) 10);
-// flaky:         histogram57.setSize((int) (byte) 100);
-// flaky:         histogram57.setOffset((int) (byte) 1);
-// flaky:         histogram57.setOffset((int) '4');
+        // flaky: histogram57.setSize((int) (short) 10);
+        // flaky: histogram57.setSize((int) (byte) 100);
+        // flaky: histogram57.setOffset((int) (byte) 1);
+        // flaky: histogram57.setOffset((int) '4');
         int[] intArray66 = null; // flaky: histogram57.getData();
-// flaky:         histogram51.set(intArray66);
+        // flaky: histogram51.set(intArray66);
         util.Histogram histogram70 = null; // flaky: new util.Histogram(intArray66, (int) '#', (int) '#');
-// flaky:         histogram18.set(intArray66);
+        // flaky: histogram18.set(intArray66);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray27);
-        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'", boolean29 == true);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'",
+                                    boolean29 == true);
         org.junit.Assert.assertNotNull(intArray42);
-        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'", boolean44 == true);
-// flaky:         org.junit.Assert.assertNotNull(intArray66);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'",
+                                    boolean44 == true);
+        // flaky: org.junit.Assert.assertNotNull(intArray66);
     }
 
     @Test
@@ -3369,43 +3817,54 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test205");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         util.Histogram histogram25 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram25.setSize((int) (short) 10);
-// flaky:         histogram25.setSize((int) (byte) 100);
-// flaky:         histogram25.setSize((int) 'a');
+        // flaky: histogram25.setSize((int) (short) 10);
+        // flaky: histogram25.setSize((int) (byte) 100);
+        // flaky: histogram25.setSize((int) 'a');
         util.Histogram histogram33 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram33.setSize((int) (short) 10);
-// flaky:         histogram33.setSize((int) (byte) 100);
+        // flaky: histogram33.setSize((int) (short) 10);
+        // flaky: histogram33.setSize((int) (byte) 100);
         java.lang.Integer[] intArray40 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList41 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41, intArray40);
-// flaky:         histogram33.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram25.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 10);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, (int) '4');
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList41);
+        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41,
+                                                         intArray40);
+        // flaky: histogram33.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram25.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        10);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, (int) '4');
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList41);
         try {
             int int55 = 0; // flaky: histogram1.get(97);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 97");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 97");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
         org.junit.Assert.assertNotNull(intArray40);
-        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'", boolean42 == true);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'",
+                                    boolean42 == true);
     }
 
     @Test
@@ -3413,20 +3872,21 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test206");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
-// flaky:         histogram2.setWidth(100);
+        // flaky: histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth(100);
         util.Histogram histogram8 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram8.setSize((int) (short) 10);
-// flaky:         histogram8.setSize((int) (byte) 100);
-// flaky:         histogram8.setOffset((int) (byte) 1);
-// flaky:         histogram8.setOffset((int) '4');
+        // flaky: histogram8.setSize((int) (short) 10);
+        // flaky: histogram8.setSize((int) (byte) 100);
+        // flaky: histogram8.setOffset((int) (byte) 1);
+        // flaky: histogram8.setOffset((int) '4');
         int[] intArray17 = null; // flaky: histogram8.getData();
         try {
-// flaky:             histogram2.set(intArray17);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: histogram2.set(intArray17);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray17);
+        // flaky: org.junit.Assert.assertNotNull(intArray17);
     }
 
     @Test
@@ -3434,7 +3894,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test207");
         int int1 = util.RGBPixel.getBlue(10);
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 10 + "'", int1 == 10);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 10 + "'",
+                                    int1 == 10);
     }
 
     @Test
@@ -3442,75 +3903,98 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test208");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
-// flaky:         histogram1.setSize(0);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize(0);
         util.Histogram histogram11 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram11.setSize((int) (short) 10);
-// flaky:         histogram11.setSize((int) (byte) 100);
+        // flaky: histogram11.setSize((int) (short) 10);
+        // flaky: histogram11.setSize((int) (byte) 100);
         java.lang.Integer[] intArray18 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList19 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean20 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList19, intArray18);
-// flaky:         histogram11.set((java.util.List<java.lang.Integer>) intList19);
-        util.Histogram histogram23 = new util.Histogram((java.util.List<java.lang.Integer>) intList19, (int) 'a');
-        util.Histogram histogram26 = new util.Histogram((java.util.List<java.lang.Integer>) intList19, (int) '4', (int) 'a');
+        boolean boolean20 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList19,
+                                                         intArray18);
+        // flaky: histogram11.set((java.util.List<java.lang.Integer>) intList19);
+        util.Histogram histogram23 = new util.Histogram((java.util.List<java.lang.Integer>) intList19,
+                                                        (int) 'a');
+        util.Histogram histogram26 = new util.Histogram((java.util.List<java.lang.Integer>) intList19,
+                                                        (int) '4', (int) 'a');
         int[] intArray27 = histogram26.getData();
         util.Histogram histogram29 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram29.setSize((int) (short) 10);
-// flaky:         histogram29.setSize((int) (byte) 100);
+        // flaky: histogram29.setSize((int) (short) 10);
+        // flaky: histogram29.setSize((int) (byte) 100);
         java.lang.Integer[] intArray36 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList37 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean38 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList37, intArray36);
-// flaky:         histogram29.set((java.util.List<java.lang.Integer>) intList37);
-        util.Histogram histogram42 = new util.Histogram((java.util.List<java.lang.Integer>) intList37, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram44 = new util.Histogram((java.util.List<java.lang.Integer>) intList37, (int) (byte) 100);
+        boolean boolean38 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList37,
+                                                         intArray36);
+        // flaky: histogram29.set((java.util.List<java.lang.Integer>) intList37);
+        util.Histogram histogram42 = new util.Histogram((java.util.List<java.lang.Integer>) intList37,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram44 = new util.Histogram((java.util.List<java.lang.Integer>) intList37,
+                                                        (int) (byte) 100);
         histogram26.set((java.util.List<java.lang.Integer>) intList37);
         util.Histogram histogram47 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram47.setSize((int) (short) 10);
-// flaky:         histogram47.setSize((int) (byte) 100);
+        // flaky: histogram47.setSize((int) (short) 10);
+        // flaky: histogram47.setSize((int) (byte) 100);
         java.lang.Integer[] intArray54 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList55 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean56 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList55, intArray54);
-// flaky:         histogram47.set((java.util.List<java.lang.Integer>) intList55);
-        util.Histogram histogram60 = new util.Histogram((java.util.List<java.lang.Integer>) intList55, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram62 = new util.Histogram((java.util.List<java.lang.Integer>) intList55, (int) (byte) 100);
-        util.Histogram histogram64 = new util.Histogram((java.util.List<java.lang.Integer>) intList55, 255);
+        boolean boolean56 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList55,
+                                                         intArray54);
+        // flaky: histogram47.set((java.util.List<java.lang.Integer>) intList55);
+        util.Histogram histogram60 = new util.Histogram((java.util.List<java.lang.Integer>) intList55,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram62 = new util.Histogram((java.util.List<java.lang.Integer>) intList55,
+                                                        (int) (byte) 100);
+        util.Histogram histogram64 = new util.Histogram((java.util.List<java.lang.Integer>) intList55,
+                                                        255);
         util.Histogram histogram66 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram66.setSize((int) (short) 10);
-// flaky:         histogram66.setSize((int) (byte) 100);
+        // flaky: histogram66.setSize((int) (short) 10);
+        // flaky: histogram66.setSize((int) (byte) 100);
         java.lang.Integer[] intArray73 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList74 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean75 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList74, intArray73);
-// flaky:         histogram66.set((java.util.List<java.lang.Integer>) intList74);
-        util.Histogram histogram78 = new util.Histogram((java.util.List<java.lang.Integer>) intList74, (int) 'a');
+        boolean boolean75 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList74,
+                                                         intArray73);
+        // flaky: histogram66.set((java.util.List<java.lang.Integer>) intList74);
+        util.Histogram histogram78 = new util.Histogram((java.util.List<java.lang.Integer>) intList74,
+                                                        (int) 'a');
         histogram64.set((java.util.List<java.lang.Integer>) intList74);
         histogram26.set((java.util.List<java.lang.Integer>) intList74);
         util.Histogram histogram82 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram82.setSize((int) (short) 10);
-// flaky:         histogram82.setSize((int) (byte) 100);
+        // flaky: histogram82.setSize((int) (short) 10);
+        // flaky: histogram82.setSize((int) (byte) 100);
         java.lang.Integer[] intArray89 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList90 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean91 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList90, intArray89);
-// flaky:         histogram82.set((java.util.List<java.lang.Integer>) intList90);
-        util.Histogram histogram95 = new util.Histogram((java.util.List<java.lang.Integer>) intList90, (int) (short) 10, (int) (byte) 10);
+        boolean boolean91 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList90,
+                                                         intArray89);
+        // flaky: histogram82.set((java.util.List<java.lang.Integer>) intList90);
+        util.Histogram histogram95 = new util.Histogram((java.util.List<java.lang.Integer>) intList90,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram26.set((java.util.List<java.lang.Integer>) intList90);
         try {
-// flaky:             histogram1.set((java.util.List<java.lang.Integer>) intList90);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 2");
+            // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList90);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray18);
-        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + true + "'", boolean20 == true);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + true + "'",
+                                    boolean20 == true);
         org.junit.Assert.assertNotNull(intArray27);
         org.junit.Assert.assertNotNull(intArray36);
-        org.junit.Assert.assertTrue("'" + boolean38 + "' != '" + true + "'", boolean38 == true);
+        org.junit.Assert.assertTrue("'" + boolean38 + "' != '" + true + "'",
+                                    boolean38 == true);
         org.junit.Assert.assertNotNull(intArray54);
-        org.junit.Assert.assertTrue("'" + boolean56 + "' != '" + true + "'", boolean56 == true);
+        org.junit.Assert.assertTrue("'" + boolean56 + "' != '" + true + "'",
+                                    boolean56 == true);
         org.junit.Assert.assertNotNull(intArray73);
-        org.junit.Assert.assertTrue("'" + boolean75 + "' != '" + true + "'", boolean75 == true);
+        org.junit.Assert.assertTrue("'" + boolean75 + "' != '" + true + "'",
+                                    boolean75 == true);
         org.junit.Assert.assertNotNull(intArray89);
-        org.junit.Assert.assertTrue("'" + boolean91 + "' != '" + true + "'", boolean91 == true);
+        org.junit.Assert.assertTrue("'" + boolean91 + "' != '" + true + "'",
+                                    boolean91 == true);
     }
 
     @Test
@@ -3518,7 +4002,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test209");
         int int1 = util.RGBPixel.getBlue((int) '#');
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 35 + "'", int1 == 35);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 35 + "'",
+                                    int1 == 35);
     }
 
     @Test
@@ -3529,18 +4014,19 @@ public class Regression0Test {
         histogram1.setWidth((int) (byte) 100);
         histogram1.setOffset((int) (short) 100);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
-// flaky:         histogram7.setOffset((int) (byte) 1);
-// flaky:         histogram7.setOffset((int) '4');
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setOffset((int) (byte) 1);
+        // flaky: histogram7.setOffset((int) '4');
         int[] intArray16 = null; // flaky: histogram7.getData();
-// flaky:         histogram1.set(intArray16);
+        // flaky: histogram1.set(intArray16);
         try {
             util.Histogram histogram20 = null; // flaky: new util.Histogram(intArray16, (int) (byte) 100, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray16);
+        // flaky: org.junit.Assert.assertNotNull(intArray16);
     }
 
     @Test
@@ -3548,7 +4034,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test211");
         int int1 = util.RGBPixel.getRed((int) (byte) -1);
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 255 + "'", int1 == 255);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 255 + "'",
+                                    int1 == 255);
     }
 
     @Test
@@ -3577,16 +4064,18 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.UP + "'", direction0.equals(morphology.Sobel.Direction.UP));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.UP + "'",
+                                    direction0.equals(morphology.Sobel.Direction.UP));
         org.junit.Assert.assertNotNull(floatArray4);
         org.junit.Assert.assertNotNull(floatArray8);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology10);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology10);
         org.junit.Assert.assertNotNull(baseMorphology11);
         org.junit.Assert.assertNotNull(floatArray18);
         org.junit.Assert.assertNotNull(baseMorphology20);
         org.junit.Assert.assertNotNull(wildcardClass21);
         org.junit.Assert.assertNotNull(baseMorphology24);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology25);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology25);
     }
 
     @Test
@@ -3594,7 +4083,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test213");
         int int1 = util.RGBPixel.getGreen((int) (short) -1);
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 255 + "'", int1 == 255);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 255 + "'",
+                                    int1 == 255);
     }
 
     @Test
@@ -3602,10 +4092,11 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test214");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) '4');
+        // flaky: histogram1.setSize((int) '4');
         try {
-// flaky:             histogram1.put((int) (byte) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: histogram1.put((int) (byte) -1);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -3614,16 +4105,21 @@ public class Regression0Test {
     public void test215() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test215");
-        java.lang.Integer[] intArray6 = new java.lang.Integer[] { 52, 255, (-1), 0, (-1), 100 };
+        java.lang.Integer[] intArray6 = new java.lang.Integer[] { 52, 255, (-1),
+                                                                  0, (-1),
+                                                                  100 };
         java.util.ArrayList<java.lang.Integer> intList7 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean8 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList7, intArray6);
+        boolean boolean8 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList7,
+                                                        intArray6);
         try {
-            util.Histogram histogram10 = new util.Histogram((java.util.List<java.lang.Integer>) intList7, (int) (byte) 100);
+            util.Histogram histogram10 = new util.Histogram((java.util.List<java.lang.Integer>) intList7,
+                                                            (int) (byte) 100);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 256");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray6);
-        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + true + "'", boolean8 == true);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + true + "'",
+                                    boolean8 == true);
     }
 
     @Test
@@ -3632,9 +4128,12 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test216");
         util.Histogram histogram1 = new util.Histogram((int) (byte) 100);
         int[] intArray2 = histogram1.getData();
-        java.lang.Integer[] intArray11 = new java.lang.Integer[] { 100, 100, 52, 0, 100, 100, (-1), 0 };
+        java.lang.Integer[] intArray11 = new java.lang.Integer[] { 100, 100, 52,
+                                                                   0, 100, 100,
+                                                                   (-1), 0 };
         java.util.ArrayList<java.lang.Integer> intList12 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12, intArray11);
+        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12,
+                                                         intArray11);
         try {
             histogram1.set((java.util.List<java.lang.Integer>) intList12);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 101");
@@ -3642,7 +4141,8 @@ public class Regression0Test {
         }
         org.junit.Assert.assertNotNull(intArray2);
         org.junit.Assert.assertNotNull(intArray11);
-        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'",
+                                    boolean13 == true);
     }
 
     @Test
@@ -3650,17 +4150,21 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test217");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram14.setOffset(10);
         histogram14.setSize(0);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -3668,20 +4172,25 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test218");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, (int) (byte) 1);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
         try {
-            util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 1);
+            util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                            (int) (byte) 1);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -3716,7 +4225,8 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test221");
         try {
             util.Histogram histogram2 = null; // flaky: new util.Histogram((-1), (int) '4');
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -3726,7 +4236,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test222");
         int int1 = util.RGBPixel.getBlue(35);
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 35 + "'", int1 == 35);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 35 + "'",
+                                    int1 == 35);
     }
 
     @Test
@@ -3734,17 +4245,21 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test223");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram14.put((int) (short) 10);
         histogram14.setOffset((int) (byte) 1);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -3752,30 +4267,35 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test224");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
-// flaky:         histogram1.setWidth(1);
-// flaky:         histogram1.setWidth((int) '4');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
+        // flaky: histogram1.setWidth(1);
+        // flaky: histogram1.setWidth((int) '4');
         java.lang.Class<?> wildcardClass12 = null; // flaky: histogram1.getClass();
         util.Histogram histogram14 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram14.setSize((int) (short) 10);
-// flaky:         histogram14.setSize((int) (byte) 100);
+        // flaky: histogram14.setSize((int) (short) 10);
+        // flaky: histogram14.setSize((int) (byte) 100);
         java.lang.Integer[] intArray21 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList22 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean23 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList22, intArray21);
-// flaky:         histogram14.set((java.util.List<java.lang.Integer>) intList22);
-        util.Histogram histogram27 = new util.Histogram((java.util.List<java.lang.Integer>) intList22, (int) (short) 10, (int) (byte) 10);
+        boolean boolean23 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList22,
+                                                         intArray21);
+        // flaky: histogram14.set((java.util.List<java.lang.Integer>) intList22);
+        util.Histogram histogram27 = new util.Histogram((java.util.List<java.lang.Integer>) intList22,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray28 = histogram27.getData();
-// flaky:         histogram1.set(intArray28);
+        // flaky: histogram1.set(intArray28);
         try {
-// flaky:             histogram1.setSize((-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: histogram1.setSize((-1));
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(wildcardClass12);
+        // flaky: org.junit.Assert.assertNotNull(wildcardClass12);
         org.junit.Assert.assertNotNull(intArray21);
-        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + true + "'", boolean23 == true);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + true + "'",
+                                    boolean23 == true);
         org.junit.Assert.assertNotNull(intArray28);
     }
 
@@ -3784,15 +4304,16 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test225");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
-// flaky:         histogram1.setSize(0);
-// flaky:         histogram1.setWidth(10);
-// flaky:         histogram1.setWidth((int) (short) -1);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize(0);
+        // flaky: histogram1.setWidth(10);
+        // flaky: histogram1.setWidth((int) (short) -1);
         try {
-// flaky:             histogram1.put((int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: histogram1.put((int) (byte) 0);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -3803,7 +4324,8 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test226");
         try {
             util.Histogram histogram2 = null; // flaky: new util.Histogram((int) (short) -1, (int) (short) 1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -3813,38 +4335,48 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test227");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setWidth(0);
-// flaky:         histogram1.setOffset((int) '#');
-// flaky:         histogram1.setSize((int) (byte) 0);
+        // flaky: histogram1.setWidth(0);
+        // flaky: histogram1.setOffset((int) '#');
+        // flaky: histogram1.setSize((int) (byte) 0);
         java.lang.Integer[] intArray10 = new java.lang.Integer[] { 10, 1 };
         java.util.ArrayList<java.lang.Integer> intList11 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean12 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList11, intArray10);
-        util.Histogram histogram15 = new util.Histogram((java.util.List<java.lang.Integer>) intList11, (int) '#', (int) (byte) 100);
+        boolean boolean12 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList11,
+                                                         intArray10);
+        util.Histogram histogram15 = new util.Histogram((java.util.List<java.lang.Integer>) intList11,
+                                                        (int) '#',
+                                                        (int) (byte) 100);
         histogram15.put((int) '#');
         util.Histogram histogram19 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram19.setSize((int) (short) 10);
-// flaky:         histogram19.setSize((int) (byte) 100);
-// flaky:         histogram19.setSize((int) 'a');
+        // flaky: histogram19.setSize((int) (short) 10);
+        // flaky: histogram19.setSize((int) (byte) 100);
+        // flaky: histogram19.setSize((int) 'a');
         util.Histogram histogram27 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram27.setSize((int) (short) 10);
-// flaky:         histogram27.setSize((int) (byte) 100);
+        // flaky: histogram27.setSize((int) (short) 10);
+        // flaky: histogram27.setSize((int) (byte) 100);
         java.lang.Integer[] intArray34 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList35 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean36 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList35, intArray34);
-// flaky:         histogram27.set((java.util.List<java.lang.Integer>) intList35);
-        util.Histogram histogram40 = new util.Histogram((java.util.List<java.lang.Integer>) intList35, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram19.set((java.util.List<java.lang.Integer>) intList35);
-        util.Histogram histogram43 = new util.Histogram((java.util.List<java.lang.Integer>) intList35, 10);
+        boolean boolean36 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList35,
+                                                         intArray34);
+        // flaky: histogram27.set((java.util.List<java.lang.Integer>) intList35);
+        util.Histogram histogram40 = new util.Histogram((java.util.List<java.lang.Integer>) intList35,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram19.set((java.util.List<java.lang.Integer>) intList35);
+        util.Histogram histogram43 = new util.Histogram((java.util.List<java.lang.Integer>) intList35,
+                                                        10);
         histogram15.set((java.util.List<java.lang.Integer>) intList35);
         try {
-// flaky:             histogram1.set((java.util.List<java.lang.Integer>) intList35);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList35);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray10);
-        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + true + "'", boolean12 == true);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + true + "'",
+                                    boolean12 == true);
         org.junit.Assert.assertNotNull(intArray34);
-        org.junit.Assert.assertTrue("'" + boolean36 + "' != '" + true + "'", boolean36 == true);
+        org.junit.Assert.assertTrue("'" + boolean36 + "' != '" + true + "'",
+                                    boolean36 == true);
     }
 
     @Test
@@ -3873,13 +4405,13 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test230");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         int int9 = 0; // flaky: histogram1.get((int) (short) 0);
-// flaky:         histogram1.setSize((int) (short) 100);
-// flaky:         histogram1.setOffset((int) (byte) 10);
-// flaky:         histogram1.put((int) (byte) 10);
+        // flaky: histogram1.setSize((int) (short) 100);
+        // flaky: histogram1.setOffset((int) (byte) 10);
+        // flaky: histogram1.put((int) (byte) 10);
         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
     }
 
@@ -3899,7 +4431,9 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.DOWN + "'", direction0.equals(morphology.Sobel.Direction.DOWN));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.DOWN + "'",
+                                    direction0.equals(morphology.Sobel.Direction.DOWN));
         org.junit.Assert.assertNotNull(floatArray2);
         org.junit.Assert.assertNotNull(wildcardClass4);
         org.junit.Assert.assertNotNull(baseMorphology5);
@@ -3909,16 +4443,21 @@ public class Regression0Test {
     public void test232() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test232");
-        java.lang.Integer[] intArray9 = new java.lang.Integer[] { 35, 100, (-1), 97, 100, 0, 35, 100, 35 };
+        java.lang.Integer[] intArray9 = new java.lang.Integer[] { 35, 100, (-1),
+                                                                  97, 100, 0,
+                                                                  35, 100, 35 };
         java.util.ArrayList<java.lang.Integer> intList10 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean11 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList10, intArray9);
+        boolean boolean11 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList10,
+                                                         intArray9);
         try {
             util.Histogram histogram14 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList10, (int) (byte) 0, 255);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray9);
-        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + true + "'", boolean11 == true);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + true + "'",
+                                    boolean11 == true);
     }
 
     @Test
@@ -3927,28 +4466,37 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test233");
         java.lang.Integer[] intArray2 = new java.lang.Integer[] { 10, 1 };
         java.util.ArrayList<java.lang.Integer> intList3 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3, intArray2);
-        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3, (int) '#', (int) (byte) 100);
+        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3,
+                                                        intArray2);
+        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3,
+                                                       (int) '#',
+                                                       (int) (byte) 100);
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
-// flaky:         histogram9.setSize((int) 'a');
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) 'a');
         util.Histogram histogram17 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram17.setSize((int) (short) 10);
-// flaky:         histogram17.setSize((int) (byte) 100);
+        // flaky: histogram17.setSize((int) (short) 10);
+        // flaky: histogram17.setSize((int) (byte) 100);
         java.lang.Integer[] intArray24 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList25 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean26 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList25, intArray24);
-// flaky:         histogram17.set((java.util.List<java.lang.Integer>) intList25);
-        util.Histogram histogram30 = new util.Histogram((java.util.List<java.lang.Integer>) intList25, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList25);
+        boolean boolean26 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList25,
+                                                         intArray24);
+        // flaky: histogram17.set((java.util.List<java.lang.Integer>) intList25);
+        util.Histogram histogram30 = new util.Histogram((java.util.List<java.lang.Integer>) intList25,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList25);
         histogram7.set((java.util.List<java.lang.Integer>) intList25);
-        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList25, 97);
+        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList25,
+                                                        97);
         histogram34.put(10);
         org.junit.Assert.assertNotNull(intArray2);
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'", boolean4 == true);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'",
+                                    boolean4 == true);
         org.junit.Assert.assertNotNull(intArray24);
-        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + true + "'", boolean26 == true);
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + true + "'",
+                                    boolean26 == true);
     }
 
     @Test
@@ -3956,45 +4504,56 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test234");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         util.Histogram histogram6 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram6.setSize((int) (short) 10);
-// flaky:         histogram6.setSize((int) (byte) 100);
-// flaky:         histogram6.setSize((int) 'a');
+        // flaky: histogram6.setSize((int) (short) 10);
+        // flaky: histogram6.setSize((int) (byte) 100);
+        // flaky: histogram6.setSize((int) 'a');
         util.Histogram histogram14 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram14.setSize((int) (short) 10);
-// flaky:         histogram14.setSize((int) (byte) 100);
+        // flaky: histogram14.setSize((int) (short) 10);
+        // flaky: histogram14.setSize((int) (byte) 100);
         java.lang.Integer[] intArray21 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList22 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean23 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList22, intArray21);
-// flaky:         histogram14.set((java.util.List<java.lang.Integer>) intList22);
-        util.Histogram histogram27 = new util.Histogram((java.util.List<java.lang.Integer>) intList22, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram6.set((java.util.List<java.lang.Integer>) intList22);
+        boolean boolean23 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList22,
+                                                         intArray21);
+        // flaky: histogram14.set((java.util.List<java.lang.Integer>) intList22);
+        util.Histogram histogram27 = new util.Histogram((java.util.List<java.lang.Integer>) intList22,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram6.set((java.util.List<java.lang.Integer>) intList22);
         util.Histogram histogram30 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram30.setSize((int) (short) 10);
-// flaky:         histogram30.setSize((int) (byte) 100);
-// flaky:         histogram30.setSize((int) 'a');
+        // flaky: histogram30.setSize((int) (short) 10);
+        // flaky: histogram30.setSize((int) (byte) 100);
+        // flaky: histogram30.setSize((int) 'a');
         util.Histogram histogram38 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram38.setSize((int) (short) 10);
-// flaky:         histogram38.setSize((int) (byte) 100);
+        // flaky: histogram38.setSize((int) (short) 10);
+        // flaky: histogram38.setSize((int) (byte) 100);
         java.lang.Integer[] intArray45 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList46 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean47 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList46, intArray45);
-// flaky:         histogram38.set((java.util.List<java.lang.Integer>) intList46);
-        util.Histogram histogram51 = new util.Histogram((java.util.List<java.lang.Integer>) intList46, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram30.set((java.util.List<java.lang.Integer>) intList46);
-        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList46, 10);
-        util.Histogram histogram57 = new util.Histogram((java.util.List<java.lang.Integer>) intList46, 1, (int) '4');
-// flaky:         histogram6.set((java.util.List<java.lang.Integer>) intList46);
+        boolean boolean47 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList46,
+                                                         intArray45);
+        // flaky: histogram38.set((java.util.List<java.lang.Integer>) intList46);
+        util.Histogram histogram51 = new util.Histogram((java.util.List<java.lang.Integer>) intList46,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram30.set((java.util.List<java.lang.Integer>) intList46);
+        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList46,
+                                                        10);
+        util.Histogram histogram57 = new util.Histogram((java.util.List<java.lang.Integer>) intList46,
+                                                        1, (int) '4');
+        // flaky: histogram6.set((java.util.List<java.lang.Integer>) intList46);
         try {
-// flaky:             histogram2.set((java.util.List<java.lang.Integer>) intList46);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: histogram2.set((java.util.List<java.lang.Integer>) intList46);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray21);
-        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + true + "'", boolean23 == true);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + true + "'",
+                                    boolean23 == true);
         org.junit.Assert.assertNotNull(intArray45);
-        org.junit.Assert.assertTrue("'" + boolean47 + "' != '" + true + "'", boolean47 == true);
+        org.junit.Assert.assertTrue("'" + boolean47 + "' != '" + true + "'",
+                                    boolean47 == true);
     }
 
     @Test
@@ -4023,16 +4582,18 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.UP + "'", direction0.equals(morphology.Sobel.Direction.UP));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.UP + "'",
+                                    direction0.equals(morphology.Sobel.Direction.UP));
         org.junit.Assert.assertNotNull(floatArray4);
         org.junit.Assert.assertNotNull(floatArray8);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology10);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology10);
         org.junit.Assert.assertNotNull(baseMorphology11);
         org.junit.Assert.assertNotNull(floatArray18);
         org.junit.Assert.assertNotNull(baseMorphology20);
         org.junit.Assert.assertNotNull(wildcardClass21);
         org.junit.Assert.assertNotNull(baseMorphology24);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology25);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology25);
     }
 
     @Test
@@ -4111,44 +4672,58 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test240");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
         util.Histogram histogram20 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram20.setSize((int) (short) 10);
-// flaky:         histogram20.setSize((int) (byte) 100);
+        // flaky: histogram20.setSize((int) (short) 10);
+        // flaky: histogram20.setSize((int) (byte) 100);
         java.lang.Integer[] intArray27 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList28 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28, intArray27);
-// flaky:         histogram20.set((java.util.List<java.lang.Integer>) intList28);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) 'a');
+        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28,
+                                                         intArray27);
+        // flaky: histogram20.set((java.util.List<java.lang.Integer>) intList28);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) 'a');
         histogram18.set((java.util.List<java.lang.Integer>) intList28);
         util.Histogram histogram35 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram35.setSize((int) (short) 10);
-// flaky:         histogram35.setSize((int) (byte) 100);
+        // flaky: histogram35.setSize((int) (short) 10);
+        // flaky: histogram35.setSize((int) (byte) 100);
         java.lang.Integer[] intArray42 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList43 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43, intArray42);
-// flaky:         histogram35.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 10, (int) (byte) 10);
+        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43,
+                                                         intArray42);
+        // flaky: histogram35.set((java.util.List<java.lang.Integer>) intList43);
+        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram18.set((java.util.List<java.lang.Integer>) intList43);
         try {
-            util.Histogram histogram51 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 1);
+            util.Histogram histogram51 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                            (int) (short) 1);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray27);
-        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'", boolean29 == true);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'",
+                                    boolean29 == true);
         org.junit.Assert.assertNotNull(intArray42);
-        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'", boolean44 == true);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'",
+                                    boolean44 == true);
     }
 
     @Test
@@ -4159,10 +4734,11 @@ public class Regression0Test {
         int[] intArray3 = null; // flaky: histogram2.getData();
         try {
             util.Histogram histogram5 = null; // flaky: new util.Histogram(intArray3, 10);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray3);
+        // flaky: org.junit.Assert.assertNotNull(intArray3);
     }
 
     @Test
@@ -4171,31 +4747,40 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test242");
         java.lang.Integer[] intArray2 = new java.lang.Integer[] { 10, 1 };
         java.util.ArrayList<java.lang.Integer> intList3 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3, intArray2);
-        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3, (int) '#', (int) (byte) 100);
+        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3,
+                                                        intArray2);
+        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3,
+                                                       (int) '#',
+                                                       (int) (byte) 100);
         histogram7.put((int) '#');
         util.Histogram histogram11 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram11.setSize((int) (short) 10);
-// flaky:         histogram11.setSize((int) (byte) 100);
-// flaky:         histogram11.setSize((int) 'a');
+        // flaky: histogram11.setSize((int) (short) 10);
+        // flaky: histogram11.setSize((int) (byte) 100);
+        // flaky: histogram11.setSize((int) 'a');
         util.Histogram histogram19 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram19.setSize((int) (short) 10);
-// flaky:         histogram19.setSize((int) (byte) 100);
+        // flaky: histogram19.setSize((int) (short) 10);
+        // flaky: histogram19.setSize((int) (byte) 100);
         java.lang.Integer[] intArray26 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList27 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27, intArray26);
-// flaky:         histogram19.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram11.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, 10);
+        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27,
+                                                         intArray26);
+        // flaky: histogram19.set((java.util.List<java.lang.Integer>) intList27);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram11.set((java.util.List<java.lang.Integer>) intList27);
+        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        10);
         histogram7.set((java.util.List<java.lang.Integer>) intList27);
         util.Histogram histogram39 = new util.Histogram(255, (int) (byte) 100);
         int[] intArray40 = histogram39.getData();
         histogram7.set(intArray40);
         org.junit.Assert.assertNotNull(intArray2);
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'", boolean4 == true);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'",
+                                    boolean4 == true);
         org.junit.Assert.assertNotNull(intArray26);
-        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'", boolean28 == true);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'",
+                                    boolean28 == true);
         org.junit.Assert.assertNotNull(intArray40);
     }
 
@@ -4204,25 +4789,30 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test243");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setWidth(0);
-// flaky:         histogram1.setSize((int) 'a');
-// flaky:         histogram1.setWidth((int) (byte) 100);
+        // flaky: histogram1.setWidth(0);
+        // flaky: histogram1.setSize((int) 'a');
+        // flaky: histogram1.setWidth((int) (byte) 100);
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 100, (int) (byte) 1);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         try {
-            util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, 1);
+            util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                            1);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
     }
 
     @Test
@@ -4246,7 +4836,7 @@ public class Regression0Test {
         }
         org.junit.Assert.assertNotNull(floatArray3);
         org.junit.Assert.assertNotNull(floatArray6);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology11);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology11);
     }
 
     @Test
@@ -4254,7 +4844,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test245");
         int int1 = util.RGBPixel.getBlue(97);
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 97 + "'", int1 == 97);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 97 + "'",
+                                    int1 == 97);
     }
 
     @Test
@@ -4265,10 +4856,11 @@ public class Regression0Test {
         int[] intArray3 = null; // flaky: histogram2.getData();
         try {
             util.Histogram histogram6 = null; // flaky: new util.Histogram(intArray3, 100, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray3);
+        // flaky: org.junit.Assert.assertNotNull(intArray3);
     }
 
     @Test
@@ -4276,14 +4868,15 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test247");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
         try {
             util.Histogram histogram7 = null; // flaky: new util.Histogram(intArray5, 255);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
     }
 
     @Test
@@ -4311,7 +4904,8 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test250");
         try {
             util.Histogram histogram2 = null; // flaky: new util.Histogram((int) (byte) -1, (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -4341,7 +4935,8 @@ public class Regression0Test {
     public void test253() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test253");
-        util.Histogram histogram2 = new util.Histogram((int) (byte) 1, (int) '#');
+        util.Histogram histogram2 = new util.Histogram((int) (byte) 1,
+                                                       (int) '#');
     }
 
     @Test
@@ -4362,13 +4957,16 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test255");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray15 = histogram14.getData();
         histogram14.setWidth(97);
         histogram14.setWidth((int) (byte) 1);
@@ -4380,7 +4978,8 @@ public class Regression0Test {
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray15);
     }
 
@@ -4402,22 +5001,29 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test257");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, (int) (byte) 1);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 10);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 52);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 10);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        52);
         try {
-            util.Histogram histogram20 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 1);
+            util.Histogram histogram20 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                            (int) (byte) 1);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -4425,21 +5031,27 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test258");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
         try {
             util.Histogram histogram19 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255, (-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -2");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: -2");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -4467,25 +5079,30 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test261");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         try {
             util.Histogram histogram26 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) ' ', 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
     }
 
     @Test
@@ -4496,20 +5113,21 @@ public class Regression0Test {
         histogram1.setWidth((int) (byte) 100);
         histogram1.setOffset((int) (short) 100);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
-// flaky:         histogram7.setOffset((int) (byte) 1);
-// flaky:         histogram7.setOffset((int) '4');
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setOffset((int) (byte) 1);
+        // flaky: histogram7.setOffset((int) '4');
         int[] intArray16 = null; // flaky: histogram7.getData();
-// flaky:         histogram1.set(intArray16);
+        // flaky: histogram1.set(intArray16);
         util.Histogram histogram19 = null; // flaky: new util.Histogram(intArray16, (int) (short) 100);
         util.Histogram histogram21 = null; // flaky: new util.Histogram(intArray16, 97);
         try {
             int int23 = 0; // flaky: histogram21.get((int) (byte) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -1");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: -1");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray16);
+        // flaky: org.junit.Assert.assertNotNull(intArray16);
     }
 
     @Test
@@ -4543,48 +5161,64 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test265");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
-        util.Histogram histogram20 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) ' ');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
+        util.Histogram histogram20 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) ' ');
         util.Histogram histogram22 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram22.setSize((int) (short) 10);
-// flaky:         histogram22.setSize((int) (byte) 100);
+        // flaky: histogram22.setSize((int) (short) 10);
+        // flaky: histogram22.setSize((int) (byte) 100);
         java.lang.Integer[] intArray29 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList30 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean31 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList30, intArray29);
-// flaky:         histogram22.set((java.util.List<java.lang.Integer>) intList30);
-        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList30, (int) (short) 10, (int) (byte) 10);
+        boolean boolean31 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList30,
+                                                         intArray29);
+        // flaky: histogram22.set((java.util.List<java.lang.Integer>) intList30);
+        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList30,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram35.put((int) (short) 10);
         util.Histogram histogram39 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram39.setSize((int) (short) 10);
-// flaky:         histogram39.setSize((int) (byte) 100);
+        // flaky: histogram39.setSize((int) (short) 10);
+        // flaky: histogram39.setSize((int) (byte) 100);
         java.lang.Integer[] intArray46 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList47 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean48 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList47, intArray46);
-// flaky:         histogram39.set((java.util.List<java.lang.Integer>) intList47);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList47, (int) (short) 10, (int) (byte) 10);
+        boolean boolean48 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList47,
+                                                         intArray46);
+        // flaky: histogram39.set((java.util.List<java.lang.Integer>) intList47);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList47,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray53 = histogram52.getData();
         histogram35.set(intArray53);
         int[] intArray55 = histogram35.getData();
         histogram20.set(intArray55);
         try {
             util.Histogram histogram59 = null; // flaky: new util.Histogram(intArray55, 100, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray29);
-        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + true + "'", boolean31 == true);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + true + "'",
+                                    boolean31 == true);
         org.junit.Assert.assertNotNull(intArray46);
-        org.junit.Assert.assertTrue("'" + boolean48 + "' != '" + true + "'", boolean48 == true);
+        org.junit.Assert.assertTrue("'" + boolean48 + "' != '" + true + "'",
+                                    boolean48 == true);
         org.junit.Assert.assertNotNull(intArray53);
         org.junit.Assert.assertNotNull(intArray55);
     }
@@ -4599,7 +5233,8 @@ public class Regression0Test {
         int[] intArray6 = histogram5.getData();
         histogram1.set(intArray6);
         util.Histogram histogram10 = null; // flaky: new util.Histogram(intArray6, 52, (-1));
-        util.Histogram histogram13 = new util.Histogram(intArray6, (int) (byte) 100, 1);
+        util.Histogram histogram13 = new util.Histogram(intArray6,
+                                                        (int) (byte) 100, 1);
         util.Histogram histogram15 = new util.Histogram(intArray6, (int) '4');
         util.Histogram histogram18 = new util.Histogram(1, (int) (short) 100);
         int[] intArray19 = histogram18.getData();
@@ -4633,10 +5268,12 @@ public class Regression0Test {
         }
         org.junit.Assert.assertNotNull(floatArray0);
         org.junit.Assert.assertNotNull(wildcardClass2);
-        org.junit.Assert.assertTrue("'" + direction3 + "' != '" + morphology.Sobel.Direction.UP + "'", direction3.equals(morphology.Sobel.Direction.UP));
+        org.junit.Assert.assertTrue("'" + direction3 + "' != '"
+                                    + morphology.Sobel.Direction.UP + "'",
+                                    direction3.equals(morphology.Sobel.Direction.UP));
         org.junit.Assert.assertNotNull(floatArray7);
         org.junit.Assert.assertNotNull(floatArray11);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology13);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology13);
         org.junit.Assert.assertNotNull(baseMorphology14);
         org.junit.Assert.assertNotNull(baseMorphology15);
     }
@@ -4666,35 +5303,45 @@ public class Regression0Test {
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
         int[] intArray2 = null; // flaky: histogram1.getData();
         util.Histogram histogram4 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram4.setSize((int) (short) 10);
-// flaky:         histogram4.setSize((int) (byte) 100);
+        // flaky: histogram4.setSize((int) (short) 10);
+        // flaky: histogram4.setSize((int) (byte) 100);
         java.lang.Integer[] intArray11 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList12 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12, intArray11);
-// flaky:         histogram4.set((java.util.List<java.lang.Integer>) intList12);
-        util.Histogram histogram17 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, (int) (byte) 100);
-        util.Histogram histogram21 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, 255);
+        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12,
+                                                         intArray11);
+        // flaky: histogram4.set((java.util.List<java.lang.Integer>) intList12);
+        util.Histogram histogram17 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        (int) (byte) 100);
+        util.Histogram histogram21 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        255);
         util.Histogram histogram23 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram23.setSize((int) (short) 10);
-// flaky:         histogram23.setSize((int) (byte) 100);
+        // flaky: histogram23.setSize((int) (short) 10);
+        // flaky: histogram23.setSize((int) (byte) 100);
         java.lang.Integer[] intArray30 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList31 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean32 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList31, intArray30);
-// flaky:         histogram23.set((java.util.List<java.lang.Integer>) intList31);
-        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList31, (int) 'a');
+        boolean boolean32 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList31,
+                                                         intArray30);
+        // flaky: histogram23.set((java.util.List<java.lang.Integer>) intList31);
+        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList31,
+                                                        (int) 'a');
         histogram21.set((java.util.List<java.lang.Integer>) intList31);
         java.lang.Class<?> wildcardClass37 = intList31.getClass();
         try {
-// flaky:             histogram1.set((java.util.List<java.lang.Integer>) intList31);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList31);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray2);
+        // flaky: org.junit.Assert.assertNotNull(intArray2);
         org.junit.Assert.assertNotNull(intArray11);
-        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'",
+                                    boolean13 == true);
         org.junit.Assert.assertNotNull(intArray30);
-        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + true + "'", boolean32 == true);
+        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + true + "'",
+                                    boolean32 == true);
         org.junit.Assert.assertNotNull(wildcardClass37);
     }
 
@@ -4703,70 +5350,93 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test270");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) 'a');
         int[] intArray17 = histogram16.getData();
         util.Histogram histogram19 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram19.setSize((int) (short) 10);
-// flaky:         histogram19.setSize((int) (byte) 100);
+        // flaky: histogram19.setSize((int) (short) 10);
+        // flaky: histogram19.setSize((int) (byte) 100);
         java.lang.Integer[] intArray26 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList27 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27, intArray26);
-// flaky:         histogram19.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (byte) 100);
+        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27,
+                                                         intArray26);
+        // flaky: histogram19.set((java.util.List<java.lang.Integer>) intList27);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (byte) 100);
         histogram16.set((java.util.List<java.lang.Integer>) intList27);
         util.Histogram histogram37 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram37.setSize((int) (short) 10);
-// flaky:         histogram37.setSize((int) (byte) 100);
+        // flaky: histogram37.setSize((int) (short) 10);
+        // flaky: histogram37.setSize((int) (byte) 100);
         java.lang.Integer[] intArray44 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList45 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean46 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList45, intArray44);
-// flaky:         histogram37.set((java.util.List<java.lang.Integer>) intList45);
-        util.Histogram histogram50 = new util.Histogram((java.util.List<java.lang.Integer>) intList45, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList45, (int) (byte) 100);
-        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList45, 255);
+        boolean boolean46 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList45,
+                                                         intArray44);
+        // flaky: histogram37.set((java.util.List<java.lang.Integer>) intList45);
+        util.Histogram histogram50 = new util.Histogram((java.util.List<java.lang.Integer>) intList45,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList45,
+                                                        (int) (byte) 100);
+        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList45,
+                                                        255);
         util.Histogram histogram56 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram56.setSize((int) (short) 10);
-// flaky:         histogram56.setSize((int) (byte) 100);
+        // flaky: histogram56.setSize((int) (short) 10);
+        // flaky: histogram56.setSize((int) (byte) 100);
         java.lang.Integer[] intArray63 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList64 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean65 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList64, intArray63);
-// flaky:         histogram56.set((java.util.List<java.lang.Integer>) intList64);
-        util.Histogram histogram68 = new util.Histogram((java.util.List<java.lang.Integer>) intList64, (int) 'a');
+        boolean boolean65 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList64,
+                                                         intArray63);
+        // flaky: histogram56.set((java.util.List<java.lang.Integer>) intList64);
+        util.Histogram histogram68 = new util.Histogram((java.util.List<java.lang.Integer>) intList64,
+                                                        (int) 'a');
         histogram54.set((java.util.List<java.lang.Integer>) intList64);
         histogram16.set((java.util.List<java.lang.Integer>) intList64);
         util.Histogram histogram72 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram72.setSize((int) (short) 10);
-// flaky:         histogram72.setSize((int) (byte) 100);
+        // flaky: histogram72.setSize((int) (short) 10);
+        // flaky: histogram72.setSize((int) (byte) 100);
         java.lang.Integer[] intArray79 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList80 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean81 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList80, intArray79);
-// flaky:         histogram72.set((java.util.List<java.lang.Integer>) intList80);
-        util.Histogram histogram85 = new util.Histogram((java.util.List<java.lang.Integer>) intList80, (int) (short) 10, (int) (byte) 10);
+        boolean boolean81 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList80,
+                                                         intArray79);
+        // flaky: histogram72.set((java.util.List<java.lang.Integer>) intList80);
+        util.Histogram histogram85 = new util.Histogram((java.util.List<java.lang.Integer>) intList80,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram16.set((java.util.List<java.lang.Integer>) intList80);
         try {
             util.Histogram histogram88 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList80, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray17);
         org.junit.Assert.assertNotNull(intArray26);
-        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'", boolean28 == true);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'",
+                                    boolean28 == true);
         org.junit.Assert.assertNotNull(intArray44);
-        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + true + "'", boolean46 == true);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + true + "'",
+                                    boolean46 == true);
         org.junit.Assert.assertNotNull(intArray63);
-        org.junit.Assert.assertTrue("'" + boolean65 + "' != '" + true + "'", boolean65 == true);
+        org.junit.Assert.assertTrue("'" + boolean65 + "' != '" + true + "'",
+                                    boolean65 == true);
         org.junit.Assert.assertNotNull(intArray79);
-        org.junit.Assert.assertTrue("'" + boolean81 + "' != '" + true + "'", boolean81 == true);
+        org.junit.Assert.assertTrue("'" + boolean81 + "' != '" + true + "'",
+                                    boolean81 == true);
     }
 
     @Test
@@ -4791,8 +5461,8 @@ public class Regression0Test {
         }
         org.junit.Assert.assertNotNull(floatArray3);
         org.junit.Assert.assertNotNull(floatArray6);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology10);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology13);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology10);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology13);
     }
 
     @Test
@@ -4801,27 +5471,32 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test272");
         util.Histogram histogram2 = new util.Histogram(1, (int) (short) 1);
         util.Histogram histogram4 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram4.setSize((int) (short) 10);
-// flaky:         histogram4.setSize((int) (byte) 100);
+        // flaky: histogram4.setSize((int) (short) 10);
+        // flaky: histogram4.setSize((int) (byte) 100);
         java.lang.Integer[] intArray11 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList12 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12, intArray11);
-// flaky:         histogram4.set((java.util.List<java.lang.Integer>) intList12);
-        util.Histogram histogram17 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, (int) (short) 10, (int) (byte) 10);
+        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12,
+                                                         intArray11);
+        // flaky: histogram4.set((java.util.List<java.lang.Integer>) intList12);
+        util.Histogram histogram17 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         try {
             histogram2.set((java.util.List<java.lang.Integer>) intList12);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray11);
-        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'",
+                                    boolean13 == true);
     }
 
     @Test
     public void test273() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test273");
-        util.Histogram histogram2 = new util.Histogram((int) (short) 10, (int) (short) 10);
+        util.Histogram histogram2 = new util.Histogram((int) (short) 10,
+                                                       (int) (short) 10);
         try {
             int int4 = histogram2.get((int) (byte) 100);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 100");
@@ -4834,13 +5509,13 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test274");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
-// flaky:         histogram1.setSize(0);
-// flaky:         histogram1.setWidth(10);
-// flaky:         histogram1.setWidth((int) (short) -1);
-// flaky:         histogram1.setWidth(52);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize(0);
+        // flaky: histogram1.setWidth(10);
+        // flaky: histogram1.setWidth((int) (short) -1);
+        // flaky: histogram1.setWidth(52);
     }
 
     @Test
@@ -4848,22 +5523,27 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test275");
         util.Histogram histogram2 = null; // flaky: new util.Histogram((int) (byte) 100, 0);
-// flaky:         histogram2.setOffset(10);
+        // flaky: histogram2.setOffset(10);
         util.Histogram histogram6 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram6.setSize((int) (short) 10);
-// flaky:         histogram6.setSize((int) (byte) 100);
+        // flaky: histogram6.setSize((int) (short) 10);
+        // flaky: histogram6.setSize((int) (byte) 100);
         java.lang.Integer[] intArray13 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList14 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean15 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList14, intArray13);
-// flaky:         histogram6.set((java.util.List<java.lang.Integer>) intList14);
-        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList14, (int) (short) 10, (int) (byte) 10);
+        boolean boolean15 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList14,
+                                                         intArray13);
+        // flaky: histogram6.set((java.util.List<java.lang.Integer>) intList14);
+        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList14,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         try {
-// flaky:             histogram2.set((java.util.List<java.lang.Integer>) intList14);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: histogram2.set((java.util.List<java.lang.Integer>) intList14);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray13);
-        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + true + "'", boolean15 == true);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + true + "'",
+                                    boolean15 == true);
     }
 
     @Test
@@ -4871,30 +5551,35 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test276");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
-// flaky:         histogram1.setWidth(1);
-// flaky:         histogram1.setWidth((int) '4');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
+        // flaky: histogram1.setWidth(1);
+        // flaky: histogram1.setWidth((int) '4');
         java.lang.Class<?> wildcardClass12 = null; // flaky: histogram1.getClass();
         util.Histogram histogram14 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram14.setSize((int) (short) 10);
-// flaky:         histogram14.setSize((int) (byte) 100);
+        // flaky: histogram14.setSize((int) (short) 10);
+        // flaky: histogram14.setSize((int) (byte) 100);
         java.lang.Integer[] intArray21 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList22 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean23 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList22, intArray21);
-// flaky:         histogram14.set((java.util.List<java.lang.Integer>) intList22);
-        util.Histogram histogram27 = new util.Histogram((java.util.List<java.lang.Integer>) intList22, (int) (short) 10, (int) (byte) 10);
+        boolean boolean23 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList22,
+                                                         intArray21);
+        // flaky: histogram14.set((java.util.List<java.lang.Integer>) intList22);
+        util.Histogram histogram27 = new util.Histogram((java.util.List<java.lang.Integer>) intList22,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray28 = histogram27.getData();
-// flaky:         histogram1.set(intArray28);
+        // flaky: histogram1.set(intArray28);
         try {
             util.Histogram histogram32 = null; // flaky: new util.Histogram(intArray28, (int) (short) 1, (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(wildcardClass12);
+        // flaky: org.junit.Assert.assertNotNull(wildcardClass12);
         org.junit.Assert.assertNotNull(intArray21);
-        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + true + "'", boolean23 == true);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + true + "'",
+                                    boolean23 == true);
         org.junit.Assert.assertNotNull(intArray28);
     }
 
@@ -4903,13 +5588,16 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test277");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray15 = histogram14.getData();
         histogram14.setWidth(97);
         histogram14.setWidth((int) (byte) 1);
@@ -4919,7 +5607,8 @@ public class Regression0Test {
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray15);
     }
 
@@ -4941,7 +5630,9 @@ public class Regression0Test {
         } catch (java.lang.NullPointerException e) {
         }
         org.junit.Assert.assertNotNull(floatArray4);
-        org.junit.Assert.assertTrue("'" + direction6 + "' != '" + morphology.Sobel.Direction.RIGHT + "'", direction6.equals(morphology.Sobel.Direction.RIGHT));
+        org.junit.Assert.assertTrue("'" + direction6 + "' != '"
+                                    + morphology.Sobel.Direction.RIGHT + "'",
+                                    direction6.equals(morphology.Sobel.Direction.RIGHT));
         org.junit.Assert.assertNotNull(baseMorphology10);
     }
 
@@ -4951,29 +5642,38 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test279");
         java.lang.Integer[] intArray2 = new java.lang.Integer[] { 10, 1 };
         java.util.ArrayList<java.lang.Integer> intList3 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3, intArray2);
-        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3, (int) '#', (int) (byte) 100);
+        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3,
+                                                        intArray2);
+        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3,
+                                                       (int) '#',
+                                                       (int) (byte) 100);
         histogram7.put((int) '#');
         util.Histogram histogram11 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram11.setSize((int) (short) 10);
-// flaky:         histogram11.setSize((int) (byte) 100);
-// flaky:         histogram11.setSize((int) 'a');
+        // flaky: histogram11.setSize((int) (short) 10);
+        // flaky: histogram11.setSize((int) (byte) 100);
+        // flaky: histogram11.setSize((int) 'a');
         util.Histogram histogram19 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram19.setSize((int) (short) 10);
-// flaky:         histogram19.setSize((int) (byte) 100);
+        // flaky: histogram19.setSize((int) (short) 10);
+        // flaky: histogram19.setSize((int) (byte) 100);
         java.lang.Integer[] intArray26 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList27 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27, intArray26);
-// flaky:         histogram19.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram11.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, 10);
+        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27,
+                                                         intArray26);
+        // flaky: histogram19.set((java.util.List<java.lang.Integer>) intList27);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram11.set((java.util.List<java.lang.Integer>) intList27);
+        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        10);
         histogram7.set((java.util.List<java.lang.Integer>) intList27);
         java.lang.Class<?> wildcardClass37 = histogram7.getClass();
         org.junit.Assert.assertNotNull(intArray2);
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'", boolean4 == true);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'",
+                                    boolean4 == true);
         org.junit.Assert.assertNotNull(intArray26);
-        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'", boolean28 == true);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'",
+                                    boolean28 == true);
         org.junit.Assert.assertNotNull(wildcardClass37);
     }
 
@@ -4984,7 +5684,10 @@ public class Regression0Test {
         feature.FirstOrder.Feature feature0 = feature.FirstOrder.Feature.SQUARESUM;
         java.lang.Class<?> wildcardClass1 = feature0.getClass();
         java.lang.Class<?> wildcardClass2 = feature0.getClass();
-        org.junit.Assert.assertTrue("'" + feature0 + "' != '" + feature.FirstOrder.Feature.SQUARESUM + "'", feature0.equals(feature.FirstOrder.Feature.SQUARESUM));
+        org.junit.Assert.assertTrue("'" + feature0 + "' != '"
+                                    + feature.FirstOrder.Feature.SQUARESUM
+                                    + "'",
+                                    feature0.equals(feature.FirstOrder.Feature.SQUARESUM));
         org.junit.Assert.assertNotNull(wildcardClass1);
         org.junit.Assert.assertNotNull(wildcardClass2);
     }
@@ -4994,45 +5697,60 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test281");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
         util.Histogram histogram20 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram20.setSize((int) (short) 10);
-// flaky:         histogram20.setSize((int) (byte) 100);
+        // flaky: histogram20.setSize((int) (short) 10);
+        // flaky: histogram20.setSize((int) (byte) 100);
         java.lang.Integer[] intArray27 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList28 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28, intArray27);
-// flaky:         histogram20.set((java.util.List<java.lang.Integer>) intList28);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) 'a');
+        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28,
+                                                         intArray27);
+        // flaky: histogram20.set((java.util.List<java.lang.Integer>) intList28);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) 'a');
         histogram18.set((java.util.List<java.lang.Integer>) intList28);
         util.Histogram histogram35 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram35.setSize((int) (short) 10);
-// flaky:         histogram35.setSize((int) (byte) 100);
+        // flaky: histogram35.setSize((int) (short) 10);
+        // flaky: histogram35.setSize((int) (byte) 100);
         java.lang.Integer[] intArray42 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList43 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43, intArray42);
-// flaky:         histogram35.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 10, (int) (byte) 10);
+        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43,
+                                                         intArray42);
+        // flaky: histogram35.set((java.util.List<java.lang.Integer>) intList43);
+        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram18.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, 97, (int) 'a');
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        97, (int) 'a');
         try {
             util.Histogram histogram54 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray27);
-        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'", boolean29 == true);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'",
+                                    boolean29 == true);
         org.junit.Assert.assertNotNull(intArray42);
-        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'", boolean44 == true);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'",
+                                    boolean44 == true);
     }
 
     @Test
@@ -5045,7 +5763,8 @@ public class Regression0Test {
         int[] intArray6 = histogram5.getData();
         histogram1.set(intArray6);
         util.Histogram histogram10 = null; // flaky: new util.Histogram(intArray6, 52, (-1));
-        util.Histogram histogram13 = new util.Histogram(intArray6, (int) (byte) 100, 1);
+        util.Histogram histogram13 = new util.Histogram(intArray6,
+                                                        (int) (byte) 100, 1);
         util.Histogram histogram15 = new util.Histogram(intArray6, (int) '4');
         util.Histogram histogram18 = new util.Histogram(1, (int) (short) 100);
         int[] intArray19 = histogram18.getData();
@@ -5064,36 +5783,42 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test283");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, (int) (byte) 1);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
         int int16 = histogram14.get((int) '#');
         util.Histogram histogram18 = new util.Histogram((int) ' ');
         histogram18.setWidth((int) (byte) 100);
         histogram18.setOffset((int) (short) 100);
         util.Histogram histogram24 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram24.setSize((int) (short) 10);
-// flaky:         histogram24.setSize((int) (byte) 100);
-// flaky:         histogram24.setOffset((int) (byte) 1);
-// flaky:         histogram24.setOffset((int) '4');
+        // flaky: histogram24.setSize((int) (short) 10);
+        // flaky: histogram24.setSize((int) (byte) 100);
+        // flaky: histogram24.setOffset((int) (byte) 1);
+        // flaky: histogram24.setOffset((int) '4');
         int[] intArray33 = null; // flaky: histogram24.getData();
-// flaky:         histogram18.set(intArray33);
+        // flaky: histogram18.set(intArray33);
         util.Histogram histogram37 = null; // flaky: new util.Histogram(intArray33, (int) '#', (int) '#');
         int[] intArray38 = null; // flaky: histogram37.getData();
         try {
-// flaky:             histogram14.set(intArray38);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: histogram14.set(intArray38);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
-        org.junit.Assert.assertTrue("'" + int16 + "' != '" + 0 + "'", int16 == 0);
-// flaky:         org.junit.Assert.assertNotNull(intArray33);
-// flaky:         org.junit.Assert.assertNotNull(intArray38);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
+        org.junit.Assert.assertTrue("'" + int16 + "' != '" + 0 + "'",
+                                    int16 == 0);
+        // flaky: org.junit.Assert.assertNotNull(intArray33);
+        // flaky: org.junit.Assert.assertNotNull(intArray38);
     }
 
     @Test
@@ -5103,7 +5828,7 @@ public class Regression0Test {
         util.Histogram histogram1 = new util.Histogram((int) (byte) 100);
         int[] intArray2 = histogram1.getData();
         util.Histogram histogram5 = null; // flaky: new util.Histogram(intArray2, 52, (int) (byte) -1);
-// flaky:         histogram5.setOffset(0);
+        // flaky: histogram5.setOffset(0);
         org.junit.Assert.assertNotNull(intArray2);
     }
 
@@ -5125,7 +5850,9 @@ public class Regression0Test {
         } catch (java.lang.NullPointerException e) {
         }
         org.junit.Assert.assertNotNull(floatArray4);
-        org.junit.Assert.assertTrue("'" + direction6 + "' != '" + morphology.Sobel.Direction.RIGHT + "'", direction6.equals(morphology.Sobel.Direction.RIGHT));
+        org.junit.Assert.assertTrue("'" + direction6 + "' != '"
+                                    + morphology.Sobel.Direction.RIGHT + "'",
+                                    direction6.equals(morphology.Sobel.Direction.RIGHT));
         org.junit.Assert.assertNotNull(baseMorphology10);
     }
 
@@ -5153,21 +5880,28 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test287");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
         try {
-            util.Histogram histogram19 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) -1, (int) '#');
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            util.Histogram histogram19 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) -1, (int)
+                                               // '#');
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -5175,29 +5909,37 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test288");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, (int) (byte) 1);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 10);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 52);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 10);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        52);
         try {
             util.Histogram histogram20 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
     public void test289() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test289");
-        int[] intArray5 = new int[] { (byte) 1, (short) 10, (byte) -1, '#', (byte) 10 };
+        int[] intArray5 = new int[] { (byte) 1, (short) 10, (byte) -1, '#',
+                                      (byte) 10 };
         util.Histogram histogram7 = new util.Histogram(intArray5, (int) 'a');
         java.lang.Class<?> wildcardClass8 = intArray5.getClass();
         org.junit.Assert.assertNotNull(intArray5);
@@ -5222,10 +5964,12 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.UP + "'", direction0.equals(morphology.Sobel.Direction.UP));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.UP + "'",
+                                    direction0.equals(morphology.Sobel.Direction.UP));
         org.junit.Assert.assertNotNull(floatArray4);
         org.junit.Assert.assertNotNull(floatArray8);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology10);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology10);
         org.junit.Assert.assertNotNull(baseMorphology11);
     }
 
@@ -5234,36 +5978,46 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test291");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         util.Histogram histogram6 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram6.setSize((int) (short) 10);
-// flaky:         histogram6.setSize((int) (byte) 100);
+        // flaky: histogram6.setSize((int) (short) 10);
+        // flaky: histogram6.setSize((int) (byte) 100);
         java.lang.Integer[] intArray13 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList14 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean15 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList14, intArray13);
-// flaky:         histogram6.set((java.util.List<java.lang.Integer>) intList14);
-        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList14, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram21 = new util.Histogram((java.util.List<java.lang.Integer>) intList14, (int) (byte) 100);
-        util.Histogram histogram23 = new util.Histogram((java.util.List<java.lang.Integer>) intList14, 255);
+        boolean boolean15 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList14,
+                                                         intArray13);
+        // flaky: histogram6.set((java.util.List<java.lang.Integer>) intList14);
+        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList14,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram21 = new util.Histogram((java.util.List<java.lang.Integer>) intList14,
+                                                        (int) (byte) 100);
+        util.Histogram histogram23 = new util.Histogram((java.util.List<java.lang.Integer>) intList14,
+                                                        255);
         util.Histogram histogram25 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram25.setSize((int) (short) 10);
-// flaky:         histogram25.setSize((int) (byte) 100);
+        // flaky: histogram25.setSize((int) (short) 10);
+        // flaky: histogram25.setSize((int) (byte) 100);
         java.lang.Integer[] intArray32 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList33 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean34 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList33, intArray32);
-// flaky:         histogram25.set((java.util.List<java.lang.Integer>) intList33);
-        util.Histogram histogram37 = new util.Histogram((java.util.List<java.lang.Integer>) intList33, (int) 'a');
+        boolean boolean34 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList33,
+                                                         intArray32);
+        // flaky: histogram25.set((java.util.List<java.lang.Integer>) intList33);
+        util.Histogram histogram37 = new util.Histogram((java.util.List<java.lang.Integer>) intList33,
+                                                        (int) 'a');
         histogram23.set((java.util.List<java.lang.Integer>) intList33);
         java.lang.Class<?> wildcardClass39 = intList33.getClass();
         try {
-// flaky:             histogram2.set((java.util.List<java.lang.Integer>) intList33);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: histogram2.set((java.util.List<java.lang.Integer>) intList33);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray13);
-        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + true + "'", boolean15 == true);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + true + "'",
+                                    boolean15 == true);
         org.junit.Assert.assertNotNull(intArray32);
-        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + true + "'", boolean34 == true);
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + true + "'",
+                                    boolean34 == true);
         org.junit.Assert.assertNotNull(wildcardClass39);
     }
 
@@ -5271,55 +6025,73 @@ public class Regression0Test {
     public void test292() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test292");
-        util.Histogram histogram2 = new util.Histogram((int) (short) 1, (int) (short) 1);
+        util.Histogram histogram2 = new util.Histogram((int) (short) 1,
+                                                       (int) (short) 1);
         util.Histogram histogram4 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram4.setSize((int) (short) 10);
-// flaky:         histogram4.setSize((int) (byte) 100);
+        // flaky: histogram4.setSize((int) (short) 10);
+        // flaky: histogram4.setSize((int) (byte) 100);
         java.lang.Integer[] intArray11 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList12 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12, intArray11);
-// flaky:         histogram4.set((java.util.List<java.lang.Integer>) intList12);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, (int) 'a');
-        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, (int) '4', (int) 'a');
+        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12,
+                                                         intArray11);
+        // flaky: histogram4.set((java.util.List<java.lang.Integer>) intList12);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        (int) 'a');
+        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        (int) '4', (int) 'a');
         int[] intArray20 = histogram19.getData();
         util.Histogram histogram22 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram22.setSize((int) (short) 10);
-// flaky:         histogram22.setSize((int) (byte) 100);
+        // flaky: histogram22.setSize((int) (short) 10);
+        // flaky: histogram22.setSize((int) (byte) 100);
         java.lang.Integer[] intArray29 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList30 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean31 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList30, intArray29);
-// flaky:         histogram22.set((java.util.List<java.lang.Integer>) intList30);
-        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList30, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram37 = new util.Histogram((java.util.List<java.lang.Integer>) intList30, (int) (byte) 100);
+        boolean boolean31 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList30,
+                                                         intArray29);
+        // flaky: histogram22.set((java.util.List<java.lang.Integer>) intList30);
+        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList30,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram37 = new util.Histogram((java.util.List<java.lang.Integer>) intList30,
+                                                        (int) (byte) 100);
         histogram19.set((java.util.List<java.lang.Integer>) intList30);
         util.Histogram histogram40 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram40.setSize((int) (short) 10);
-// flaky:         histogram40.setSize((int) (byte) 100);
+        // flaky: histogram40.setSize((int) (short) 10);
+        // flaky: histogram40.setSize((int) (byte) 100);
         java.lang.Integer[] intArray47 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList48 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean49 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList48, intArray47);
-// flaky:         histogram40.set((java.util.List<java.lang.Integer>) intList48);
-        util.Histogram histogram53 = new util.Histogram((java.util.List<java.lang.Integer>) intList48, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram55 = new util.Histogram((java.util.List<java.lang.Integer>) intList48, (int) (byte) 100);
-        util.Histogram histogram57 = new util.Histogram((java.util.List<java.lang.Integer>) intList48, 255);
+        boolean boolean49 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList48,
+                                                         intArray47);
+        // flaky: histogram40.set((java.util.List<java.lang.Integer>) intList48);
+        util.Histogram histogram53 = new util.Histogram((java.util.List<java.lang.Integer>) intList48,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram55 = new util.Histogram((java.util.List<java.lang.Integer>) intList48,
+                                                        (int) (byte) 100);
+        util.Histogram histogram57 = new util.Histogram((java.util.List<java.lang.Integer>) intList48,
+                                                        255);
         util.Histogram histogram59 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram59.setSize((int) (short) 10);
-// flaky:         histogram59.setSize((int) (byte) 100);
+        // flaky: histogram59.setSize((int) (short) 10);
+        // flaky: histogram59.setSize((int) (byte) 100);
         java.lang.Integer[] intArray66 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList67 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean68 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList67, intArray66);
-// flaky:         histogram59.set((java.util.List<java.lang.Integer>) intList67);
-        util.Histogram histogram71 = new util.Histogram((java.util.List<java.lang.Integer>) intList67, (int) 'a');
+        boolean boolean68 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList67,
+                                                         intArray66);
+        // flaky: histogram59.set((java.util.List<java.lang.Integer>) intList67);
+        util.Histogram histogram71 = new util.Histogram((java.util.List<java.lang.Integer>) intList67,
+                                                        (int) 'a');
         histogram57.set((java.util.List<java.lang.Integer>) intList67);
         histogram19.set((java.util.List<java.lang.Integer>) intList67);
         util.Histogram histogram75 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram75.setSize((int) (short) 10);
-// flaky:         histogram75.setSize((int) (byte) 100);
+        // flaky: histogram75.setSize((int) (short) 10);
+        // flaky: histogram75.setSize((int) (byte) 100);
         java.lang.Integer[] intArray82 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList83 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean84 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList83, intArray82);
-// flaky:         histogram75.set((java.util.List<java.lang.Integer>) intList83);
-        util.Histogram histogram88 = new util.Histogram((java.util.List<java.lang.Integer>) intList83, (int) (short) 10, (int) (byte) 10);
+        boolean boolean84 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList83,
+                                                         intArray82);
+        // flaky: histogram75.set((java.util.List<java.lang.Integer>) intList83);
+        util.Histogram histogram88 = new util.Histogram((java.util.List<java.lang.Integer>) intList83,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram19.set((java.util.List<java.lang.Integer>) intList83);
         try {
             histogram2.set((java.util.List<java.lang.Integer>) intList83);
@@ -5327,16 +6099,21 @@ public class Regression0Test {
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray11);
-        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'",
+                                    boolean13 == true);
         org.junit.Assert.assertNotNull(intArray20);
         org.junit.Assert.assertNotNull(intArray29);
-        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + true + "'", boolean31 == true);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + true + "'",
+                                    boolean31 == true);
         org.junit.Assert.assertNotNull(intArray47);
-        org.junit.Assert.assertTrue("'" + boolean49 + "' != '" + true + "'", boolean49 == true);
+        org.junit.Assert.assertTrue("'" + boolean49 + "' != '" + true + "'",
+                                    boolean49 == true);
         org.junit.Assert.assertNotNull(intArray66);
-        org.junit.Assert.assertTrue("'" + boolean68 + "' != '" + true + "'", boolean68 == true);
+        org.junit.Assert.assertTrue("'" + boolean68 + "' != '" + true + "'",
+                                    boolean68 == true);
         org.junit.Assert.assertNotNull(intArray82);
-        org.junit.Assert.assertTrue("'" + boolean84 + "' != '" + true + "'", boolean84 == true);
+        org.junit.Assert.assertTrue("'" + boolean84 + "' != '" + true + "'",
+                                    boolean84 == true);
     }
 
     @Test
@@ -5344,25 +6121,30 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test293");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
         java.lang.Integer[] intArray14 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList15 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean16 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList15, intArray14);
-// flaky:         histogram7.set((java.util.List<java.lang.Integer>) intList15);
-        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList15, (int) 'a');
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList15, 97, 255);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList15);
+        boolean boolean16 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList15,
+                                                         intArray14);
+        // flaky: histogram7.set((java.util.List<java.lang.Integer>) intList15);
+        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList15,
+                                                        (int) 'a');
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList15,
+                                                        97, 255);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList15);
         try {
             util.Histogram histogram25 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList15, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray14);
-        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'", boolean16 == true);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'",
+                                    boolean16 == true);
     }
 
     @Test
@@ -5370,35 +6152,46 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test294");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
         util.Histogram histogram20 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram20.setSize((int) (short) 10);
-// flaky:         histogram20.setSize((int) (byte) 100);
+        // flaky: histogram20.setSize((int) (short) 10);
+        // flaky: histogram20.setSize((int) (byte) 100);
         java.lang.Integer[] intArray27 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList28 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28, intArray27);
-// flaky:         histogram20.set((java.util.List<java.lang.Integer>) intList28);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) 'a');
+        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28,
+                                                         intArray27);
+        // flaky: histogram20.set((java.util.List<java.lang.Integer>) intList28);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) 'a');
         histogram18.set((java.util.List<java.lang.Integer>) intList28);
         java.lang.Class<?> wildcardClass34 = intList28.getClass();
-        util.Histogram histogram36 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) (short) 100);
+        util.Histogram histogram36 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) (short) 100);
         try {
             util.Histogram histogram39 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) (short) -1, 10);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray27);
-        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'", boolean29 == true);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'",
+                                    boolean29 == true);
         org.junit.Assert.assertNotNull(wildcardClass34);
     }
 
@@ -5415,9 +6208,9 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test296");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setWidth(0);
-// flaky:         histogram1.setSize(0);
-// flaky:         histogram1.setOffset(35);
+        // flaky: histogram1.setWidth(0);
+        // flaky: histogram1.setSize(0);
+        // flaky: histogram1.setOffset(35);
     }
 
     @Test
@@ -5425,8 +6218,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test297");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setWidth(0);
-// flaky:         histogram1.setOffset((int) (short) 0);
+        // flaky: histogram1.setWidth(0);
+        // flaky: histogram1.setOffset((int) (short) 0);
     }
 
     @Test
@@ -5442,47 +6235,66 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test299");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
         util.Histogram histogram20 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram20.setSize((int) (short) 10);
-// flaky:         histogram20.setSize((int) (byte) 100);
+        // flaky: histogram20.setSize((int) (short) 10);
+        // flaky: histogram20.setSize((int) (byte) 100);
         java.lang.Integer[] intArray27 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList28 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28, intArray27);
-// flaky:         histogram20.set((java.util.List<java.lang.Integer>) intList28);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) 'a');
+        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28,
+                                                         intArray27);
+        // flaky: histogram20.set((java.util.List<java.lang.Integer>) intList28);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) 'a');
         histogram18.set((java.util.List<java.lang.Integer>) intList28);
         util.Histogram histogram35 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram35.setSize((int) (short) 10);
-// flaky:         histogram35.setSize((int) (byte) 100);
+        // flaky: histogram35.setSize((int) (short) 10);
+        // flaky: histogram35.setSize((int) (byte) 100);
         java.lang.Integer[] intArray42 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList43 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43, intArray42);
-// flaky:         histogram35.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 10, (int) (byte) 10);
+        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43,
+                                                         intArray42);
+        // flaky: histogram35.set((java.util.List<java.lang.Integer>) intList43);
+        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram18.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram51 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (byte) 10);
-        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 100, (int) (short) 100);
-        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (byte) 100);
+        util.Histogram histogram51 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (byte) 10);
+        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 100,
+                                                        (int) (short) 100);
+        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (byte) 100);
         try {
-            util.Histogram histogram59 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 100, (int) (byte) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            util.Histogram histogram59 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 100, (int)
+                                               // (byte) -1);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray27);
-        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'", boolean29 == true);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'",
+                                    boolean29 == true);
         org.junit.Assert.assertNotNull(intArray42);
-        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'", boolean44 == true);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'",
+                                    boolean44 == true);
     }
 
     @Test
@@ -5491,10 +6303,12 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test300");
         util.Histogram histogram1 = new util.Histogram((int) (byte) 100);
         int[] intArray2 = histogram1.getData();
-        util.Histogram histogram4 = new util.Histogram(intArray2, (int) (short) 10);
+        util.Histogram histogram4 = new util.Histogram(intArray2,
+                                                       (int) (short) 10);
         try {
             util.Histogram histogram7 = null; // flaky: new util.Histogram(intArray2, (-1), (int) (byte) 100);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray2);
@@ -5513,7 +6327,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test302");
         int int1 = util.RGBPixel.getBlue((int) (short) 10);
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 10 + "'", int1 == 10);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 10 + "'",
+                                    int1 == 10);
     }
 
     @Test
@@ -5528,7 +6343,8 @@ public class Regression0Test {
     public void test304() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test304");
-        util.Histogram histogram2 = new util.Histogram((int) (short) 1, (int) (short) 100);
+        util.Histogram histogram2 = new util.Histogram((int) (short) 1,
+                                                       (int) (short) 100);
     }
 
     @Test
@@ -5536,11 +6352,12 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test305");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) '4');
-// flaky:         histogram1.setWidth((int) (byte) 0);
+        // flaky: histogram1.setSize((int) '4');
+        // flaky: histogram1.setWidth((int) (byte) 0);
         try {
-// flaky:             histogram1.put((int) (short) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: histogram1.put((int) (short) -1);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -5567,7 +6384,8 @@ public class Regression0Test {
         util.Histogram histogram5 = new util.Histogram(intArray3, (int) '#');
         try {
             util.Histogram histogram7 = null; // flaky: new util.Histogram(intArray3, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray3);
@@ -5578,23 +6396,28 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test308");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) '4');
-// flaky:         histogram1.setWidth((int) (byte) 0);
+        // flaky: histogram1.setSize((int) '4');
+        // flaky: histogram1.setWidth((int) (byte) 0);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
         java.lang.Integer[] intArray14 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList15 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean16 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList15, intArray14);
-// flaky:         histogram7.set((java.util.List<java.lang.Integer>) intList15);
-        util.Histogram histogram20 = new util.Histogram((java.util.List<java.lang.Integer>) intList15, (int) (short) 100, (int) (byte) 1);
+        boolean boolean16 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList15,
+                                                         intArray14);
+        // flaky: histogram7.set((java.util.List<java.lang.Integer>) intList15);
+        util.Histogram histogram20 = new util.Histogram((java.util.List<java.lang.Integer>) intList15,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
         try {
-// flaky:             histogram1.set((java.util.List<java.lang.Integer>) intList15);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList15);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray14);
-        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'", boolean16 == true);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'",
+                                    boolean16 == true);
     }
 
     @Test
@@ -5605,20 +6428,21 @@ public class Regression0Test {
         histogram1.setWidth((int) (byte) 100);
         histogram1.setOffset((int) (short) 100);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
-// flaky:         histogram7.setOffset((int) (byte) 1);
-// flaky:         histogram7.setOffset((int) '4');
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setOffset((int) (byte) 1);
+        // flaky: histogram7.setOffset((int) '4');
         int[] intArray16 = null; // flaky: histogram7.getData();
-// flaky:         histogram1.set(intArray16);
+        // flaky: histogram1.set(intArray16);
         util.Histogram histogram19 = null; // flaky: new util.Histogram(intArray16, (int) (short) 100);
         util.Histogram histogram21 = null; // flaky: new util.Histogram(intArray16, 97);
         try {
             util.Histogram histogram24 = null; // flaky: new util.Histogram(intArray16, (int) '4', 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: / by zero");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // / by zero");
         } catch (java.lang.ArithmeticException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray16);
+        // flaky: org.junit.Assert.assertNotNull(intArray16);
     }
 
     @Test
@@ -5626,17 +6450,18 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test310");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setWidth(0);
+        // flaky: histogram1.setWidth(0);
         util.Histogram histogram6 = null; // flaky: new util.Histogram(0, (int) (short) -1);
         int[] intArray7 = null; // flaky: histogram6.getData();
         java.lang.Class<?> wildcardClass8 = null; // flaky: intArray7.getClass();
         try {
-// flaky:             histogram1.set(intArray7);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: histogram1.set(intArray7);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray7);
-// flaky:         org.junit.Assert.assertNotNull(wildcardClass8);
+        // flaky: org.junit.Assert.assertNotNull(intArray7);
+        // flaky: org.junit.Assert.assertNotNull(wildcardClass8);
     }
 
     @Test
@@ -5644,20 +6469,27 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test311");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
         histogram18.put(0);
         int int22 = histogram18.get((int) (byte) 10);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
-        org.junit.Assert.assertTrue("'" + int22 + "' != '" + 0 + "'", int22 == 0);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
+        org.junit.Assert.assertTrue("'" + int22 + "' != '" + 0 + "'",
+                                    int22 == 0);
     }
 
     @Test
@@ -5667,7 +6499,8 @@ public class Regression0Test {
         java.util.List<java.lang.Integer> intList0 = null;
         try {
             util.Histogram histogram2 = null; // flaky: new util.Histogram(intList0, (int) (byte) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -5691,7 +6524,8 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test314");
         int[] intArray0 = null;
         try {
-            util.Histogram histogram3 = new util.Histogram(intArray0, 35, (int) (byte) 10);
+            util.Histogram histogram3 = new util.Histogram(intArray0, 35,
+                                                           (int) (byte) 10);
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
@@ -5740,38 +6574,49 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test317");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, (int) (byte) 1);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 10);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 52);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 10);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        52);
         try {
             util.Histogram histogram21 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, 0, (int) (byte) 1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
     public void test318() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test318");
-        java.lang.Integer[] intArray6 = new java.lang.Integer[] { 52, 52, 0, 1, 255, 35 };
+        java.lang.Integer[] intArray6 = new java.lang.Integer[] { 52, 52, 0, 1,
+                                                                  255, 35 };
         java.util.ArrayList<java.lang.Integer> intList7 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean8 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList7, intArray6);
+        boolean boolean8 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList7,
+                                                        intArray6);
         try {
-            util.Histogram histogram10 = new util.Histogram((java.util.List<java.lang.Integer>) intList7, (int) (short) 1);
+            util.Histogram histogram10 = new util.Histogram((java.util.List<java.lang.Integer>) intList7,
+                                                            (int) (short) 1);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray6);
-        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + true + "'", boolean8 == true);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + true + "'",
+                                    boolean8 == true);
     }
 
     @Test
@@ -5779,18 +6624,24 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test319");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, (int) (byte) 1);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 10);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 52);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 10);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        52);
         java.lang.Class<?> wildcardClass19 = intList9.getClass();
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(wildcardClass19);
     }
 
@@ -5813,7 +6664,9 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.DOWN + "'", direction0.equals(morphology.Sobel.Direction.DOWN));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.DOWN + "'",
+                                    direction0.equals(morphology.Sobel.Direction.DOWN));
         org.junit.Assert.assertNotNull(floatArray3);
         org.junit.Assert.assertNotNull(baseMorphology8);
     }
@@ -5823,43 +6676,60 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test321");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
         util.Histogram histogram20 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram20.setSize((int) (short) 10);
-// flaky:         histogram20.setSize((int) (byte) 100);
+        // flaky: histogram20.setSize((int) (short) 10);
+        // flaky: histogram20.setSize((int) (byte) 100);
         java.lang.Integer[] intArray27 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList28 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28, intArray27);
-// flaky:         histogram20.set((java.util.List<java.lang.Integer>) intList28);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) 'a');
+        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28,
+                                                         intArray27);
+        // flaky: histogram20.set((java.util.List<java.lang.Integer>) intList28);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) 'a');
         histogram18.set((java.util.List<java.lang.Integer>) intList28);
         util.Histogram histogram35 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram35.setSize((int) (short) 10);
-// flaky:         histogram35.setSize((int) (byte) 100);
+        // flaky: histogram35.setSize((int) (short) 10);
+        // flaky: histogram35.setSize((int) (byte) 100);
         java.lang.Integer[] intArray42 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList43 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43, intArray42);
-// flaky:         histogram35.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 10, (int) (byte) 10);
+        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43,
+                                                         intArray42);
+        // flaky: histogram35.set((java.util.List<java.lang.Integer>) intList43);
+        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram18.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram51 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (byte) 10);
-        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 100, (int) (short) 100);
-        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (byte) 100);
+        util.Histogram histogram51 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (byte) 10);
+        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 100,
+                                                        (int) (short) 100);
+        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (byte) 100);
         histogram56.setOffset((int) (short) -1);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray27);
-        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'", boolean29 == true);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'",
+                                    boolean29 == true);
         org.junit.Assert.assertNotNull(intArray42);
-        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'", boolean44 == true);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'",
+                                    boolean44 == true);
     }
 
     @Test
@@ -5927,30 +6797,38 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test327");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram14.put((int) (short) 10);
         util.Histogram histogram18 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram18.setSize((int) (short) 10);
-// flaky:         histogram18.setSize((int) (byte) 100);
+        // flaky: histogram18.setSize((int) (short) 10);
+        // flaky: histogram18.setSize((int) (byte) 100);
         java.lang.Integer[] intArray25 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList26 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean27 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList26, intArray25);
-// flaky:         histogram18.set((java.util.List<java.lang.Integer>) intList26);
-        util.Histogram histogram31 = new util.Histogram((java.util.List<java.lang.Integer>) intList26, (int) (short) 10, (int) (byte) 10);
+        boolean boolean27 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList26,
+                                                         intArray25);
+        // flaky: histogram18.set((java.util.List<java.lang.Integer>) intList26);
+        util.Histogram histogram31 = new util.Histogram((java.util.List<java.lang.Integer>) intList26,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray32 = histogram31.getData();
         histogram14.set(intArray32);
         int[] intArray34 = histogram14.getData();
         histogram14.setSize(52);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray25);
-        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + true + "'", boolean27 == true);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + true + "'",
+                                    boolean27 == true);
         org.junit.Assert.assertNotNull(intArray32);
         org.junit.Assert.assertNotNull(intArray34);
     }
@@ -5960,39 +6838,41 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test328");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
-// flaky:         histogram1.setSize(0);
-// flaky:         histogram1.setWidth((int) (short) 0);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize(0);
+        // flaky: histogram1.setWidth((int) (short) 0);
         java.lang.Class<?> wildcardClass12 = null; // flaky: histogram1.getClass();
-// flaky:         org.junit.Assert.assertNotNull(wildcardClass12);
+        // flaky: org.junit.Assert.assertNotNull(wildcardClass12);
     }
 
     @Test
     public void test329() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test329");
-        util.Histogram histogram2 = new util.Histogram((int) (byte) 10, (int) (short) 1);
+        util.Histogram histogram2 = new util.Histogram((int) (byte) 10,
+                                                       (int) (short) 1);
         util.Histogram histogram4 = new util.Histogram((int) ' ');
         histogram4.setWidth((int) (byte) 100);
         histogram4.setOffset((int) (short) 100);
         util.Histogram histogram10 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram10.setSize((int) (short) 10);
-// flaky:         histogram10.setSize((int) (byte) 100);
-// flaky:         histogram10.setOffset((int) (byte) 1);
-// flaky:         histogram10.setOffset((int) '4');
+        // flaky: histogram10.setSize((int) (short) 10);
+        // flaky: histogram10.setSize((int) (byte) 100);
+        // flaky: histogram10.setOffset((int) (byte) 1);
+        // flaky: histogram10.setOffset((int) '4');
         int[] intArray19 = null; // flaky: histogram10.getData();
-// flaky:         histogram4.set(intArray19);
+        // flaky: histogram4.set(intArray19);
         util.Histogram histogram22 = null; // flaky: new util.Histogram(intArray19, (int) (short) 100);
         int[] intArray23 = null; // flaky: histogram22.getData();
         try {
-// flaky:             histogram2.set(intArray23);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: histogram2.set(intArray23);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray19);
-// flaky:         org.junit.Assert.assertNotNull(intArray23);
+        // flaky: org.junit.Assert.assertNotNull(intArray19);
+        // flaky: org.junit.Assert.assertNotNull(intArray23);
     }
 
     @Test
@@ -6007,21 +6887,26 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test331");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray15 = histogram14.getData();
         try {
             util.Histogram histogram17 = null; // flaky: new util.Histogram(intArray15, (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray15);
     }
 
@@ -6030,41 +6915,53 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test332");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         util.Histogram histogram25 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram25.setSize((int) (short) 10);
-// flaky:         histogram25.setSize((int) (byte) 100);
-// flaky:         histogram25.setSize((int) 'a');
+        // flaky: histogram25.setSize((int) (short) 10);
+        // flaky: histogram25.setSize((int) (byte) 100);
+        // flaky: histogram25.setSize((int) 'a');
         util.Histogram histogram33 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram33.setSize((int) (short) 10);
-// flaky:         histogram33.setSize((int) (byte) 100);
+        // flaky: histogram33.setSize((int) (short) 10);
+        // flaky: histogram33.setSize((int) (byte) 100);
         java.lang.Integer[] intArray40 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList41 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41, intArray40);
-// flaky:         histogram33.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram25.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 10);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, (int) '4');
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, 255);
-        util.Histogram histogram58 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 97);
+        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41,
+                                                         intArray40);
+        // flaky: histogram33.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram25.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        10);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, (int) '4');
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, 255);
+        util.Histogram histogram58 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        97);
         histogram58.setOffset((-1));
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
         org.junit.Assert.assertNotNull(intArray40);
-        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'", boolean42 == true);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'",
+                                    boolean42 == true);
     }
 
     @Test
@@ -6085,16 +6982,20 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test334");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, (int) (byte) 1);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
         histogram14.setOffset((int) '4');
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -6102,21 +7003,27 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test335");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 97, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        97, 255);
         try {
-            util.Histogram histogram19 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) -1, (int) '4');
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            util.Histogram histogram19 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) -1, (int)
+                                               // '4');
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -6129,30 +7036,37 @@ public class Regression0Test {
         int[] intArray6 = histogram5.getData();
         histogram1.set(intArray6);
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         util.Histogram histogram15 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram15.setSize((int) (short) 10);
-// flaky:         histogram15.setSize((int) (byte) 100);
+        // flaky: histogram15.setSize((int) (short) 10);
+        // flaky: histogram15.setSize((int) (byte) 100);
         java.lang.Integer[] intArray22 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList23 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean24 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList23, intArray22);
-// flaky:         histogram15.set((java.util.List<java.lang.Integer>) intList23);
-        util.Histogram histogram27 = new util.Histogram((java.util.List<java.lang.Integer>) intList23, (int) 'a');
-        util.Histogram histogram30 = new util.Histogram((java.util.List<java.lang.Integer>) intList23, 97, 255);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList23);
+        boolean boolean24 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList23,
+                                                         intArray22);
+        // flaky: histogram15.set((java.util.List<java.lang.Integer>) intList23);
+        util.Histogram histogram27 = new util.Histogram((java.util.List<java.lang.Integer>) intList23,
+                                                        (int) 'a');
+        util.Histogram histogram30 = new util.Histogram((java.util.List<java.lang.Integer>) intList23,
+                                                        97, 255);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList23);
         util.Histogram histogram33 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram33.setSize((int) (short) 10);
-// flaky:         histogram33.setSize((int) (byte) 100);
+        // flaky: histogram33.setSize((int) (short) 10);
+        // flaky: histogram33.setSize((int) (byte) 100);
         java.lang.Integer[] intArray40 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList41 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41, intArray40);
-// flaky:         histogram33.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram45 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) 'a');
-        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) '4', (int) 'a');
+        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41,
+                                                         intArray40);
+        // flaky: histogram33.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram45 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        (int) 'a');
+        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        (int) '4', (int) 'a');
         int[] intArray49 = histogram48.getData();
-        util.Histogram histogram51 = new util.Histogram(intArray49, (int) (short) 10);
-// flaky:         histogram9.set(intArray49);
+        util.Histogram histogram51 = new util.Histogram(intArray49,
+                                                        (int) (short) 10);
+        // flaky: histogram9.set(intArray49);
         histogram1.set(intArray49);
         histogram1.setSize(10);
         try {
@@ -6162,9 +7076,11 @@ public class Regression0Test {
         }
         org.junit.Assert.assertNotNull(intArray6);
         org.junit.Assert.assertNotNull(intArray22);
-        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + true + "'", boolean24 == true);
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + true + "'",
+                                    boolean24 == true);
         org.junit.Assert.assertNotNull(intArray40);
-        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'", boolean42 == true);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'",
+                                    boolean42 == true);
         org.junit.Assert.assertNotNull(intArray49);
     }
 
@@ -6176,10 +7092,11 @@ public class Regression0Test {
         int[] intArray2 = null; // flaky: histogram1.getData();
         try {
             util.Histogram histogram4 = null; // flaky: new util.Histogram(intArray2, (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray2);
+        // flaky: org.junit.Assert.assertNotNull(intArray2);
     }
 
     @Test
@@ -6187,14 +7104,14 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test338");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setOffset((int) (byte) 1);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setOffset((int) (byte) 1);
         util.Histogram histogram9 = new util.Histogram((int) ' ');
         int[] intArray10 = histogram9.getData();
-// flaky:         histogram1.set(intArray10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.put((int) (short) 0);
+        // flaky: histogram1.set(intArray10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.put((int) (short) 0);
         org.junit.Assert.assertNotNull(intArray10);
     }
 
@@ -6216,13 +7133,16 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test340");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray15 = histogram14.getData();
         histogram14.setWidth(97);
         histogram14.setWidth((int) (byte) 1);
@@ -6230,49 +7150,64 @@ public class Regression0Test {
         histogram14.setWidth(100);
         histogram14.setWidth((int) 'a');
         util.Histogram histogram27 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram27.setSize((int) (short) 10);
-// flaky:         histogram27.setSize((int) (byte) 100);
-// flaky:         histogram27.setSize((int) 'a');
+        // flaky: histogram27.setSize((int) (short) 10);
+        // flaky: histogram27.setSize((int) (byte) 100);
+        // flaky: histogram27.setSize((int) 'a');
         util.Histogram histogram35 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram35.setSize((int) (short) 10);
-// flaky:         histogram35.setSize((int) (byte) 100);
+        // flaky: histogram35.setSize((int) (short) 10);
+        // flaky: histogram35.setSize((int) (byte) 100);
         java.lang.Integer[] intArray42 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList43 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43, intArray42);
-// flaky:         histogram35.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram27.set((java.util.List<java.lang.Integer>) intList43);
+        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43,
+                                                         intArray42);
+        // flaky: histogram35.set((java.util.List<java.lang.Integer>) intList43);
+        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram27.set((java.util.List<java.lang.Integer>) intList43);
         util.Histogram histogram51 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram51.setSize((int) (short) 10);
-// flaky:         histogram51.setSize((int) (byte) 100);
-// flaky:         histogram51.setSize((int) 'a');
+        // flaky: histogram51.setSize((int) (short) 10);
+        // flaky: histogram51.setSize((int) (byte) 100);
+        // flaky: histogram51.setSize((int) 'a');
         util.Histogram histogram59 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram59.setSize((int) (short) 10);
-// flaky:         histogram59.setSize((int) (byte) 100);
+        // flaky: histogram59.setSize((int) (short) 10);
+        // flaky: histogram59.setSize((int) (byte) 100);
         java.lang.Integer[] intArray66 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList67 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean68 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList67, intArray66);
-// flaky:         histogram59.set((java.util.List<java.lang.Integer>) intList67);
-        util.Histogram histogram72 = new util.Histogram((java.util.List<java.lang.Integer>) intList67, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram51.set((java.util.List<java.lang.Integer>) intList67);
-        util.Histogram histogram75 = new util.Histogram((java.util.List<java.lang.Integer>) intList67, 10);
-        util.Histogram histogram78 = new util.Histogram((java.util.List<java.lang.Integer>) intList67, 1, (int) '4');
-// flaky:         histogram27.set((java.util.List<java.lang.Integer>) intList67);
-        util.Histogram histogram82 = new util.Histogram((java.util.List<java.lang.Integer>) intList67, 1, 255);
-        util.Histogram histogram84 = new util.Histogram((java.util.List<java.lang.Integer>) intList67, 97);
+        boolean boolean68 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList67,
+                                                         intArray66);
+        // flaky: histogram59.set((java.util.List<java.lang.Integer>) intList67);
+        util.Histogram histogram72 = new util.Histogram((java.util.List<java.lang.Integer>) intList67,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram51.set((java.util.List<java.lang.Integer>) intList67);
+        util.Histogram histogram75 = new util.Histogram((java.util.List<java.lang.Integer>) intList67,
+                                                        10);
+        util.Histogram histogram78 = new util.Histogram((java.util.List<java.lang.Integer>) intList67,
+                                                        1, (int) '4');
+        // flaky: histogram27.set((java.util.List<java.lang.Integer>) intList67);
+        util.Histogram histogram82 = new util.Histogram((java.util.List<java.lang.Integer>) intList67,
+                                                        1, 255);
+        util.Histogram histogram84 = new util.Histogram((java.util.List<java.lang.Integer>) intList67,
+                                                        97);
         histogram14.set((java.util.List<java.lang.Integer>) intList67);
         try {
-            util.Histogram histogram88 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList67, (int) (short) 10, (int) (short) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            util.Histogram histogram88 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList67, (int) (short) 10, (int)
+                                               // (short) -1);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray15);
         org.junit.Assert.assertNotNull(intArray42);
-        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'", boolean44 == true);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'",
+                                    boolean44 == true);
         org.junit.Assert.assertNotNull(intArray66);
-        org.junit.Assert.assertTrue("'" + boolean68 + "' != '" + true + "'", boolean68 == true);
+        org.junit.Assert.assertTrue("'" + boolean68 + "' != '" + true + "'",
+                                    boolean68 == true);
     }
 
     @Test
@@ -6288,59 +7223,78 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test342");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) 'a');
         int[] intArray17 = histogram16.getData();
         util.Histogram histogram19 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram19.setSize((int) (short) 10);
-// flaky:         histogram19.setSize((int) (byte) 100);
+        // flaky: histogram19.setSize((int) (short) 10);
+        // flaky: histogram19.setSize((int) (byte) 100);
         java.lang.Integer[] intArray26 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList27 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27, intArray26);
-// flaky:         histogram19.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (byte) 100);
+        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27,
+                                                         intArray26);
+        // flaky: histogram19.set((java.util.List<java.lang.Integer>) intList27);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (byte) 100);
         histogram16.set((java.util.List<java.lang.Integer>) intList27);
         util.Histogram histogram37 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram37.setSize((int) (short) 10);
-// flaky:         histogram37.setSize((int) (byte) 100);
+        // flaky: histogram37.setSize((int) (short) 10);
+        // flaky: histogram37.setSize((int) (byte) 100);
         java.lang.Integer[] intArray44 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList45 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean46 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList45, intArray44);
-// flaky:         histogram37.set((java.util.List<java.lang.Integer>) intList45);
-        util.Histogram histogram50 = new util.Histogram((java.util.List<java.lang.Integer>) intList45, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList45, (int) (byte) 100);
-        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList45, 255);
+        boolean boolean46 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList45,
+                                                         intArray44);
+        // flaky: histogram37.set((java.util.List<java.lang.Integer>) intList45);
+        util.Histogram histogram50 = new util.Histogram((java.util.List<java.lang.Integer>) intList45,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList45,
+                                                        (int) (byte) 100);
+        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList45,
+                                                        255);
         util.Histogram histogram56 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram56.setSize((int) (short) 10);
-// flaky:         histogram56.setSize((int) (byte) 100);
+        // flaky: histogram56.setSize((int) (short) 10);
+        // flaky: histogram56.setSize((int) (byte) 100);
         java.lang.Integer[] intArray63 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList64 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean65 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList64, intArray63);
-// flaky:         histogram56.set((java.util.List<java.lang.Integer>) intList64);
-        util.Histogram histogram68 = new util.Histogram((java.util.List<java.lang.Integer>) intList64, (int) 'a');
+        boolean boolean65 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList64,
+                                                         intArray63);
+        // flaky: histogram56.set((java.util.List<java.lang.Integer>) intList64);
+        util.Histogram histogram68 = new util.Histogram((java.util.List<java.lang.Integer>) intList64,
+                                                        (int) 'a');
         histogram54.set((java.util.List<java.lang.Integer>) intList64);
         histogram16.set((java.util.List<java.lang.Integer>) intList64);
         try {
             util.Histogram histogram73 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList64, 10, (int) (short) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray17);
         org.junit.Assert.assertNotNull(intArray26);
-        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'", boolean28 == true);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'",
+                                    boolean28 == true);
         org.junit.Assert.assertNotNull(intArray44);
-        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + true + "'", boolean46 == true);
+        org.junit.Assert.assertTrue("'" + boolean46 + "' != '" + true + "'",
+                                    boolean46 == true);
         org.junit.Assert.assertNotNull(intArray63);
-        org.junit.Assert.assertTrue("'" + boolean65 + "' != '" + true + "'", boolean65 == true);
+        org.junit.Assert.assertTrue("'" + boolean65 + "' != '" + true + "'",
+                                    boolean65 == true);
     }
 
     @Test
@@ -6353,14 +7307,16 @@ public class Regression0Test {
         int[] intArray6 = histogram5.getData();
         histogram1.set(intArray6);
         util.Histogram histogram10 = null; // flaky: new util.Histogram(intArray6, 52, (-1));
-        util.Histogram histogram13 = new util.Histogram(intArray6, (int) (byte) 100, 1);
+        util.Histogram histogram13 = new util.Histogram(intArray6,
+                                                        (int) (byte) 100, 1);
         util.Histogram histogram15 = new util.Histogram(intArray6, (int) '4');
         util.Histogram histogram18 = new util.Histogram(1, (int) (short) 100);
         int[] intArray19 = histogram18.getData();
         histogram15.set(intArray19);
         try {
             util.Histogram histogram23 = null; // flaky: new util.Histogram(intArray19, (int) ' ', (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // null");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray6);
@@ -6372,7 +7328,7 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test344");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 100);
+        // flaky: histogram1.setSize((int) (short) 100);
     }
 
     @Test
@@ -6380,22 +7336,27 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test345");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) 'a');
         int[] intArray17 = histogram16.getData();
         try {
             util.Histogram histogram19 = null; // flaky: new util.Histogram(intArray17, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray17);
     }
 
@@ -6426,7 +7387,9 @@ public class Regression0Test {
         } catch (java.lang.NullPointerException e) {
         }
         org.junit.Assert.assertNotNull(floatArray4);
-        org.junit.Assert.assertTrue("'" + direction6 + "' != '" + morphology.Sobel.Direction.RIGHT + "'", direction6.equals(morphology.Sobel.Direction.RIGHT));
+        org.junit.Assert.assertTrue("'" + direction6 + "' != '"
+                                    + morphology.Sobel.Direction.RIGHT + "'",
+                                    direction6.equals(morphology.Sobel.Direction.RIGHT));
         org.junit.Assert.assertNotNull(baseMorphology10);
         org.junit.Assert.assertNotNull(wildcardClass11);
         org.junit.Assert.assertNotNull(wildcardClass12);
@@ -6444,13 +7407,13 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test349");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setOffset((int) (byte) 1);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setOffset((int) (byte) 1);
         util.Histogram histogram9 = new util.Histogram((int) ' ');
         int[] intArray10 = histogram9.getData();
-// flaky:         histogram1.set(intArray10);
-// flaky:         histogram1.setOffset(97);
+        // flaky: histogram1.set(intArray10);
+        // flaky: histogram1.setOffset(97);
         org.junit.Assert.assertNotNull(intArray10);
     }
 
@@ -6461,7 +7424,8 @@ public class Regression0Test {
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
         try {
             int int4 = 0; // flaky: histogram2.get((int) (short) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -1");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: -1");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -6471,43 +7435,60 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test351");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
         util.Histogram histogram20 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram20.setSize((int) (short) 10);
-// flaky:         histogram20.setSize((int) (byte) 100);
+        // flaky: histogram20.setSize((int) (short) 10);
+        // flaky: histogram20.setSize((int) (byte) 100);
         java.lang.Integer[] intArray27 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList28 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28, intArray27);
-// flaky:         histogram20.set((java.util.List<java.lang.Integer>) intList28);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) 'a');
+        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28,
+                                                         intArray27);
+        // flaky: histogram20.set((java.util.List<java.lang.Integer>) intList28);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) 'a');
         histogram18.set((java.util.List<java.lang.Integer>) intList28);
         util.Histogram histogram35 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram35.setSize((int) (short) 10);
-// flaky:         histogram35.setSize((int) (byte) 100);
+        // flaky: histogram35.setSize((int) (short) 10);
+        // flaky: histogram35.setSize((int) (byte) 100);
         java.lang.Integer[] intArray42 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList43 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43, intArray42);
-// flaky:         histogram35.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 10, (int) (byte) 10);
+        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43,
+                                                         intArray42);
+        // flaky: histogram35.set((java.util.List<java.lang.Integer>) intList43);
+        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram18.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram51 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (byte) 10);
-        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 100, (int) (short) 100);
-        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) '4');
+        util.Histogram histogram51 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (byte) 10);
+        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 100,
+                                                        (int) (short) 100);
+        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) '4');
         histogram56.setWidth(1);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray27);
-        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'", boolean29 == true);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'",
+                                    boolean29 == true);
         org.junit.Assert.assertNotNull(intArray42);
-        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'", boolean44 == true);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'",
+                                    boolean44 == true);
     }
 
     @Test
@@ -6515,29 +7496,36 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test352");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) ' ', 100);
-        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 100, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) ' ', 100);
+        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        100, (int) (byte) 10);
         try {
             util.Histogram histogram22 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) -1, (-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
     public void test353() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test353");
-        util.Histogram histogram2 = new util.Histogram((int) (byte) 100, (int) (byte) 100);
+        util.Histogram histogram2 = new util.Histogram((int) (byte) 100,
+                                                       (int) (byte) 100);
         histogram2.setSize((int) (byte) 1);
     }
 
@@ -6546,17 +7534,18 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test354");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
-// flaky:         histogram2.setOffset((int) (byte) 10);
+        // flaky: histogram2.setOffset((int) (byte) 10);
         int[] intArray8 = null; // flaky: histogram2.getData();
         try {
             util.Histogram histogram10 = null; // flaky: new util.Histogram(intArray8, 100);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
-// flaky:         org.junit.Assert.assertNotNull(intArray8);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray8);
     }
 
     @Test
@@ -6580,12 +7569,14 @@ public class Regression0Test {
     public void test356() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test356");
-        int[] intArray5 = new int[] { (byte) 1, (short) 10, (byte) -1, '#', (byte) 10 };
+        int[] intArray5 = new int[] { (byte) 1, (short) 10, (byte) -1, '#',
+                                      (byte) 10 };
         util.Histogram histogram7 = new util.Histogram(intArray5, (int) 'a');
         util.Histogram histogram9 = new util.Histogram(intArray5, 100);
         try {
             util.Histogram histogram12 = null; // flaky: new util.Histogram(intArray5, (-1), (int) (byte) 1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray5);
@@ -6596,35 +7587,46 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test357");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
         util.Histogram histogram20 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram20.setSize((int) (short) 10);
-// flaky:         histogram20.setSize((int) (byte) 100);
+        // flaky: histogram20.setSize((int) (short) 10);
+        // flaky: histogram20.setSize((int) (byte) 100);
         java.lang.Integer[] intArray27 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList28 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28, intArray27);
-// flaky:         histogram20.set((java.util.List<java.lang.Integer>) intList28);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) 'a');
+        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28,
+                                                         intArray27);
+        // flaky: histogram20.set((java.util.List<java.lang.Integer>) intList28);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) 'a');
         histogram18.set((java.util.List<java.lang.Integer>) intList28);
         java.lang.Class<?> wildcardClass34 = intList28.getClass();
-        util.Histogram histogram36 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) (short) 100);
+        util.Histogram histogram36 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) (short) 100);
         try {
             util.Histogram histogram38 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) (byte) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray27);
-        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'", boolean29 == true);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'",
+                                    boolean29 == true);
         org.junit.Assert.assertNotNull(wildcardClass34);
     }
 
@@ -6641,7 +7643,8 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test359");
         try {
             util.Histogram histogram2 = null; // flaky: new util.Histogram((-1), 52);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -6651,9 +7654,9 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test360");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
-// flaky:         histogram2.setWidth(100);
-// flaky:         histogram2.setOffset(1);
+        // flaky: histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth(100);
+        // flaky: histogram2.setOffset(1);
     }
 
     @Test
@@ -6662,13 +7665,17 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test361");
         java.lang.Integer[] intArray2 = new java.lang.Integer[] { 10, 1 };
         java.util.ArrayList<java.lang.Integer> intList3 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3, intArray2);
-        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3, (int) '#', (int) (byte) 100);
+        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3,
+                                                        intArray2);
+        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3,
+                                                       (int) '#',
+                                                       (int) (byte) 100);
         histogram7.put((int) '#');
         java.lang.Class<?> wildcardClass10 = histogram7.getClass();
         histogram7.setWidth((int) (byte) 1);
         org.junit.Assert.assertNotNull(intArray2);
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'", boolean4 == true);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'",
+                                    boolean4 == true);
         org.junit.Assert.assertNotNull(wildcardClass10);
     }
 
@@ -6677,17 +7684,21 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test362");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) ' ');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) ' ');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100);
         histogram16.setWidth((int) '#');
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -6695,22 +7706,29 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test363");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
         try {
-            util.Histogram histogram20 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 1);
+            util.Histogram histogram20 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                            (int) (byte) 1);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -6741,11 +7759,11 @@ public class Regression0Test {
         org.junit.Assert.assertNotNull(floatArray2);
         org.junit.Assert.assertNotNull(floatArray6);
         org.junit.Assert.assertNotNull(floatArray10);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology12);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology13);
-// flaky:         org.junit.Assert.assertNotNull(wildcardClass14);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology12);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology13);
+        // flaky: org.junit.Assert.assertNotNull(wildcardClass14);
         org.junit.Assert.assertNotNull(floatArray15);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology20);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology20);
     }
 
     @Test
@@ -6766,33 +7784,42 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test366");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram14.put((int) (short) 10);
         util.Histogram histogram18 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram18.setSize((int) (short) 10);
-// flaky:         histogram18.setSize((int) (byte) 100);
+        // flaky: histogram18.setSize((int) (short) 10);
+        // flaky: histogram18.setSize((int) (byte) 100);
         java.lang.Integer[] intArray25 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList26 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean27 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList26, intArray25);
-// flaky:         histogram18.set((java.util.List<java.lang.Integer>) intList26);
-        util.Histogram histogram31 = new util.Histogram((java.util.List<java.lang.Integer>) intList26, (int) (short) 10, (int) (byte) 10);
+        boolean boolean27 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList26,
+                                                         intArray25);
+        // flaky: histogram18.set((java.util.List<java.lang.Integer>) intList26);
+        util.Histogram histogram31 = new util.Histogram((java.util.List<java.lang.Integer>) intList26,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray32 = histogram31.getData();
         histogram14.set(intArray32);
         try {
             util.Histogram histogram35 = null; // flaky: new util.Histogram(intArray32, (int) (short) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray25);
-        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + true + "'", boolean27 == true);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + true + "'",
+                                    boolean27 == true);
         org.junit.Assert.assertNotNull(intArray32);
     }
 
@@ -6808,36 +7835,49 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test368");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, (int) (byte) 1);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 10);
         int[] intArray17 = histogram16.getData();
         util.Histogram histogram19 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram19.setSize((int) (short) 10);
-// flaky:         histogram19.setSize((int) (byte) 100);
+        // flaky: histogram19.setSize((int) (short) 10);
+        // flaky: histogram19.setSize((int) (byte) 100);
         java.lang.Integer[] intArray26 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList27 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27, intArray26);
-// flaky:         histogram19.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (short) 100, (int) (byte) 1);
-        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (byte) 10);
+        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27,
+                                                         intArray26);
+        // flaky: histogram19.set((java.util.List<java.lang.Integer>) intList27);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (byte) 10);
         histogram16.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram38 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) 'a', (int) (short) 10);
+        util.Histogram histogram38 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) 'a',
+                                                        (int) (short) 10);
         try {
             util.Histogram histogram41 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) '4', 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // null");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray17);
         org.junit.Assert.assertNotNull(intArray26);
-        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'", boolean28 == true);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'",
+                                    boolean28 == true);
     }
 
     @Test
@@ -6848,37 +7888,42 @@ public class Regression0Test {
         histogram1.setWidth((int) (byte) 100);
         histogram1.setOffset((int) (short) 100);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
-// flaky:         histogram7.setOffset((int) (byte) 1);
-// flaky:         histogram7.setOffset((int) '4');
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setOffset((int) (byte) 1);
+        // flaky: histogram7.setOffset((int) '4');
         int[] intArray16 = null; // flaky: histogram7.getData();
-// flaky:         histogram1.set(intArray16);
+        // flaky: histogram1.set(intArray16);
         util.Histogram histogram19 = null; // flaky: new util.Histogram(intArray16, (int) (short) 100);
         util.Histogram histogram21 = null; // flaky: new util.Histogram(intArray16, 97);
         util.Histogram histogram23 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram23.setSize((int) (short) 10);
-// flaky:         histogram23.setSize((int) (byte) 100);
+        // flaky: histogram23.setSize((int) (short) 10);
+        // flaky: histogram23.setSize((int) (byte) 100);
         java.lang.Integer[] intArray30 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList31 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean32 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList31, intArray30);
-// flaky:         histogram23.set((java.util.List<java.lang.Integer>) intList31);
-        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList31, (int) 'a');
-// flaky:         histogram21.set((java.util.List<java.lang.Integer>) intList31);
+        boolean boolean32 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList31,
+                                                         intArray30);
+        // flaky: histogram23.set((java.util.List<java.lang.Integer>) intList31);
+        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList31,
+                                                        (int) 'a');
+        // flaky: histogram21.set((java.util.List<java.lang.Integer>) intList31);
         int[] intArray37 = null; // flaky: histogram21.getData();
         util.Histogram histogram39 = new util.Histogram((int) ' ');
         int[] intArray40 = histogram39.getData();
-// flaky:         histogram21.set(intArray40);
-        util.Histogram histogram43 = new util.Histogram(intArray40, (int) (short) 100);
+        // flaky: histogram21.set(intArray40);
+        util.Histogram histogram43 = new util.Histogram(intArray40,
+                                                        (int) (short) 100);
         try {
             util.Histogram histogram46 = null; // flaky: new util.Histogram(intArray40, (int) (byte) 1, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // null");
         } catch (java.lang.ArithmeticException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray16);
+        // flaky: org.junit.Assert.assertNotNull(intArray16);
         org.junit.Assert.assertNotNull(intArray30);
-        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + true + "'", boolean32 == true);
-// flaky:         org.junit.Assert.assertNotNull(intArray37);
+        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + true + "'",
+                                    boolean32 == true);
+        // flaky: org.junit.Assert.assertNotNull(intArray37);
         org.junit.Assert.assertNotNull(intArray40);
     }
 
@@ -6894,31 +7939,36 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test371");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, 10);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        10);
         histogram25.setWidth((int) ' ');
         util.Histogram histogram29 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram29.setSize((int) (short) 10);
-// flaky:         histogram29.setSize((int) (byte) 100);
-// flaky:         histogram29.setOffset((int) (byte) 1);
-// flaky:         histogram29.setOffset((int) '4');
+        // flaky: histogram29.setSize((int) (short) 10);
+        // flaky: histogram29.setSize((int) (byte) 100);
+        // flaky: histogram29.setOffset((int) (byte) 1);
+        // flaky: histogram29.setOffset((int) '4');
         int[] intArray38 = null; // flaky: histogram29.getData();
-// flaky:         histogram25.set(intArray38);
+        // flaky: histogram25.set(intArray38);
         histogram25.setOffset(10);
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
-// flaky:         org.junit.Assert.assertNotNull(intArray38);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
+        // flaky: org.junit.Assert.assertNotNull(intArray38);
     }
 
     @Test
@@ -6948,23 +7998,28 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test373");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray15 = histogram14.getData();
         histogram14.setWidth(97);
         histogram14.setWidth((int) (byte) 1);
         int[] intArray20 = histogram14.getData();
         int int22 = histogram14.get((int) (short) 1);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray15);
         org.junit.Assert.assertNotNull(intArray20);
-        org.junit.Assert.assertTrue("'" + int22 + "' != '" + 0 + "'", int22 == 0);
+        org.junit.Assert.assertTrue("'" + int22 + "' != '" + 0 + "'",
+                                    int22 == 0);
     }
 
     @Test
@@ -7000,17 +8055,19 @@ public class Regression0Test {
         }
         org.junit.Assert.assertNotNull(floatArray0);
         org.junit.Assert.assertNotNull(wildcardClass2);
-        org.junit.Assert.assertTrue("'" + direction3 + "' != '" + morphology.Sobel.Direction.UP + "'", direction3.equals(morphology.Sobel.Direction.UP));
+        org.junit.Assert.assertTrue("'" + direction3 + "' != '"
+                                    + morphology.Sobel.Direction.UP + "'",
+                                    direction3.equals(morphology.Sobel.Direction.UP));
         org.junit.Assert.assertNotNull(floatArray7);
         org.junit.Assert.assertNotNull(floatArray11);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology13);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology13);
         org.junit.Assert.assertNotNull(baseMorphology14);
         org.junit.Assert.assertNotNull(baseMorphology15);
         org.junit.Assert.assertNotNull(floatArray18);
         org.junit.Assert.assertNotNull(floatArray22);
         org.junit.Assert.assertNotNull(floatArray26);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology28);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology29);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology28);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology29);
         org.junit.Assert.assertNotNull(baseMorphology30);
     }
 
@@ -7019,19 +8076,20 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test375");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
-// flaky:         histogram2.setOffset((int) (byte) 10);
-// flaky:         histogram2.setSize((int) (short) 0);
-// flaky:         histogram2.setWidth(255);
+        // flaky: histogram2.setOffset((int) (byte) 10);
+        // flaky: histogram2.setSize((int) (short) 0);
+        // flaky: histogram2.setWidth(255);
         int[] intArray12 = null; // flaky: histogram2.getData();
         try {
-// flaky:             histogram2.put((int) (short) 10);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: histogram2.put((int) (short) 10);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
-// flaky:         org.junit.Assert.assertNotNull(intArray12);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray12);
     }
 
     @Test
@@ -7039,44 +8097,55 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test376");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         util.Histogram histogram25 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram25.setSize((int) (short) 10);
-// flaky:         histogram25.setSize((int) (byte) 100);
-// flaky:         histogram25.setSize((int) 'a');
+        // flaky: histogram25.setSize((int) (short) 10);
+        // flaky: histogram25.setSize((int) (byte) 100);
+        // flaky: histogram25.setSize((int) 'a');
         util.Histogram histogram33 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram33.setSize((int) (short) 10);
-// flaky:         histogram33.setSize((int) (byte) 100);
+        // flaky: histogram33.setSize((int) (short) 10);
+        // flaky: histogram33.setSize((int) (byte) 100);
         java.lang.Integer[] intArray40 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList41 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41, intArray40);
-// flaky:         histogram33.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram25.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 10);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, (int) '4');
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, 255);
+        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41,
+                                                         intArray40);
+        // flaky: histogram33.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram25.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        10);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, (int) '4');
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, 255);
         try {
             int int58 = histogram56.get((int) (short) 100);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 100");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
         org.junit.Assert.assertNotNull(intArray40);
-        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'", boolean42 == true);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'",
+                                    boolean42 == true);
     }
 
     @Test
@@ -7087,31 +8156,41 @@ public class Regression0Test {
         int[] intArray2 = histogram1.getData();
         java.lang.Integer[] intArray5 = new java.lang.Integer[] { 10, 1 };
         java.util.ArrayList<java.lang.Integer> intList6 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean7 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList6, intArray5);
-        util.Histogram histogram10 = new util.Histogram((java.util.List<java.lang.Integer>) intList6, (int) '#', (int) (byte) 100);
+        boolean boolean7 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList6,
+                                                        intArray5);
+        util.Histogram histogram10 = new util.Histogram((java.util.List<java.lang.Integer>) intList6,
+                                                        (int) '#',
+                                                        (int) (byte) 100);
         util.Histogram histogram12 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram12.setSize((int) (short) 10);
-// flaky:         histogram12.setSize((int) (byte) 100);
-// flaky:         histogram12.setSize((int) 'a');
+        // flaky: histogram12.setSize((int) (short) 10);
+        // flaky: histogram12.setSize((int) (byte) 100);
+        // flaky: histogram12.setSize((int) 'a');
         util.Histogram histogram20 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram20.setSize((int) (short) 10);
-// flaky:         histogram20.setSize((int) (byte) 100);
+        // flaky: histogram20.setSize((int) (short) 10);
+        // flaky: histogram20.setSize((int) (byte) 100);
         java.lang.Integer[] intArray27 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList28 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28, intArray27);
-// flaky:         histogram20.set((java.util.List<java.lang.Integer>) intList28);
-        util.Histogram histogram33 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram12.set((java.util.List<java.lang.Integer>) intList28);
+        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28,
+                                                         intArray27);
+        // flaky: histogram20.set((java.util.List<java.lang.Integer>) intList28);
+        util.Histogram histogram33 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram12.set((java.util.List<java.lang.Integer>) intList28);
         histogram10.set((java.util.List<java.lang.Integer>) intList28);
-        util.Histogram histogram37 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, 97);
+        util.Histogram histogram37 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        97);
         histogram1.set((java.util.List<java.lang.Integer>) intList28);
-        util.Histogram histogram40 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) '#');
+        util.Histogram histogram40 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) '#');
         histogram40.setOffset((int) (byte) 0);
         org.junit.Assert.assertNotNull(intArray2);
         org.junit.Assert.assertNotNull(intArray5);
-        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + true + "'", boolean7 == true);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + true + "'",
+                                    boolean7 == true);
         org.junit.Assert.assertNotNull(intArray27);
-        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'", boolean29 == true);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'",
+                                    boolean29 == true);
     }
 
     @Test
@@ -7138,43 +8217,57 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test379");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, (int) (byte) 1);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 10);
         int[] intArray17 = histogram16.getData();
         util.Histogram histogram19 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram19.setSize((int) (short) 10);
-// flaky:         histogram19.setSize((int) (byte) 100);
+        // flaky: histogram19.setSize((int) (short) 10);
+        // flaky: histogram19.setSize((int) (byte) 100);
         java.lang.Integer[] intArray26 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList27 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27, intArray26);
-// flaky:         histogram19.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (short) 100, (int) (byte) 1);
-        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (byte) 10);
+        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27,
+                                                         intArray26);
+        // flaky: histogram19.set((java.util.List<java.lang.Integer>) intList27);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (byte) 10);
         histogram16.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram38 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) 'a', (int) (short) 10);
+        util.Histogram histogram38 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) 'a',
+                                                        (int) (short) 10);
         try {
             util.Histogram histogram40 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray17);
         org.junit.Assert.assertNotNull(intArray26);
-        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'", boolean28 == true);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'",
+                                    boolean28 == true);
     }
 
     @Test
     public void test380() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test380");
-        util.Histogram histogram2 = new util.Histogram((int) (byte) 100, (int) (byte) 100);
+        util.Histogram histogram2 = new util.Histogram((int) (byte) 100,
+                                                       (int) (byte) 100);
         int[] intArray3 = null;
         try {
             histogram2.set(intArray3);
@@ -7188,19 +8281,24 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test381");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) 'a');
         int[] intArray17 = histogram16.getData();
-        util.Histogram histogram19 = new util.Histogram(intArray17, (int) (short) 10);
+        util.Histogram histogram19 = new util.Histogram(intArray17,
+                                                        (int) (short) 10);
         histogram19.setOffset((int) (short) 0);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray17);
     }
 
@@ -7209,7 +8307,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test382");
         int int1 = util.RGBPixel.getRed((int) (short) -1);
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 255 + "'", int1 == 255);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 255 + "'",
+                                    int1 == 255);
     }
 
     @Test
@@ -7217,43 +8316,55 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test383");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         util.Histogram histogram25 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram25.setSize((int) (short) 10);
-// flaky:         histogram25.setSize((int) (byte) 100);
-// flaky:         histogram25.setSize((int) 'a');
+        // flaky: histogram25.setSize((int) (short) 10);
+        // flaky: histogram25.setSize((int) (byte) 100);
+        // flaky: histogram25.setSize((int) 'a');
         util.Histogram histogram33 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram33.setSize((int) (short) 10);
-// flaky:         histogram33.setSize((int) (byte) 100);
+        // flaky: histogram33.setSize((int) (short) 10);
+        // flaky: histogram33.setSize((int) (byte) 100);
         java.lang.Integer[] intArray40 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList41 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41, intArray40);
-// flaky:         histogram33.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram25.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 10);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, (int) '4');
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList41);
+        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41,
+                                                         intArray40);
+        // flaky: histogram33.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram25.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        10);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, (int) '4');
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList41);
         try {
-            util.Histogram histogram56 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (byte) -1, (int) ' ');
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            util.Histogram histogram56 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (byte) -1, (int) '
+                                               // ');
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
         org.junit.Assert.assertNotNull(intArray40);
-        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'", boolean42 == true);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'",
+                                    boolean42 == true);
     }
 
     @Test
@@ -7263,7 +8374,7 @@ public class Regression0Test {
         util.Histogram histogram1 = new util.Histogram((int) (byte) 100);
         int[] intArray2 = histogram1.getData();
         util.Histogram histogram5 = null; // flaky: new util.Histogram(intArray2, 52, (int) (byte) -1);
-// flaky:         histogram5.put((int) (short) 0);
+        // flaky: histogram5.put((int) (short) 0);
         org.junit.Assert.assertNotNull(intArray2);
     }
 
@@ -7272,28 +8383,33 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test385");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setWidth(0);
-// flaky:         histogram1.setSize((int) 'a');
-// flaky:         histogram1.setWidth((int) (byte) 100);
+        // flaky: histogram1.setWidth(0);
+        // flaky: histogram1.setSize((int) 'a');
+        // flaky: histogram1.setWidth((int) (byte) 100);
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 100, (int) (byte) 1);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
-// flaky:         histogram1.put((int) (short) 10);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        // flaky: histogram1.put((int) (short) 10);
         java.lang.Class<?> wildcardClass26 = null; // flaky: histogram1.getClass();
         try {
-// flaky:             histogram1.setSize((int) (short) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: histogram1.setSize((int) (short) -1);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
-// flaky:         org.junit.Assert.assertNotNull(wildcardClass26);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
+        // flaky: org.junit.Assert.assertNotNull(wildcardClass26);
     }
 
     @Test
@@ -7327,31 +8443,40 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test388");
         java.lang.Integer[] intArray2 = new java.lang.Integer[] { 10, 1 };
         java.util.ArrayList<java.lang.Integer> intList3 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3, intArray2);
-        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3, (int) '#', (int) (byte) 100);
+        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3,
+                                                        intArray2);
+        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3,
+                                                       (int) '#',
+                                                       (int) (byte) 100);
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
-// flaky:         histogram9.setSize((int) 'a');
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) 'a');
         util.Histogram histogram17 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram17.setSize((int) (short) 10);
-// flaky:         histogram17.setSize((int) (byte) 100);
+        // flaky: histogram17.setSize((int) (short) 10);
+        // flaky: histogram17.setSize((int) (byte) 100);
         java.lang.Integer[] intArray24 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList25 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean26 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList25, intArray24);
-// flaky:         histogram17.set((java.util.List<java.lang.Integer>) intList25);
-        util.Histogram histogram30 = new util.Histogram((java.util.List<java.lang.Integer>) intList25, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList25);
+        boolean boolean26 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList25,
+                                                         intArray24);
+        // flaky: histogram17.set((java.util.List<java.lang.Integer>) intList25);
+        util.Histogram histogram30 = new util.Histogram((java.util.List<java.lang.Integer>) intList25,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList25);
         histogram7.set((java.util.List<java.lang.Integer>) intList25);
         try {
             util.Histogram histogram34 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList25, (-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray2);
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'", boolean4 == true);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'",
+                                    boolean4 == true);
         org.junit.Assert.assertNotNull(intArray24);
-        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + true + "'", boolean26 == true);
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + true + "'",
+                                    boolean26 == true);
     }
 
     @Test
@@ -7374,7 +8499,9 @@ public class Regression0Test {
         }
         org.junit.Assert.assertNotNull(floatArray6);
         org.junit.Assert.assertNotNull(baseMorphology8);
-        org.junit.Assert.assertTrue("'" + direction9 + "' != '" + morphology.Sobel.Direction.RIGHT + "'", direction9.equals(morphology.Sobel.Direction.RIGHT));
+        org.junit.Assert.assertTrue("'" + direction9 + "' != '"
+                                    + morphology.Sobel.Direction.RIGHT + "'",
+                                    direction9.equals(morphology.Sobel.Direction.RIGHT));
         org.junit.Assert.assertNotNull(wildcardClass11);
         org.junit.Assert.assertNotNull(baseMorphology12);
     }
@@ -7385,25 +8512,34 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test390");
         util.Histogram histogram2 = new util.Histogram(100, 10);
         util.Histogram histogram4 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram4.setSize((int) (short) 10);
-// flaky:         histogram4.setSize((int) (byte) 100);
+        // flaky: histogram4.setSize((int) (short) 10);
+        // flaky: histogram4.setSize((int) (byte) 100);
         java.lang.Integer[] intArray11 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList12 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12, intArray11);
-// flaky:         histogram4.set((java.util.List<java.lang.Integer>) intList12);
-        util.Histogram histogram17 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, (int) (byte) 100);
-        util.Histogram histogram21 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, 255);
-        util.Histogram histogram23 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, (int) ' ');
-        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList12, (int) '4');
+        boolean boolean13 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList12,
+                                                         intArray11);
+        // flaky: histogram4.set((java.util.List<java.lang.Integer>) intList12);
+        util.Histogram histogram17 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        (int) (byte) 100);
+        util.Histogram histogram21 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        255);
+        util.Histogram histogram23 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        (int) ' ');
+        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList12,
+                                                        (int) '4');
         histogram2.set((java.util.List<java.lang.Integer>) intList12);
         try {
             util.Histogram histogram29 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList12, (-1), (int) (short) 10);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray11);
-        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'",
+                                    boolean13 == true);
     }
 
     @Test
@@ -7419,7 +8555,7 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test392");
         util.Histogram histogram2 = null; // flaky: new util.Histogram((int) (byte) 10, (int) (byte) -1);
-// flaky:         histogram2.setWidth((int) (short) 10);
+        // flaky: histogram2.setWidth((int) (short) 10);
     }
 
     @Test
@@ -7427,39 +8563,49 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test393");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         util.Histogram histogram25 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram25.setSize((int) (short) 10);
-// flaky:         histogram25.setSize((int) (byte) 100);
-// flaky:         histogram25.setSize((int) 'a');
+        // flaky: histogram25.setSize((int) (short) 10);
+        // flaky: histogram25.setSize((int) (byte) 100);
+        // flaky: histogram25.setSize((int) 'a');
         util.Histogram histogram33 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram33.setSize((int) (short) 10);
-// flaky:         histogram33.setSize((int) (byte) 100);
+        // flaky: histogram33.setSize((int) (short) 10);
+        // flaky: histogram33.setSize((int) (byte) 100);
         java.lang.Integer[] intArray40 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList41 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41, intArray40);
-// flaky:         histogram33.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram25.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 10);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, (int) '4');
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList41);
+        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41,
+                                                         intArray40);
+        // flaky: histogram33.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram25.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        10);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, (int) '4');
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList41);
         java.lang.Class<?> wildcardClass54 = intList41.getClass();
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
         org.junit.Assert.assertNotNull(intArray40);
-        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'", boolean42 == true);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'",
+                                    boolean42 == true);
         org.junit.Assert.assertNotNull(wildcardClass54);
     }
 
@@ -7468,61 +8614,87 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test394");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
         int[] intArray17 = histogram16.getData();
-        util.Histogram histogram20 = new util.Histogram(intArray17, (int) (short) 1, (int) (short) 10);
+        util.Histogram histogram20 = new util.Histogram(intArray17,
+                                                        (int) (short) 1,
+                                                        (int) (short) 10);
         util.Histogram histogram22 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram22.setSize((int) (short) 10);
-// flaky:         histogram22.setSize((int) (byte) 100);
+        // flaky: histogram22.setSize((int) (short) 10);
+        // flaky: histogram22.setSize((int) (byte) 100);
         java.lang.Integer[] intArray29 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList30 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean31 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList30, intArray29);
-// flaky:         histogram22.set((java.util.List<java.lang.Integer>) intList30);
-        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList30, (int) (short) 100, (int) (byte) 1);
-        util.Histogram histogram37 = new util.Histogram((java.util.List<java.lang.Integer>) intList30, (int) (byte) 10);
+        boolean boolean31 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList30,
+                                                         intArray29);
+        // flaky: histogram22.set((java.util.List<java.lang.Integer>) intList30);
+        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList30,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        util.Histogram histogram37 = new util.Histogram((java.util.List<java.lang.Integer>) intList30,
+                                                        (int) (byte) 10);
         int[] intArray38 = histogram37.getData();
         util.Histogram histogram40 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram40.setSize((int) (short) 10);
-// flaky:         histogram40.setSize((int) (byte) 100);
+        // flaky: histogram40.setSize((int) (short) 10);
+        // flaky: histogram40.setSize((int) (byte) 100);
         java.lang.Integer[] intArray47 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList48 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean49 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList48, intArray47);
-// flaky:         histogram40.set((java.util.List<java.lang.Integer>) intList48);
-        util.Histogram histogram53 = new util.Histogram((java.util.List<java.lang.Integer>) intList48, (int) (short) 100, (int) (byte) 1);
-        util.Histogram histogram55 = new util.Histogram((java.util.List<java.lang.Integer>) intList48, (int) (byte) 10);
+        boolean boolean49 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList48,
+                                                         intArray47);
+        // flaky: histogram40.set((java.util.List<java.lang.Integer>) intList48);
+        util.Histogram histogram53 = new util.Histogram((java.util.List<java.lang.Integer>) intList48,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        util.Histogram histogram55 = new util.Histogram((java.util.List<java.lang.Integer>) intList48,
+                                                        (int) (byte) 10);
         histogram37.set((java.util.List<java.lang.Integer>) intList48);
-        util.Histogram histogram59 = new util.Histogram((java.util.List<java.lang.Integer>) intList48, (int) 'a', (int) (short) 10);
-        util.Histogram histogram61 = new util.Histogram((java.util.List<java.lang.Integer>) intList48, 100);
-        util.Histogram histogram63 = new util.Histogram((java.util.List<java.lang.Integer>) intList48, 35);
+        util.Histogram histogram59 = new util.Histogram((java.util.List<java.lang.Integer>) intList48,
+                                                        (int) 'a',
+                                                        (int) (short) 10);
+        util.Histogram histogram61 = new util.Histogram((java.util.List<java.lang.Integer>) intList48,
+                                                        100);
+        util.Histogram histogram63 = new util.Histogram((java.util.List<java.lang.Integer>) intList48,
+                                                        35);
         util.Histogram histogram65 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram65.setSize((int) (short) 10);
-// flaky:         histogram65.setSize((int) (byte) 100);
+        // flaky: histogram65.setSize((int) (short) 10);
+        // flaky: histogram65.setSize((int) (byte) 100);
         java.lang.Integer[] intArray72 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList73 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean74 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList73, intArray72);
-// flaky:         histogram65.set((java.util.List<java.lang.Integer>) intList73);
-        util.Histogram histogram77 = new util.Histogram((java.util.List<java.lang.Integer>) intList73, (int) 'a');
-        util.Histogram histogram80 = new util.Histogram((java.util.List<java.lang.Integer>) intList73, (int) ' ', 100);
-        util.Histogram histogram83 = new util.Histogram((java.util.List<java.lang.Integer>) intList73, (int) (byte) 10, 255);
+        boolean boolean74 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList73,
+                                                         intArray72);
+        // flaky: histogram65.set((java.util.List<java.lang.Integer>) intList73);
+        util.Histogram histogram77 = new util.Histogram((java.util.List<java.lang.Integer>) intList73,
+                                                        (int) 'a');
+        util.Histogram histogram80 = new util.Histogram((java.util.List<java.lang.Integer>) intList73,
+                                                        (int) ' ', 100);
+        util.Histogram histogram83 = new util.Histogram((java.util.List<java.lang.Integer>) intList73,
+                                                        (int) (byte) 10, 255);
         histogram63.set((java.util.List<java.lang.Integer>) intList73);
         histogram20.set((java.util.List<java.lang.Integer>) intList73);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray17);
         org.junit.Assert.assertNotNull(intArray29);
-        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + true + "'", boolean31 == true);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + true + "'",
+                                    boolean31 == true);
         org.junit.Assert.assertNotNull(intArray38);
         org.junit.Assert.assertNotNull(intArray47);
-        org.junit.Assert.assertTrue("'" + boolean49 + "' != '" + true + "'", boolean49 == true);
+        org.junit.Assert.assertTrue("'" + boolean49 + "' != '" + true + "'",
+                                    boolean49 == true);
         org.junit.Assert.assertNotNull(intArray72);
-        org.junit.Assert.assertTrue("'" + boolean74 + "' != '" + true + "'", boolean74 == true);
+        org.junit.Assert.assertTrue("'" + boolean74 + "' != '" + true + "'",
+                                    boolean74 == true);
     }
 
     @Test
@@ -7530,22 +8702,28 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test395");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) ' ', 100);
-        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 10, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) ' ', 100);
+        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 10, 255);
         try {
             util.Histogram histogram22 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 0, (-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -7553,17 +8731,21 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test396");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram14.setOffset(10);
         histogram14.setSize((int) '#');
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -7579,23 +8761,28 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test398");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) 'a');
         int[] intArray17 = histogram16.getData();
         util.Histogram histogram19 = new util.Histogram(intArray17, 97);
         try {
             util.Histogram histogram22 = null; // flaky: new util.Histogram(intArray17, 0, (-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray17);
     }
 
@@ -7624,7 +8811,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test400");
         int int1 = util.RGBPixel.getBlue((int) ' ');
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 32 + "'", int1 == 32);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 32 + "'",
+                                    int1 == 32);
     }
 
     @Test
@@ -7632,51 +8820,63 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test401");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
-// flaky:         histogram1.setSize(0);
-// flaky:         histogram1.setWidth((int) (short) 0);
-// flaky:         histogram1.setWidth((int) (short) -1);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize(0);
+        // flaky: histogram1.setWidth((int) (short) 0);
+        // flaky: histogram1.setWidth((int) (short) -1);
         util.Histogram histogram15 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram15.setSize((int) (short) 10);
-// flaky:         histogram15.setSize((int) (byte) 100);
-// flaky:         histogram15.setSize((int) 'a');
+        // flaky: histogram15.setSize((int) (short) 10);
+        // flaky: histogram15.setSize((int) (byte) 100);
+        // flaky: histogram15.setSize((int) 'a');
         util.Histogram histogram23 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram23.setSize((int) (short) 10);
-// flaky:         histogram23.setSize((int) (byte) 100);
+        // flaky: histogram23.setSize((int) (short) 10);
+        // flaky: histogram23.setSize((int) (byte) 100);
         java.lang.Integer[] intArray30 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList31 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean32 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList31, intArray30);
-// flaky:         histogram23.set((java.util.List<java.lang.Integer>) intList31);
-        util.Histogram histogram36 = new util.Histogram((java.util.List<java.lang.Integer>) intList31, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram15.set((java.util.List<java.lang.Integer>) intList31);
+        boolean boolean32 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList31,
+                                                         intArray30);
+        // flaky: histogram23.set((java.util.List<java.lang.Integer>) intList31);
+        util.Histogram histogram36 = new util.Histogram((java.util.List<java.lang.Integer>) intList31,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram15.set((java.util.List<java.lang.Integer>) intList31);
         util.Histogram histogram39 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram39.setSize((int) (short) 10);
-// flaky:         histogram39.setSize((int) (byte) 100);
-// flaky:         histogram39.setSize((int) 'a');
+        // flaky: histogram39.setSize((int) (short) 10);
+        // flaky: histogram39.setSize((int) (byte) 100);
+        // flaky: histogram39.setSize((int) 'a');
         util.Histogram histogram47 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram47.setSize((int) (short) 10);
-// flaky:         histogram47.setSize((int) (byte) 100);
+        // flaky: histogram47.setSize((int) (short) 10);
+        // flaky: histogram47.setSize((int) (byte) 100);
         java.lang.Integer[] intArray54 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList55 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean56 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList55, intArray54);
-// flaky:         histogram47.set((java.util.List<java.lang.Integer>) intList55);
-        util.Histogram histogram60 = new util.Histogram((java.util.List<java.lang.Integer>) intList55, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram39.set((java.util.List<java.lang.Integer>) intList55);
-        util.Histogram histogram63 = new util.Histogram((java.util.List<java.lang.Integer>) intList55, 10);
-        util.Histogram histogram66 = new util.Histogram((java.util.List<java.lang.Integer>) intList55, 1, (int) '4');
-// flaky:         histogram15.set((java.util.List<java.lang.Integer>) intList55);
-        util.Histogram histogram70 = new util.Histogram((java.util.List<java.lang.Integer>) intList55, 1, 255);
+        boolean boolean56 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList55,
+                                                         intArray54);
+        // flaky: histogram47.set((java.util.List<java.lang.Integer>) intList55);
+        util.Histogram histogram60 = new util.Histogram((java.util.List<java.lang.Integer>) intList55,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram39.set((java.util.List<java.lang.Integer>) intList55);
+        util.Histogram histogram63 = new util.Histogram((java.util.List<java.lang.Integer>) intList55,
+                                                        10);
+        util.Histogram histogram66 = new util.Histogram((java.util.List<java.lang.Integer>) intList55,
+                                                        1, (int) '4');
+        // flaky: histogram15.set((java.util.List<java.lang.Integer>) intList55);
+        util.Histogram histogram70 = new util.Histogram((java.util.List<java.lang.Integer>) intList55,
+                                                        1, 255);
         try {
-// flaky:             histogram1.set((java.util.List<java.lang.Integer>) intList55);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList55);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray30);
-        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + true + "'", boolean32 == true);
+        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + true + "'",
+                                    boolean32 == true);
         org.junit.Assert.assertNotNull(intArray54);
-        org.junit.Assert.assertTrue("'" + boolean56 + "' != '" + true + "'", boolean56 == true);
+        org.junit.Assert.assertTrue("'" + boolean56 + "' != '" + true + "'",
+                                    boolean56 == true);
     }
 
     @Test
@@ -7706,7 +8906,8 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test403");
         try {
             util.Histogram histogram2 = null; // flaky: new util.Histogram((int) (byte) -1, 255);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -7717,7 +8918,8 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test404");
         try {
             util.Histogram histogram2 = null; // flaky: new util.Histogram((int) (byte) -1, (int) ' ');
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -7738,7 +8940,9 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.RIGHT + "'", direction0.equals(morphology.Sobel.Direction.RIGHT));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.RIGHT + "'",
+                                    direction0.equals(morphology.Sobel.Direction.RIGHT));
         org.junit.Assert.assertNotNull(baseMorphology3);
         org.junit.Assert.assertNotNull(baseMorphology6);
     }
@@ -7748,13 +8952,16 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test406");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray15 = histogram14.getData();
         histogram14.setWidth(97);
         histogram14.setWidth((int) (byte) 1);
@@ -7762,49 +8969,63 @@ public class Regression0Test {
         histogram14.setWidth(100);
         histogram14.setWidth((int) 'a');
         util.Histogram histogram27 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram27.setSize((int) (short) 10);
-// flaky:         histogram27.setSize((int) (byte) 100);
-// flaky:         histogram27.setSize((int) 'a');
+        // flaky: histogram27.setSize((int) (short) 10);
+        // flaky: histogram27.setSize((int) (byte) 100);
+        // flaky: histogram27.setSize((int) 'a');
         util.Histogram histogram35 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram35.setSize((int) (short) 10);
-// flaky:         histogram35.setSize((int) (byte) 100);
+        // flaky: histogram35.setSize((int) (short) 10);
+        // flaky: histogram35.setSize((int) (byte) 100);
         java.lang.Integer[] intArray42 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList43 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43, intArray42);
-// flaky:         histogram35.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram27.set((java.util.List<java.lang.Integer>) intList43);
+        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43,
+                                                         intArray42);
+        // flaky: histogram35.set((java.util.List<java.lang.Integer>) intList43);
+        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram27.set((java.util.List<java.lang.Integer>) intList43);
         util.Histogram histogram51 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram51.setSize((int) (short) 10);
-// flaky:         histogram51.setSize((int) (byte) 100);
-// flaky:         histogram51.setSize((int) 'a');
+        // flaky: histogram51.setSize((int) (short) 10);
+        // flaky: histogram51.setSize((int) (byte) 100);
+        // flaky: histogram51.setSize((int) 'a');
         util.Histogram histogram59 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram59.setSize((int) (short) 10);
-// flaky:         histogram59.setSize((int) (byte) 100);
+        // flaky: histogram59.setSize((int) (short) 10);
+        // flaky: histogram59.setSize((int) (byte) 100);
         java.lang.Integer[] intArray66 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList67 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean68 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList67, intArray66);
-// flaky:         histogram59.set((java.util.List<java.lang.Integer>) intList67);
-        util.Histogram histogram72 = new util.Histogram((java.util.List<java.lang.Integer>) intList67, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram51.set((java.util.List<java.lang.Integer>) intList67);
-        util.Histogram histogram75 = new util.Histogram((java.util.List<java.lang.Integer>) intList67, 10);
-        util.Histogram histogram78 = new util.Histogram((java.util.List<java.lang.Integer>) intList67, 1, (int) '4');
-// flaky:         histogram27.set((java.util.List<java.lang.Integer>) intList67);
-        util.Histogram histogram82 = new util.Histogram((java.util.List<java.lang.Integer>) intList67, 1, 255);
-        util.Histogram histogram84 = new util.Histogram((java.util.List<java.lang.Integer>) intList67, 97);
+        boolean boolean68 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList67,
+                                                         intArray66);
+        // flaky: histogram59.set((java.util.List<java.lang.Integer>) intList67);
+        util.Histogram histogram72 = new util.Histogram((java.util.List<java.lang.Integer>) intList67,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram51.set((java.util.List<java.lang.Integer>) intList67);
+        util.Histogram histogram75 = new util.Histogram((java.util.List<java.lang.Integer>) intList67,
+                                                        10);
+        util.Histogram histogram78 = new util.Histogram((java.util.List<java.lang.Integer>) intList67,
+                                                        1, (int) '4');
+        // flaky: histogram27.set((java.util.List<java.lang.Integer>) intList67);
+        util.Histogram histogram82 = new util.Histogram((java.util.List<java.lang.Integer>) intList67,
+                                                        1, 255);
+        util.Histogram histogram84 = new util.Histogram((java.util.List<java.lang.Integer>) intList67,
+                                                        97);
         histogram14.set((java.util.List<java.lang.Integer>) intList67);
         try {
-            util.Histogram histogram87 = new util.Histogram((java.util.List<java.lang.Integer>) intList67, (int) (short) 1);
+            util.Histogram histogram87 = new util.Histogram((java.util.List<java.lang.Integer>) intList67,
+                                                            (int) (short) 1);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray15);
         org.junit.Assert.assertNotNull(intArray42);
-        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'", boolean44 == true);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'",
+                                    boolean44 == true);
         org.junit.Assert.assertNotNull(intArray66);
-        org.junit.Assert.assertTrue("'" + boolean68 + "' != '" + true + "'", boolean68 == true);
+        org.junit.Assert.assertTrue("'" + boolean68 + "' != '" + true + "'",
+                                    boolean68 == true);
     }
 
     @Test
@@ -7833,7 +9054,8 @@ public class Regression0Test {
         util.Histogram histogram10 = null; // flaky: new util.Histogram(intArray6, 52, (-1));
         try {
             util.Histogram histogram12 = null; // flaky: new util.Histogram(intArray6, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray6);
@@ -7845,33 +9067,43 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test410");
         java.lang.Integer[] intArray2 = new java.lang.Integer[] { 10, 1 };
         java.util.ArrayList<java.lang.Integer> intList3 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3, intArray2);
-        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3, (int) '#', (int) (byte) 100);
+        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3,
+                                                        intArray2);
+        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3,
+                                                       (int) '#',
+                                                       (int) (byte) 100);
         histogram7.put((int) '#');
         util.Histogram histogram11 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram11.setSize((int) (short) 10);
-// flaky:         histogram11.setSize((int) (byte) 100);
-// flaky:         histogram11.setSize((int) 'a');
+        // flaky: histogram11.setSize((int) (short) 10);
+        // flaky: histogram11.setSize((int) (byte) 100);
+        // flaky: histogram11.setSize((int) 'a');
         util.Histogram histogram19 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram19.setSize((int) (short) 10);
-// flaky:         histogram19.setSize((int) (byte) 100);
+        // flaky: histogram19.setSize((int) (short) 10);
+        // flaky: histogram19.setSize((int) (byte) 100);
         java.lang.Integer[] intArray26 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList27 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27, intArray26);
-// flaky:         histogram19.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram11.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, 10);
+        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27,
+                                                         intArray26);
+        // flaky: histogram19.set((java.util.List<java.lang.Integer>) intList27);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram11.set((java.util.List<java.lang.Integer>) intList27);
+        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        10);
         histogram7.set((java.util.List<java.lang.Integer>) intList27);
         try {
             util.Histogram histogram39 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList27, 255, (int) (short) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // null");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray2);
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'", boolean4 == true);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'",
+                                    boolean4 == true);
         org.junit.Assert.assertNotNull(intArray26);
-        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'", boolean28 == true);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'",
+                                    boolean28 == true);
     }
 
     @Test
@@ -7879,21 +9111,25 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test411");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) ' ');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) ' ');
         java.lang.Class<?> wildcardClass15 = intList9.getClass();
         try {
             util.Histogram histogram17 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(wildcardClass15);
     }
 
@@ -7919,20 +9155,25 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test413");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) ' ', 100);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) ' ', 100);
         histogram16.setOffset((int) (byte) 100);
         int int20 = histogram16.get((int) (byte) 1);
         histogram16.setOffset((int) 'a');
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
-        org.junit.Assert.assertTrue("'" + int20 + "' != '" + 0 + "'", int20 == 0);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
+        org.junit.Assert.assertTrue("'" + int20 + "' != '" + 0 + "'",
+                                    int20 == 0);
     }
 
     @Test
@@ -7941,7 +9182,8 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test414");
         try {
             util.Histogram histogram2 = null; // flaky: new util.Histogram((-1), 10);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -7969,9 +9211,9 @@ public class Regression0Test {
         }
         org.junit.Assert.assertNotNull(floatArray2);
         org.junit.Assert.assertNotNull(floatArray6);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology8);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology8);
         org.junit.Assert.assertNotNull(floatArray9);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology13);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology13);
         org.junit.Assert.assertNotNull(wildcardClass14);
     }
 
@@ -7995,7 +9237,9 @@ public class Regression0Test {
         }
         org.junit.Assert.assertNotNull(floatArray6);
         org.junit.Assert.assertNotNull(baseMorphology8);
-        org.junit.Assert.assertTrue("'" + direction9 + "' != '" + morphology.Sobel.Direction.RIGHT + "'", direction9.equals(morphology.Sobel.Direction.RIGHT));
+        org.junit.Assert.assertTrue("'" + direction9 + "' != '"
+                                    + morphology.Sobel.Direction.RIGHT + "'",
+                                    direction9.equals(morphology.Sobel.Direction.RIGHT));
         org.junit.Assert.assertNotNull(wildcardClass11);
         org.junit.Assert.assertNotNull(baseMorphology12);
     }
@@ -8016,15 +9260,16 @@ public class Regression0Test {
         java.lang.Class<?> wildcardClass12 = null; // flaky: baseMorphology11.getClass();
         org.junit.Assert.assertNotNull(floatArray3);
         org.junit.Assert.assertNotNull(floatArray6);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology11);
-// flaky:         org.junit.Assert.assertNotNull(wildcardClass12);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology11);
+        // flaky: org.junit.Assert.assertNotNull(wildcardClass12);
     }
 
     @Test
     public void test418() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test418");
-        util.Histogram histogram2 = new util.Histogram((int) (short) 1, (int) (short) 1);
+        util.Histogram histogram2 = new util.Histogram((int) (short) 1,
+                                                       (int) (short) 1);
         histogram2.setWidth((int) (short) 0);
         java.util.List<java.lang.Integer> intList5 = null;
         try {
@@ -8039,41 +9284,52 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test419");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         util.Histogram histogram25 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram25.setSize((int) (short) 10);
-// flaky:         histogram25.setSize((int) (byte) 100);
-// flaky:         histogram25.setSize((int) 'a');
+        // flaky: histogram25.setSize((int) (short) 10);
+        // flaky: histogram25.setSize((int) (byte) 100);
+        // flaky: histogram25.setSize((int) 'a');
         util.Histogram histogram33 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram33.setSize((int) (short) 10);
-// flaky:         histogram33.setSize((int) (byte) 100);
+        // flaky: histogram33.setSize((int) (short) 10);
+        // flaky: histogram33.setSize((int) (byte) 100);
         java.lang.Integer[] intArray40 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList41 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41, intArray40);
-// flaky:         histogram33.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram25.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 10);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, (int) '4');
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, 255);
+        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41,
+                                                         intArray40);
+        // flaky: histogram33.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram25.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        10);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, (int) '4');
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, 255);
         histogram56.setSize((int) (short) 10);
         histogram56.setSize((int) (byte) 10);
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
         org.junit.Assert.assertNotNull(intArray40);
-        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'", boolean42 == true);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'",
+                                    boolean42 == true);
     }
 
     @Test
@@ -8081,25 +9337,30 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test420");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setWidth(0);
-// flaky:         histogram1.setSize((int) 'a');
-// flaky:         histogram1.setWidth((int) (byte) 100);
+        // flaky: histogram1.setWidth(0);
+        // flaky: histogram1.setSize((int) 'a');
+        // flaky: histogram1.setWidth((int) (byte) 100);
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 100, (int) (byte) 1);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         try {
-            util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (byte) 1);
+            util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                            (int) (byte) 1);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
     }
 
     @Test
@@ -8123,8 +9384,8 @@ public class Regression0Test {
         org.junit.Assert.assertNotNull(floatArray2);
         org.junit.Assert.assertNotNull(floatArray6);
         org.junit.Assert.assertNotNull(floatArray10);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology12);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology13);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology12);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology13);
     }
 
     @Test
@@ -8141,19 +9402,23 @@ public class Regression0Test {
     public void test423() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test423");
-        util.Histogram histogram2 = new util.Histogram((int) (short) 10, (int) (byte) 1);
+        util.Histogram histogram2 = new util.Histogram((int) (short) 10,
+                                                       (int) (byte) 1);
         util.Histogram histogram4 = new util.Histogram((int) ' ');
         histogram4.put((int) (byte) 10);
         util.Histogram histogram8 = new util.Histogram((int) ' ');
         int[] intArray9 = histogram8.getData();
         histogram4.set(intArray9);
         histogram2.set(intArray9);
-        util.Histogram histogram14 = new util.Histogram(intArray9, (int) (short) 100, (int) (byte) 10);
+        util.Histogram histogram14 = new util.Histogram(intArray9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 10);
         int int16 = histogram14.get((int) '#');
         int[] intArray17 = histogram14.getData();
         util.Histogram histogram19 = new util.Histogram(intArray17, 255);
         org.junit.Assert.assertNotNull(intArray9);
-        org.junit.Assert.assertTrue("'" + int16 + "' != '" + 0 + "'", int16 == 0);
+        org.junit.Assert.assertTrue("'" + int16 + "' != '" + 0 + "'",
+                                    int16 == 0);
         org.junit.Assert.assertNotNull(intArray17);
     }
 
@@ -8166,21 +9431,22 @@ public class Regression0Test {
         histogram3.setWidth((int) (byte) 100);
         histogram3.setOffset((int) (short) 100);
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
-// flaky:         histogram9.setOffset((int) (byte) 1);
-// flaky:         histogram9.setOffset((int) '4');
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setOffset((int) (byte) 1);
+        // flaky: histogram9.setOffset((int) '4');
         int[] intArray18 = null; // flaky: histogram9.getData();
-// flaky:         histogram3.set(intArray18);
+        // flaky: histogram3.set(intArray18);
         util.Histogram histogram22 = null; // flaky: new util.Histogram(intArray18, (int) '#', (int) '#');
         int[] intArray23 = null; // flaky: histogram22.getData();
         try {
-// flaky:             histogram1.set(intArray23);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: histogram1.set(intArray23);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray18);
-// flaky:         org.junit.Assert.assertNotNull(intArray23);
+        // flaky: org.junit.Assert.assertNotNull(intArray18);
+        // flaky: org.junit.Assert.assertNotNull(intArray23);
     }
 
     @Test
@@ -8188,7 +9454,7 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test425");
         util.Histogram histogram2 = null; // flaky: new util.Histogram((int) (byte) 100, 0);
-// flaky:         histogram2.setWidth((int) (short) 0);
+        // flaky: histogram2.setWidth((int) (short) 0);
     }
 
     @Test
@@ -8199,34 +9465,35 @@ public class Regression0Test {
         histogram1.setWidth((int) (byte) 100);
         histogram1.setOffset((int) (short) 100);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
-// flaky:         histogram7.setOffset((int) (byte) 1);
-// flaky:         histogram7.setOffset((int) '4');
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setOffset((int) (byte) 1);
+        // flaky: histogram7.setOffset((int) '4');
         int[] intArray16 = null; // flaky: histogram7.getData();
-// flaky:         histogram1.set(intArray16);
+        // flaky: histogram1.set(intArray16);
         util.Histogram histogram19 = null; // flaky: new util.Histogram(intArray16, (int) (short) 100);
         util.Histogram histogram21 = null; // flaky: new util.Histogram(intArray16, 97);
         util.Histogram histogram23 = new util.Histogram((int) ' ');
         histogram23.setWidth((int) (byte) 100);
         histogram23.setOffset((int) (short) 100);
         util.Histogram histogram29 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram29.setSize((int) (short) 10);
-// flaky:         histogram29.setSize((int) (byte) 100);
-// flaky:         histogram29.setOffset((int) (byte) 1);
-// flaky:         histogram29.setOffset((int) '4');
+        // flaky: histogram29.setSize((int) (short) 10);
+        // flaky: histogram29.setSize((int) (byte) 100);
+        // flaky: histogram29.setOffset((int) (byte) 1);
+        // flaky: histogram29.setOffset((int) '4');
         int[] intArray38 = null; // flaky: histogram29.getData();
-// flaky:         histogram23.set(intArray38);
+        // flaky: histogram23.set(intArray38);
         util.Histogram histogram42 = null; // flaky: new util.Histogram(intArray38, (int) '#', (int) '#');
         int[] intArray43 = null; // flaky: histogram42.getData();
         try {
-// flaky:             histogram21.set(intArray43);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: histogram21.set(intArray43);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray16);
-// flaky:         org.junit.Assert.assertNotNull(intArray38);
-// flaky:         org.junit.Assert.assertNotNull(intArray43);
+        // flaky: org.junit.Assert.assertNotNull(intArray16);
+        // flaky: org.junit.Assert.assertNotNull(intArray38);
+        // flaky: org.junit.Assert.assertNotNull(intArray43);
     }
 
     @Test
@@ -8234,26 +9501,35 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test427");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) 'a');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) 'a');
         int[] intArray17 = histogram16.getData();
-        util.Histogram histogram19 = new util.Histogram(intArray17, (int) (short) 10);
+        util.Histogram histogram19 = new util.Histogram(intArray17,
+                                                        (int) (short) 10);
         util.Histogram histogram21 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram21.setSize((int) (short) 10);
-// flaky:         histogram21.setSize((int) (byte) 100);
+        // flaky: histogram21.setSize((int) (short) 10);
+        // flaky: histogram21.setSize((int) (byte) 100);
         java.lang.Integer[] intArray28 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList29 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean30 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList29, intArray28);
-// flaky:         histogram21.set((java.util.List<java.lang.Integer>) intList29);
-        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList29, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram36 = new util.Histogram((java.util.List<java.lang.Integer>) intList29, (int) (byte) 100);
-        util.Histogram histogram38 = new util.Histogram((java.util.List<java.lang.Integer>) intList29, 255);
+        boolean boolean30 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList29,
+                                                         intArray28);
+        // flaky: histogram21.set((java.util.List<java.lang.Integer>) intList29);
+        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList29,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram36 = new util.Histogram((java.util.List<java.lang.Integer>) intList29,
+                                                        (int) (byte) 100);
+        util.Histogram histogram38 = new util.Histogram((java.util.List<java.lang.Integer>) intList29,
+                                                        255);
         histogram19.set((java.util.List<java.lang.Integer>) intList29);
         try {
             int int41 = histogram19.get((int) (short) 100);
@@ -8261,10 +9537,12 @@ public class Regression0Test {
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray17);
         org.junit.Assert.assertNotNull(intArray28);
-        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + true + "'", boolean30 == true);
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + true + "'",
+                                    boolean30 == true);
     }
 
     @Test
@@ -8272,27 +9550,34 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test428");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, 10);
-        util.Histogram histogram28 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, 1, (int) '4');
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        10);
+        util.Histogram histogram28 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        1, (int) '4');
         try {
             util.Histogram histogram30 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
     }
 
     @Test
@@ -8310,39 +9595,49 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test430");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
         util.Histogram histogram25 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram25.setSize((int) (short) 10);
-// flaky:         histogram25.setSize((int) (byte) 100);
-// flaky:         histogram25.setSize((int) 'a');
+        // flaky: histogram25.setSize((int) (short) 10);
+        // flaky: histogram25.setSize((int) (byte) 100);
+        // flaky: histogram25.setSize((int) 'a');
         util.Histogram histogram33 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram33.setSize((int) (short) 10);
-// flaky:         histogram33.setSize((int) (byte) 100);
+        // flaky: histogram33.setSize((int) (short) 10);
+        // flaky: histogram33.setSize((int) (byte) 100);
         java.lang.Integer[] intArray40 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList41 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41, intArray40);
-// flaky:         histogram33.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram25.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 10);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, 1, (int) '4');
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList41);
-// flaky:         histogram1.put((int) (byte) 0);
+        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41,
+                                                         intArray40);
+        // flaky: histogram33.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram25.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram49 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        10);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        1, (int) '4');
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList41);
+        // flaky: histogram1.put((int) (byte) 0);
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
         org.junit.Assert.assertNotNull(intArray40);
-        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'", boolean42 == true);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'",
+                                    boolean42 == true);
     }
 
     @Test
@@ -8351,7 +9646,9 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test431");
         int[] intArray0 = null;
         try {
-            util.Histogram histogram3 = new util.Histogram(intArray0, (int) (short) 10, (int) (byte) 1);
+            util.Histogram histogram3 = new util.Histogram(intArray0,
+                                                           (int) (short) 10,
+                                                           (int) (byte) 1);
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
@@ -8367,7 +9664,8 @@ public class Regression0Test {
         int[] intArray6 = histogram5.getData();
         histogram1.set(intArray6);
         util.Histogram histogram10 = null; // flaky: new util.Histogram(intArray6, 52, (-1));
-        util.Histogram histogram13 = new util.Histogram(intArray6, (int) (byte) 100, 1);
+        util.Histogram histogram13 = new util.Histogram(intArray6,
+                                                        (int) (byte) 100, 1);
         util.Histogram histogram15 = new util.Histogram(intArray6, (int) '4');
         util.Histogram histogram18 = new util.Histogram(1, (int) (short) 100);
         int[] intArray19 = histogram18.getData();
@@ -8395,35 +9693,46 @@ public class Regression0Test {
         int[] intArray8 = histogram7.getData();
         histogram3.set(intArray8);
         util.Histogram histogram12 = null; // flaky: new util.Histogram(intArray8, 52, (-1));
-        util.Histogram histogram15 = new util.Histogram(intArray8, (int) (byte) 100, 1);
+        util.Histogram histogram15 = new util.Histogram(intArray8,
+                                                        (int) (byte) 100, 1);
         util.Histogram histogram17 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram17.setSize((int) (short) 10);
-// flaky:         histogram17.setSize((int) (byte) 100);
+        // flaky: histogram17.setSize((int) (short) 10);
+        // flaky: histogram17.setSize((int) (byte) 100);
         java.lang.Integer[] intArray24 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList25 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean26 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList25, intArray24);
-// flaky:         histogram17.set((java.util.List<java.lang.Integer>) intList25);
-        util.Histogram histogram30 = new util.Histogram((java.util.List<java.lang.Integer>) intList25, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList25, (int) (byte) 100);
-        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList25, 255);
-        util.Histogram histogram36 = new util.Histogram((java.util.List<java.lang.Integer>) intList25, (int) ' ');
-        util.Histogram histogram38 = new util.Histogram((java.util.List<java.lang.Integer>) intList25, (int) '4');
+        boolean boolean26 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList25,
+                                                         intArray24);
+        // flaky: histogram17.set((java.util.List<java.lang.Integer>) intList25);
+        util.Histogram histogram30 = new util.Histogram((java.util.List<java.lang.Integer>) intList25,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList25,
+                                                        (int) (byte) 100);
+        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList25,
+                                                        255);
+        util.Histogram histogram36 = new util.Histogram((java.util.List<java.lang.Integer>) intList25,
+                                                        (int) ' ');
+        util.Histogram histogram38 = new util.Histogram((java.util.List<java.lang.Integer>) intList25,
+                                                        (int) '4');
         histogram15.set((java.util.List<java.lang.Integer>) intList25);
         try {
-// flaky:             histogram1.set((java.util.List<java.lang.Integer>) intList25);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList25);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
         org.junit.Assert.assertNotNull(intArray24);
-        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + true + "'", boolean26 == true);
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + true + "'",
+                                    boolean26 == true);
     }
 
     @Test
     public void test435() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test435");
-        float[] floatArray6 = new float[] { 0L, 97, (byte) -1, 10.0f, (byte) 10, 1 };
+        float[] floatArray6 = new float[] { 0L, 97, (byte) -1, 10.0f, (byte) 10,
+                                            1 };
         morphology.ConvolutionKernel convolutionKernel7 = null; // flaky: new morphology.ConvolutionKernel(floatArray6);
         java.awt.image.BufferedImage bufferedImage8 = null;
         try {
@@ -8439,17 +9748,21 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test436");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) ' ', 100);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) ' ', 100);
         histogram16.setWidth(52);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -8465,7 +9778,9 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.DOWN + "'", direction0.equals(morphology.Sobel.Direction.DOWN));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.DOWN + "'",
+                                    direction0.equals(morphology.Sobel.Direction.DOWN));
     }
 
     @Test
@@ -8495,23 +9810,30 @@ public class Regression0Test {
         int[] intArray3 = histogram2.getData();
         java.lang.Integer[] intArray6 = new java.lang.Integer[] { 10, 1 };
         java.util.ArrayList<java.lang.Integer> intList7 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean8 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList7, intArray6);
-        util.Histogram histogram11 = new util.Histogram((java.util.List<java.lang.Integer>) intList7, (int) '#', (int) (byte) 100);
+        boolean boolean8 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList7,
+                                                        intArray6);
+        util.Histogram histogram11 = new util.Histogram((java.util.List<java.lang.Integer>) intList7,
+                                                        (int) '#',
+                                                        (int) (byte) 100);
         util.Histogram histogram13 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram13.setSize((int) (short) 10);
-// flaky:         histogram13.setSize((int) (byte) 100);
-// flaky:         histogram13.setSize((int) 'a');
+        // flaky: histogram13.setSize((int) (short) 10);
+        // flaky: histogram13.setSize((int) (byte) 100);
+        // flaky: histogram13.setSize((int) 'a');
         util.Histogram histogram21 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram21.setSize((int) (short) 10);
-// flaky:         histogram21.setSize((int) (byte) 100);
+        // flaky: histogram21.setSize((int) (short) 10);
+        // flaky: histogram21.setSize((int) (byte) 100);
         java.lang.Integer[] intArray28 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList29 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean30 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList29, intArray28);
-// flaky:         histogram21.set((java.util.List<java.lang.Integer>) intList29);
-        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList29, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram13.set((java.util.List<java.lang.Integer>) intList29);
+        boolean boolean30 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList29,
+                                                         intArray28);
+        // flaky: histogram21.set((java.util.List<java.lang.Integer>) intList29);
+        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList29,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram13.set((java.util.List<java.lang.Integer>) intList29);
         histogram11.set((java.util.List<java.lang.Integer>) intList29);
-        util.Histogram histogram38 = new util.Histogram((java.util.List<java.lang.Integer>) intList29, 97);
+        util.Histogram histogram38 = new util.Histogram((java.util.List<java.lang.Integer>) intList29,
+                                                        97);
         histogram2.set((java.util.List<java.lang.Integer>) intList29);
         try {
             histogram2.setSize((int) (short) -1);
@@ -8520,9 +9842,11 @@ public class Regression0Test {
         }
         org.junit.Assert.assertNotNull(intArray3);
         org.junit.Assert.assertNotNull(intArray6);
-        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + true + "'", boolean8 == true);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + true + "'",
+                                    boolean8 == true);
         org.junit.Assert.assertNotNull(intArray28);
-        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + true + "'", boolean30 == true);
+        org.junit.Assert.assertTrue("'" + boolean30 + "' != '" + true + "'",
+                                    boolean30 == true);
     }
 
     @Test
@@ -8531,7 +9855,8 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test440");
         try {
             util.Histogram histogram1 = null; // flaky: new util.Histogram((-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
     }
@@ -8541,20 +9866,26 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test441");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
         histogram18.put(0);
         histogram18.put((int) (byte) 100);
         histogram18.setOffset((int) (short) -1);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -8565,18 +9896,19 @@ public class Regression0Test {
         histogram1.setWidth((int) (byte) 100);
         histogram1.setOffset((int) (short) 100);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
-// flaky:         histogram7.setOffset((int) (byte) 1);
-// flaky:         histogram7.setOffset((int) '4');
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setOffset((int) (byte) 1);
+        // flaky: histogram7.setOffset((int) '4');
         int[] intArray16 = null; // flaky: histogram7.getData();
-// flaky:         histogram1.set(intArray16);
+        // flaky: histogram1.set(intArray16);
         util.Histogram histogram19 = null; // flaky: new util.Histogram(intArray16, (int) (short) 100);
         util.Histogram histogram21 = null; // flaky: new util.Histogram(intArray16, 97);
         util.Histogram histogram24 = null; // flaky: new util.Histogram(intArray16, 97, 10);
         int int26 = 0; // flaky: histogram24.get((int) (short) 10);
-// flaky:         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + int26 + "' != '" + 0 + "'", int26 == 0);
+        // flaky: org.junit.Assert.assertNotNull(intArray16);
+        org.junit.Assert.assertTrue("'" + int26 + "' != '" + 0 + "'",
+                                    int26 == 0);
     }
 
     @Test
@@ -8584,22 +9916,27 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test443");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) '4', (int) ' ');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) '4', (int) ' ');
         java.lang.Class<?> wildcardClass15 = intList9.getClass();
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100, 100);
         try {
             util.Histogram histogram21 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) -1, 10);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(wildcardClass15);
     }
 
@@ -8608,35 +9945,46 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test444");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, (int) (byte) 1);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 10);
         int[] intArray17 = histogram16.getData();
         util.Histogram histogram19 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram19.setSize((int) (short) 10);
-// flaky:         histogram19.setSize((int) (byte) 100);
+        // flaky: histogram19.setSize((int) (short) 10);
+        // flaky: histogram19.setSize((int) (byte) 100);
         java.lang.Integer[] intArray26 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList27 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27, intArray26);
-// flaky:         histogram19.set((java.util.List<java.lang.Integer>) intList27);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (short) 100, (int) (byte) 1);
-        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27, (int) (byte) 10);
+        boolean boolean28 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList27,
+                                                         intArray26);
+        // flaky: histogram19.set((java.util.List<java.lang.Integer>) intList27);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList27,
+                                                        (int) (byte) 10);
         histogram16.set((java.util.List<java.lang.Integer>) intList27);
         try {
             util.Histogram histogram38 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList27, (-1), (-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray17);
         org.junit.Assert.assertNotNull(intArray26);
-        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'", boolean28 == true);
+        org.junit.Assert.assertTrue("'" + boolean28 + "' != '" + true + "'",
+                                    boolean28 == true);
     }
 
     @Test
@@ -8652,7 +10000,8 @@ public class Regression0Test {
         int[] intArray13 = histogram12.getData();
         histogram8.set(intArray13);
         util.Histogram histogram17 = null; // flaky: new util.Histogram(intArray13, 52, (-1));
-        util.Histogram histogram20 = new util.Histogram(intArray13, (int) (byte) 100, 1);
+        util.Histogram histogram20 = new util.Histogram(intArray13,
+                                                        (int) (byte) 100, 1);
         util.Histogram histogram22 = new util.Histogram(intArray13, (int) '4');
         util.Histogram histogram25 = new util.Histogram(1, (int) (short) 100);
         int[] intArray26 = histogram25.getData();
@@ -8671,32 +10020,42 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test446");
         java.lang.Integer[] intArray2 = new java.lang.Integer[] { 10, 1 };
         java.util.ArrayList<java.lang.Integer> intList3 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3, intArray2);
-        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3, (int) '#', (int) (byte) 100);
+        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3,
+                                                        intArray2);
+        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3,
+                                                       (int) '#',
+                                                       (int) (byte) 100);
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
-// flaky:         histogram9.setSize((int) 'a');
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) 'a');
         util.Histogram histogram17 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram17.setSize((int) (short) 10);
-// flaky:         histogram17.setSize((int) (byte) 100);
+        // flaky: histogram17.setSize((int) (short) 10);
+        // flaky: histogram17.setSize((int) (byte) 100);
         java.lang.Integer[] intArray24 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList25 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean26 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList25, intArray24);
-// flaky:         histogram17.set((java.util.List<java.lang.Integer>) intList25);
-        util.Histogram histogram30 = new util.Histogram((java.util.List<java.lang.Integer>) intList25, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList25);
+        boolean boolean26 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList25,
+                                                         intArray24);
+        // flaky: histogram17.set((java.util.List<java.lang.Integer>) intList25);
+        util.Histogram histogram30 = new util.Histogram((java.util.List<java.lang.Integer>) intList25,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList25);
         histogram7.set((java.util.List<java.lang.Integer>) intList25);
-        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList25, 97);
+        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList25,
+                                                        97);
         try {
             util.Histogram histogram36 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList25, (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray2);
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'", boolean4 == true);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'",
+                                    boolean4 == true);
         org.junit.Assert.assertNotNull(intArray24);
-        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + true + "'", boolean26 == true);
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + true + "'",
+                                    boolean26 == true);
     }
 
     @Test
@@ -8704,17 +10063,21 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test447");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 97, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        97, 255);
         histogram16.setOffset((int) '4');
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -8722,7 +10085,7 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test448");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (byte) -1);
-// flaky:         histogram2.setWidth((int) (short) -1);
+        // flaky: histogram2.setWidth((int) (short) -1);
     }
 
     @Test
@@ -8764,13 +10127,13 @@ public class Regression0Test {
         org.junit.Assert.assertNotNull(floatArray0);
         org.junit.Assert.assertNotNull(floatArray10);
         org.junit.Assert.assertNotNull(floatArray13);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology18);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology18);
         org.junit.Assert.assertNotNull(floatArray21);
         org.junit.Assert.assertNotNull(floatArray25);
         org.junit.Assert.assertNotNull(floatArray29);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology31);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology32);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology33);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology31);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology32);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology33);
         org.junit.Assert.assertNotNull(baseMorphology34);
     }
 
@@ -8779,14 +10142,18 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test450");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
         histogram16.setSize(0);
         try {
             histogram16.put((int) (short) 10);
@@ -8794,7 +10161,8 @@ public class Regression0Test {
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -8802,14 +10170,14 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test451");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setOffset((int) (byte) 1);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setOffset((int) (byte) 1);
         util.Histogram histogram9 = new util.Histogram((int) ' ');
         int[] intArray10 = histogram9.getData();
-// flaky:         histogram1.set(intArray10);
-// flaky:         histogram1.put(97);
-// flaky:         histogram1.setWidth((int) (short) 1);
+        // flaky: histogram1.set(intArray10);
+        // flaky: histogram1.put(97);
+        // flaky: histogram1.setWidth((int) (short) 1);
         org.junit.Assert.assertNotNull(intArray10);
     }
 
@@ -8821,31 +10189,36 @@ public class Regression0Test {
         histogram1.setWidth((int) (byte) 100);
         histogram1.setOffset((int) (short) 100);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
-// flaky:         histogram7.setOffset((int) (byte) 1);
-// flaky:         histogram7.setOffset((int) '4');
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setOffset((int) (byte) 1);
+        // flaky: histogram7.setOffset((int) '4');
         int[] intArray16 = null; // flaky: histogram7.getData();
-// flaky:         histogram1.set(intArray16);
+        // flaky: histogram1.set(intArray16);
         util.Histogram histogram19 = null; // flaky: new util.Histogram(intArray16, (int) (short) 100);
         util.Histogram histogram21 = null; // flaky: new util.Histogram(intArray16, 97);
         util.Histogram histogram23 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram23.setSize((int) (short) 10);
-// flaky:         histogram23.setSize((int) (byte) 100);
+        // flaky: histogram23.setSize((int) (short) 10);
+        // flaky: histogram23.setSize((int) (byte) 100);
         java.lang.Integer[] intArray30 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList31 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean32 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList31, intArray30);
-// flaky:         histogram23.set((java.util.List<java.lang.Integer>) intList31);
-        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList31, (int) 'a');
-// flaky:         histogram21.set((java.util.List<java.lang.Integer>) intList31);
+        boolean boolean32 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList31,
+                                                         intArray30);
+        // flaky: histogram23.set((java.util.List<java.lang.Integer>) intList31);
+        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList31,
+                                                        (int) 'a');
+        // flaky: histogram21.set((java.util.List<java.lang.Integer>) intList31);
         try {
-            util.Histogram histogram39 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList31, (int) (short) 1, (int) (short) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: null");
+            util.Histogram histogram39 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList31, (int) (short) 1, (int)
+                                               // (short) 0);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // null");
         } catch (java.lang.ArithmeticException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray16);
+        // flaky: org.junit.Assert.assertNotNull(intArray16);
         org.junit.Assert.assertNotNull(intArray30);
-        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + true + "'", boolean32 == true);
+        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + true + "'",
+                                    boolean32 == true);
     }
 
     @Test
@@ -8853,22 +10226,29 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test453");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, (int) (byte) 1);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 10);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 52);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 10);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        52);
         try {
             util.Histogram histogram20 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList9, 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -8907,7 +10287,9 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.RIGHT + "'", direction0.equals(morphology.Sobel.Direction.RIGHT));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.RIGHT + "'",
+                                    direction0.equals(morphology.Sobel.Direction.RIGHT));
         org.junit.Assert.assertNotNull(baseMorphology3);
         org.junit.Assert.assertNotNull(baseMorphology6);
     }
@@ -8917,48 +10299,68 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test457");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
         util.Histogram histogram20 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram20.setSize((int) (short) 10);
-// flaky:         histogram20.setSize((int) (byte) 100);
+        // flaky: histogram20.setSize((int) (short) 10);
+        // flaky: histogram20.setSize((int) (byte) 100);
         java.lang.Integer[] intArray27 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList28 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28, intArray27);
-// flaky:         histogram20.set((java.util.List<java.lang.Integer>) intList28);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) 'a');
+        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28,
+                                                         intArray27);
+        // flaky: histogram20.set((java.util.List<java.lang.Integer>) intList28);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) 'a');
         histogram18.set((java.util.List<java.lang.Integer>) intList28);
         util.Histogram histogram35 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram35.setSize((int) (short) 10);
-// flaky:         histogram35.setSize((int) (byte) 100);
+        // flaky: histogram35.setSize((int) (short) 10);
+        // flaky: histogram35.setSize((int) (byte) 100);
         java.lang.Integer[] intArray42 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList43 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43, intArray42);
-// flaky:         histogram35.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 10, (int) (byte) 10);
+        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43,
+                                                         intArray42);
+        // flaky: histogram35.set((java.util.List<java.lang.Integer>) intList43);
+        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram18.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram51 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (byte) 10);
-        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 100, (int) (short) 100);
-        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (byte) 100);
-        util.Histogram histogram58 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 10);
+        util.Histogram histogram51 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (byte) 10);
+        util.Histogram histogram54 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 100,
+                                                        (int) (short) 100);
+        util.Histogram histogram56 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (byte) 100);
+        util.Histogram histogram58 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 10);
         try {
-            util.Histogram histogram61 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (byte) -1, (int) 'a');
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            util.Histogram histogram61 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (byte) -1, (int)
+                                               // 'a');
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray27);
-        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'", boolean29 == true);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'",
+                                    boolean29 == true);
         org.junit.Assert.assertNotNull(intArray42);
-        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'", boolean44 == true);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'",
+                                    boolean44 == true);
     }
 
     @Test
@@ -8966,16 +10368,20 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test458");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, (int) (byte) 1);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
         histogram14.setWidth((int) (short) 0);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
     }
 
     @Test
@@ -8993,27 +10399,28 @@ public class Regression0Test {
         histogram1.setWidth((int) (byte) 100);
         histogram1.setOffset((int) (short) 100);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
-// flaky:         histogram7.setOffset((int) (byte) 1);
-// flaky:         histogram7.setOffset((int) '4');
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setOffset((int) (byte) 1);
+        // flaky: histogram7.setOffset((int) '4');
         int[] intArray16 = null; // flaky: histogram7.getData();
-// flaky:         histogram1.set(intArray16);
+        // flaky: histogram1.set(intArray16);
         util.Histogram histogram19 = null; // flaky: new util.Histogram(intArray16, (int) (short) 100);
         util.Histogram histogram21 = null; // flaky: new util.Histogram(intArray16, 97);
-// flaky:         histogram21.setWidth(100);
-// flaky:         histogram21.setWidth((int) 'a');
+        // flaky: histogram21.setWidth(100);
+        // flaky: histogram21.setWidth((int) 'a');
         util.Histogram histogram28 = null; // flaky: new util.Histogram(0, (int) (short) -1);
         int[] intArray29 = null; // flaky: histogram28.getData();
         java.lang.Class<?> wildcardClass30 = null; // flaky: intArray29.getClass();
         try {
-// flaky:             histogram21.set(intArray29);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException; message: No value present");
+            // flaky: histogram21.set(intArray29);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.util.NoSuchElementException;
+            // message: No value present");
         } catch (java.util.NoSuchElementException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray16);
-// flaky:         org.junit.Assert.assertNotNull(intArray29);
-// flaky:         org.junit.Assert.assertNotNull(wildcardClass30);
+        // flaky: org.junit.Assert.assertNotNull(intArray16);
+        // flaky: org.junit.Assert.assertNotNull(intArray29);
+        // flaky: org.junit.Assert.assertNotNull(wildcardClass30);
     }
 
     @Test
@@ -9029,23 +10436,30 @@ public class Regression0Test {
         int[] intArray12 = histogram11.getData();
         java.lang.Integer[] intArray15 = new java.lang.Integer[] { 10, 1 };
         java.util.ArrayList<java.lang.Integer> intList16 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean17 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList16, intArray15);
-        util.Histogram histogram20 = new util.Histogram((java.util.List<java.lang.Integer>) intList16, (int) '#', (int) (byte) 100);
+        boolean boolean17 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList16,
+                                                         intArray15);
+        util.Histogram histogram20 = new util.Histogram((java.util.List<java.lang.Integer>) intList16,
+                                                        (int) '#',
+                                                        (int) (byte) 100);
         util.Histogram histogram22 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram22.setSize((int) (short) 10);
-// flaky:         histogram22.setSize((int) (byte) 100);
-// flaky:         histogram22.setSize((int) 'a');
+        // flaky: histogram22.setSize((int) (short) 10);
+        // flaky: histogram22.setSize((int) (byte) 100);
+        // flaky: histogram22.setSize((int) 'a');
         util.Histogram histogram30 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram30.setSize((int) (short) 10);
-// flaky:         histogram30.setSize((int) (byte) 100);
+        // flaky: histogram30.setSize((int) (short) 10);
+        // flaky: histogram30.setSize((int) (byte) 100);
         java.lang.Integer[] intArray37 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList38 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean39 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList38, intArray37);
-// flaky:         histogram30.set((java.util.List<java.lang.Integer>) intList38);
-        util.Histogram histogram43 = new util.Histogram((java.util.List<java.lang.Integer>) intList38, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram22.set((java.util.List<java.lang.Integer>) intList38);
+        boolean boolean39 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList38,
+                                                         intArray37);
+        // flaky: histogram30.set((java.util.List<java.lang.Integer>) intList38);
+        util.Histogram histogram43 = new util.Histogram((java.util.List<java.lang.Integer>) intList38,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram22.set((java.util.List<java.lang.Integer>) intList38);
         histogram20.set((java.util.List<java.lang.Integer>) intList38);
-        util.Histogram histogram47 = new util.Histogram((java.util.List<java.lang.Integer>) intList38, 97);
+        util.Histogram histogram47 = new util.Histogram((java.util.List<java.lang.Integer>) intList38,
+                                                        97);
         histogram11.set((java.util.List<java.lang.Integer>) intList38);
         try {
             histogram2.set((java.util.List<java.lang.Integer>) intList38);
@@ -9055,9 +10469,11 @@ public class Regression0Test {
         org.junit.Assert.assertNotNull(wildcardClass7);
         org.junit.Assert.assertNotNull(intArray12);
         org.junit.Assert.assertNotNull(intArray15);
-        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + true + "'", boolean17 == true);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + true + "'",
+                                    boolean17 == true);
         org.junit.Assert.assertNotNull(intArray37);
-        org.junit.Assert.assertTrue("'" + boolean39 + "' != '" + true + "'", boolean39 == true);
+        org.junit.Assert.assertTrue("'" + boolean39 + "' != '" + true + "'",
+                                    boolean39 == true);
     }
 
     @Test
@@ -9076,7 +10492,9 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.DOWN + "'", direction0.equals(morphology.Sobel.Direction.DOWN));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.DOWN + "'",
+                                    direction0.equals(morphology.Sobel.Direction.DOWN));
         org.junit.Assert.assertNotNull(floatArray2);
         org.junit.Assert.assertNotNull(wildcardClass4);
         org.junit.Assert.assertNotNull(baseMorphology5);
@@ -9087,33 +10505,45 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test463");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
-        util.Histogram histogram20 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) ' ');
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
+        util.Histogram histogram20 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) ' ');
         util.Histogram histogram22 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram22.setSize((int) (short) 10);
-// flaky:         histogram22.setSize((int) (byte) 100);
+        // flaky: histogram22.setSize((int) (short) 10);
+        // flaky: histogram22.setSize((int) (byte) 100);
         java.lang.Integer[] intArray29 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList30 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean31 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList30, intArray29);
-// flaky:         histogram22.set((java.util.List<java.lang.Integer>) intList30);
-        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList30, (int) (short) 10, (int) (byte) 10);
+        boolean boolean31 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList30,
+                                                         intArray29);
+        // flaky: histogram22.set((java.util.List<java.lang.Integer>) intList30);
+        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList30,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram35.put((int) (short) 10);
         util.Histogram histogram39 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram39.setSize((int) (short) 10);
-// flaky:         histogram39.setSize((int) (byte) 100);
+        // flaky: histogram39.setSize((int) (short) 10);
+        // flaky: histogram39.setSize((int) (byte) 100);
         java.lang.Integer[] intArray46 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList47 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean48 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList47, intArray46);
-// flaky:         histogram39.set((java.util.List<java.lang.Integer>) intList47);
-        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList47, (int) (short) 10, (int) (byte) 10);
+        boolean boolean48 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList47,
+                                                         intArray46);
+        // flaky: histogram39.set((java.util.List<java.lang.Integer>) intList47);
+        util.Histogram histogram52 = new util.Histogram((java.util.List<java.lang.Integer>) intList47,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray53 = histogram52.getData();
         histogram35.set(intArray53);
         int[] intArray55 = histogram35.getData();
@@ -9124,11 +10554,14 @@ public class Regression0Test {
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray29);
-        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + true + "'", boolean31 == true);
+        org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + true + "'",
+                                    boolean31 == true);
         org.junit.Assert.assertNotNull(intArray46);
-        org.junit.Assert.assertTrue("'" + boolean48 + "' != '" + true + "'", boolean48 == true);
+        org.junit.Assert.assertTrue("'" + boolean48 + "' != '" + true + "'",
+                                    boolean48 == true);
         org.junit.Assert.assertNotNull(intArray53);
         org.junit.Assert.assertNotNull(intArray55);
     }
@@ -9138,16 +10571,18 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test464");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setWidth(0);
-// flaky:         histogram1.setOffset((int) '#');
-// flaky:         histogram1.setSize((int) (byte) 0);
+        // flaky: histogram1.setWidth(0);
+        // flaky: histogram1.setOffset((int) '#');
+        // flaky: histogram1.setSize((int) (byte) 0);
         util.Histogram histogram10 = new util.Histogram(1, (int) (short) 100);
         int[] intArray11 = histogram10.getData();
         util.Histogram histogram13 = new util.Histogram(intArray11, (int) '#');
-        util.Histogram histogram16 = new util.Histogram(intArray11, (int) (byte) 10, 10);
+        util.Histogram histogram16 = new util.Histogram(intArray11,
+                                                        (int) (byte) 10, 10);
         try {
-// flaky:             histogram1.set(intArray11);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: null");
+            // flaky: histogram1.set(intArray11);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // null");
         } catch (java.lang.ArithmeticException e) {
         }
         org.junit.Assert.assertNotNull(intArray11);
@@ -9165,19 +10600,25 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test466");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 100, (int) (byte) 1);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 100,
+                                                        (int) (byte) 1);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 10);
         int int18 = histogram16.get(0);
         histogram16.setWidth((int) (short) -1);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
-        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 1 + "'", int18 == 1);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
+        org.junit.Assert.assertTrue("'" + int18 + "' != '" + 1 + "'",
+                                    int18 == 1);
     }
 
     @Test
@@ -9185,24 +10626,26 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test467");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) '4');
+        // flaky: histogram1.setSize((int) '4');
         int[] intArray4 = null; // flaky: histogram1.getData();
         util.Histogram histogram6 = null; // flaky: new util.Histogram(intArray4, (int) (short) 1);
         java.lang.Class<?> wildcardClass7 = null; // flaky: intArray4.getClass();
         try {
             util.Histogram histogram10 = null; // flaky: new util.Histogram(intArray4, (-1), 100);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray4);
-// flaky:         org.junit.Assert.assertNotNull(wildcardClass7);
+        // flaky: org.junit.Assert.assertNotNull(intArray4);
+        // flaky: org.junit.Assert.assertNotNull(wildcardClass7);
     }
 
     @Test
     public void test468() throws Throwable {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test468");
-        float[] floatArray6 = new float[] { (-1.0f), (-1L), 'a', (-1), (-1.0f), (byte) 100 };
+        float[] floatArray6 = new float[] { (-1.0f), (-1L), 'a', (-1), (-1.0f),
+                                            (byte) 100 };
         morphology.Erode erode7 = null; // flaky: new morphology.Erode(floatArray6);
         java.awt.image.BufferedImage bufferedImage8 = null;
         try {
@@ -9226,7 +10669,8 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test470");
         int[] intArray0 = null;
         try {
-            util.Histogram histogram3 = new util.Histogram(intArray0, 1, (int) (short) 10);
+            util.Histogram histogram3 = new util.Histogram(intArray0, 1,
+                                                           (int) (short) 10);
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
@@ -9237,41 +10681,55 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test471");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (byte) 100);
-        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, 255);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (byte) 100);
+        util.Histogram histogram18 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        255);
         util.Histogram histogram20 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram20.setSize((int) (short) 10);
-// flaky:         histogram20.setSize((int) (byte) 100);
+        // flaky: histogram20.setSize((int) (short) 10);
+        // flaky: histogram20.setSize((int) (byte) 100);
         java.lang.Integer[] intArray27 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList28 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28, intArray27);
-// flaky:         histogram20.set((java.util.List<java.lang.Integer>) intList28);
-        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28, (int) 'a');
+        boolean boolean29 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList28,
+                                                         intArray27);
+        // flaky: histogram20.set((java.util.List<java.lang.Integer>) intList28);
+        util.Histogram histogram32 = new util.Histogram((java.util.List<java.lang.Integer>) intList28,
+                                                        (int) 'a');
         histogram18.set((java.util.List<java.lang.Integer>) intList28);
         util.Histogram histogram35 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram35.setSize((int) (short) 10);
-// flaky:         histogram35.setSize((int) (byte) 100);
+        // flaky: histogram35.setSize((int) (short) 10);
+        // flaky: histogram35.setSize((int) (byte) 100);
         java.lang.Integer[] intArray42 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList43 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43, intArray42);
-// flaky:         histogram35.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (short) 10, (int) (byte) 10);
+        boolean boolean44 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList43,
+                                                         intArray42);
+        // flaky: histogram35.set((java.util.List<java.lang.Integer>) intList43);
+        util.Histogram histogram48 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram18.set((java.util.List<java.lang.Integer>) intList43);
-        util.Histogram histogram51 = new util.Histogram((java.util.List<java.lang.Integer>) intList43, (int) (byte) 10);
+        util.Histogram histogram51 = new util.Histogram((java.util.List<java.lang.Integer>) intList43,
+                                                        (int) (byte) 10);
         histogram51.setOffset(0);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray27);
-        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'", boolean29 == true);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'",
+                                    boolean29 == true);
         org.junit.Assert.assertNotNull(intArray42);
-        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'", boolean44 == true);
+        org.junit.Assert.assertTrue("'" + boolean44 + "' != '" + true + "'",
+                                    boolean44 == true);
     }
 
     @Test
@@ -9279,11 +10737,12 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test472");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
-// flaky:         histogram2.setWidth(100);
+        // flaky: histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth(100);
         try {
-// flaky:             histogram2.put((int) (short) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 0");
+            // flaky: histogram2.put((int) (short) 0);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: 0");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -9317,7 +10776,9 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.RIGHT + "'", direction0.equals(morphology.Sobel.Direction.RIGHT));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.RIGHT + "'",
+                                    direction0.equals(morphology.Sobel.Direction.RIGHT));
         org.junit.Assert.assertNotNull(wildcardClass2);
     }
 
@@ -9340,7 +10801,9 @@ public class Regression0Test {
             org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
         } catch (java.lang.NullPointerException e) {
         }
-        org.junit.Assert.assertTrue("'" + direction0 + "' != '" + morphology.Sobel.Direction.DOWN + "'", direction0.equals(morphology.Sobel.Direction.DOWN));
+        org.junit.Assert.assertTrue("'" + direction0 + "' != '"
+                                    + morphology.Sobel.Direction.DOWN + "'",
+                                    direction0.equals(morphology.Sobel.Direction.DOWN));
         org.junit.Assert.assertNotNull(floatArray3);
         org.junit.Assert.assertNotNull(baseMorphology8);
     }
@@ -9350,7 +10813,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test476");
         int int1 = util.RGBPixel.getBlue(32);
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 32 + "'", int1 == 32);
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 32 + "'",
+                                    int1 == 32);
     }
 
     @Test
@@ -9358,26 +10822,33 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test477");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, 10);
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        10);
         try {
-            util.Histogram histogram28 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) -1, (int) (short) 1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            util.Histogram histogram28 = null; // flaky: new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) -1, (int)
+                                               // (short) 1);
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
     }
 
     @Test
@@ -9388,36 +10859,40 @@ public class Regression0Test {
         histogram1.setWidth((int) (byte) 100);
         histogram1.setOffset((int) (short) 100);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
-// flaky:         histogram7.setOffset((int) (byte) 1);
-// flaky:         histogram7.setOffset((int) '4');
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setOffset((int) (byte) 1);
+        // flaky: histogram7.setOffset((int) '4');
         int[] intArray16 = null; // flaky: histogram7.getData();
-// flaky:         histogram1.set(intArray16);
+        // flaky: histogram1.set(intArray16);
         util.Histogram histogram19 = null; // flaky: new util.Histogram(intArray16, (int) (short) 100);
         util.Histogram histogram21 = null; // flaky: new util.Histogram(intArray16, 97);
         util.Histogram histogram23 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram23.setSize((int) (short) 10);
-// flaky:         histogram23.setSize((int) (byte) 100);
+        // flaky: histogram23.setSize((int) (short) 10);
+        // flaky: histogram23.setSize((int) (byte) 100);
         java.lang.Integer[] intArray30 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList31 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean32 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList31, intArray30);
-// flaky:         histogram23.set((java.util.List<java.lang.Integer>) intList31);
-        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList31, (int) 'a');
-// flaky:         histogram21.set((java.util.List<java.lang.Integer>) intList31);
+        boolean boolean32 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList31,
+                                                         intArray30);
+        // flaky: histogram23.set((java.util.List<java.lang.Integer>) intList31);
+        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList31,
+                                                        (int) 'a');
+        // flaky: histogram21.set((java.util.List<java.lang.Integer>) intList31);
         int[] intArray37 = null; // flaky: histogram21.getData();
         util.Histogram histogram39 = new util.Histogram((int) ' ');
         int[] intArray40 = histogram39.getData();
-// flaky:         histogram21.set(intArray40);
+        // flaky: histogram21.set(intArray40);
         try {
             util.Histogram histogram44 = null; // flaky: new util.Histogram(intArray40, 0, 10);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray16);
+        // flaky: org.junit.Assert.assertNotNull(intArray16);
         org.junit.Assert.assertNotNull(intArray30);
-        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + true + "'", boolean32 == true);
-// flaky:         org.junit.Assert.assertNotNull(intArray37);
+        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + true + "'",
+                                    boolean32 == true);
+        // flaky: org.junit.Assert.assertNotNull(intArray37);
         org.junit.Assert.assertNotNull(intArray40);
     }
 
@@ -9434,13 +10909,16 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test480");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray15 = histogram14.getData();
         histogram14.setWidth(97);
         histogram14.setWidth((int) (byte) 1);
@@ -9448,7 +10926,8 @@ public class Regression0Test {
         histogram14.setSize((int) (byte) 0);
         java.lang.Class<?> wildcardClass24 = histogram14.getClass();
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray15);
         org.junit.Assert.assertNotNull(wildcardClass24);
     }
@@ -9458,8 +10937,8 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test481");
         util.Histogram histogram2 = null; // flaky: new util.Histogram((int) (byte) 1, 0);
-// flaky:         histogram2.setSize((int) (byte) 100);
-// flaky:         histogram2.setWidth(10);
+        // flaky: histogram2.setSize((int) (byte) 100);
+        // flaky: histogram2.setWidth(10);
     }
 
     @Test
@@ -9492,7 +10971,9 @@ public class Regression0Test {
         } catch (java.lang.NullPointerException e) {
         }
         org.junit.Assert.assertNotNull(floatArray0);
-        org.junit.Assert.assertTrue("'" + direction9 + "' != '" + morphology.Sobel.Direction.DOWN + "'", direction9.equals(morphology.Sobel.Direction.DOWN));
+        org.junit.Assert.assertTrue("'" + direction9 + "' != '"
+                                    + morphology.Sobel.Direction.DOWN + "'",
+                                    direction9.equals(morphology.Sobel.Direction.DOWN));
         org.junit.Assert.assertNotNull(floatArray12);
         org.junit.Assert.assertNotNull(baseMorphology17);
         org.junit.Assert.assertNotNull(baseMorphology18);
@@ -9524,10 +11005,12 @@ public class Regression0Test {
         }
         org.junit.Assert.assertNotNull(floatArray6);
         org.junit.Assert.assertNotNull(baseMorphology8);
-        org.junit.Assert.assertTrue("'" + direction9 + "' != '" + morphology.Sobel.Direction.UP + "'", direction9.equals(morphology.Sobel.Direction.UP));
+        org.junit.Assert.assertTrue("'" + direction9 + "' != '"
+                                    + morphology.Sobel.Direction.UP + "'",
+                                    direction9.equals(morphology.Sobel.Direction.UP));
         org.junit.Assert.assertNotNull(floatArray13);
         org.junit.Assert.assertNotNull(floatArray17);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology19);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology19);
         org.junit.Assert.assertNotNull(baseMorphology20);
         org.junit.Assert.assertNotNull(baseMorphology21);
     }
@@ -9551,32 +11034,42 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test485");
         java.lang.Integer[] intArray2 = new java.lang.Integer[] { 10, 1 };
         java.util.ArrayList<java.lang.Integer> intList3 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3, intArray2);
-        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3, (int) '#', (int) (byte) 100);
+        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList3,
+                                                        intArray2);
+        util.Histogram histogram7 = new util.Histogram((java.util.List<java.lang.Integer>) intList3,
+                                                       (int) '#',
+                                                       (int) (byte) 100);
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
-// flaky:         histogram9.setSize((int) 'a');
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) 'a');
         util.Histogram histogram17 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram17.setSize((int) (short) 10);
-// flaky:         histogram17.setSize((int) (byte) 100);
+        // flaky: histogram17.setSize((int) (short) 10);
+        // flaky: histogram17.setSize((int) (byte) 100);
         java.lang.Integer[] intArray24 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList25 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean26 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList25, intArray24);
-// flaky:         histogram17.set((java.util.List<java.lang.Integer>) intList25);
-        util.Histogram histogram30 = new util.Histogram((java.util.List<java.lang.Integer>) intList25, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList25);
+        boolean boolean26 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList25,
+                                                         intArray24);
+        // flaky: histogram17.set((java.util.List<java.lang.Integer>) intList25);
+        util.Histogram histogram30 = new util.Histogram((java.util.List<java.lang.Integer>) intList25,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList25);
         histogram7.set((java.util.List<java.lang.Integer>) intList25);
-        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList25, (int) (short) 100);
+        util.Histogram histogram34 = new util.Histogram((java.util.List<java.lang.Integer>) intList25,
+                                                        (int) (short) 100);
         try {
-            util.Histogram histogram36 = new util.Histogram((java.util.List<java.lang.Integer>) intList25, 1);
+            util.Histogram histogram36 = new util.Histogram((java.util.List<java.lang.Integer>) intList25,
+                                                            1);
             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray2);
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'", boolean4 == true);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'",
+                                    boolean4 == true);
         org.junit.Assert.assertNotNull(intArray24);
-        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + true + "'", boolean26 == true);
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + true + "'",
+                                    boolean26 == true);
     }
 
     @Test
@@ -9624,13 +11117,13 @@ public class Regression0Test {
         }
         org.junit.Assert.assertNotNull(floatArray4);
         org.junit.Assert.assertNotNull(floatArray7);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology12);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology12);
         org.junit.Assert.assertNotNull(floatArray15);
         org.junit.Assert.assertNotNull(floatArray19);
         org.junit.Assert.assertNotNull(floatArray23);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology25);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology26);
-// flaky:         org.junit.Assert.assertNotNull(baseMorphology27);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology25);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology26);
+        // flaky: org.junit.Assert.assertNotNull(baseMorphology27);
         org.junit.Assert.assertNotNull(baseMorphology28);
     }
 
@@ -9639,20 +11132,24 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test488");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         histogram14.put((int) (short) 10);
         histogram14.put((int) (short) 0);
         int[] intArray19 = histogram14.getData();
         histogram14.setOffset((int) (byte) 10);
         histogram14.setWidth(0);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray19);
     }
 
@@ -9669,54 +11166,70 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test490");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         util.Histogram histogram9 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram9.setSize((int) (short) 10);
-// flaky:         histogram9.setSize((int) (byte) 100);
+        // flaky: histogram9.setSize((int) (short) 10);
+        // flaky: histogram9.setSize((int) (byte) 100);
         java.lang.Integer[] intArray16 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList17 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17, intArray16);
-// flaky:         histogram9.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, (int) (short) 10, (int) (byte) 10);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList17);
-        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, 10);
-        util.Histogram histogram28 = new util.Histogram((java.util.List<java.lang.Integer>) intList17, 1, (int) '4');
+        boolean boolean18 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList17,
+                                                         intArray16);
+        // flaky: histogram9.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList17);
+        util.Histogram histogram25 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        10);
+        util.Histogram histogram28 = new util.Histogram((java.util.List<java.lang.Integer>) intList17,
+                                                        1, (int) '4');
         java.lang.Class<?> wildcardClass29 = histogram28.getClass();
         histogram28.setSize((int) '4');
         util.Histogram histogram33 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram33.setSize((int) (short) 10);
-// flaky:         histogram33.setSize((int) (byte) 100);
+        // flaky: histogram33.setSize((int) (short) 10);
+        // flaky: histogram33.setSize((int) (byte) 100);
         java.lang.Integer[] intArray40 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList41 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41, intArray40);
-// flaky:         histogram33.set((java.util.List<java.lang.Integer>) intList41);
-        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41, (int) (short) 10, (int) (byte) 10);
+        boolean boolean42 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList41,
+                                                         intArray40);
+        // flaky: histogram33.set((java.util.List<java.lang.Integer>) intList41);
+        util.Histogram histogram46 = new util.Histogram((java.util.List<java.lang.Integer>) intList41,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray47 = histogram46.getData();
         histogram46.setWidth(97);
         histogram46.setOffset(1);
         util.Histogram histogram53 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram53.setSize((int) (short) 10);
-// flaky:         histogram53.setSize((int) (byte) 100);
+        // flaky: histogram53.setSize((int) (short) 10);
+        // flaky: histogram53.setSize((int) (byte) 100);
         java.lang.Integer[] intArray60 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList61 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean62 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList61, intArray60);
-// flaky:         histogram53.set((java.util.List<java.lang.Integer>) intList61);
-        util.Histogram histogram66 = new util.Histogram((java.util.List<java.lang.Integer>) intList61, (int) (short) 10, (int) (byte) 10);
-        util.Histogram histogram68 = new util.Histogram((java.util.List<java.lang.Integer>) intList61, (int) (byte) 100);
-        util.Histogram histogram70 = new util.Histogram((java.util.List<java.lang.Integer>) intList61, 255);
+        boolean boolean62 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList61,
+                                                         intArray60);
+        // flaky: histogram53.set((java.util.List<java.lang.Integer>) intList61);
+        util.Histogram histogram66 = new util.Histogram((java.util.List<java.lang.Integer>) intList61,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
+        util.Histogram histogram68 = new util.Histogram((java.util.List<java.lang.Integer>) intList61,
+                                                        (int) (byte) 100);
+        util.Histogram histogram70 = new util.Histogram((java.util.List<java.lang.Integer>) intList61,
+                                                        255);
         histogram46.set((java.util.List<java.lang.Integer>) intList61);
         histogram28.set((java.util.List<java.lang.Integer>) intList61);
         histogram28.put((int) (byte) 1);
         org.junit.Assert.assertNotNull(intArray16);
-        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'",
+                                    boolean18 == true);
         org.junit.Assert.assertNotNull(wildcardClass29);
         org.junit.Assert.assertNotNull(intArray40);
-        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'", boolean42 == true);
+        org.junit.Assert.assertTrue("'" + boolean42 + "' != '" + true + "'",
+                                    boolean42 == true);
         org.junit.Assert.assertNotNull(intArray47);
         org.junit.Assert.assertNotNull(intArray60);
-        org.junit.Assert.assertTrue("'" + boolean62 + "' != '" + true + "'", boolean62 == true);
+        org.junit.Assert.assertTrue("'" + boolean62 + "' != '" + true + "'",
+                                    boolean62 == true);
     }
 
     @Test
@@ -9725,8 +11238,9 @@ public class Regression0Test {
             System.out.format("%n%s%n", "RegressionTest0.test491");
         util.Histogram histogram2 = null; // flaky: new util.Histogram((int) (byte) 10, (int) (byte) -1);
         try {
-// flaky:             histogram2.put(97);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -97");
+            // flaky: histogram2.put(97);
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: -97");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
     }
@@ -9739,18 +11253,19 @@ public class Regression0Test {
         histogram1.setWidth((int) (byte) 100);
         histogram1.setOffset((int) (short) 100);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
-// flaky:         histogram7.setOffset((int) (byte) 1);
-// flaky:         histogram7.setOffset((int) '4');
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setOffset((int) (byte) 1);
+        // flaky: histogram7.setOffset((int) '4');
         int[] intArray16 = null; // flaky: histogram7.getData();
-// flaky:         histogram1.set(intArray16);
+        // flaky: histogram1.set(intArray16);
         try {
             util.Histogram histogram20 = null; // flaky: new util.Histogram(intArray16, (int) (short) 100, (int) (byte) 0);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.ArithmeticException; message:
+            // null");
         } catch (java.lang.ArithmeticException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray16);
+        // flaky: org.junit.Assert.assertNotNull(intArray16);
     }
 
     @Test
@@ -9761,33 +11276,37 @@ public class Regression0Test {
         histogram1.setWidth((int) (byte) 100);
         histogram1.setOffset((int) (short) 100);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
-// flaky:         histogram7.setOffset((int) (byte) 1);
-// flaky:         histogram7.setOffset((int) '4');
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setOffset((int) (byte) 1);
+        // flaky: histogram7.setOffset((int) '4');
         int[] intArray16 = null; // flaky: histogram7.getData();
-// flaky:         histogram1.set(intArray16);
+        // flaky: histogram1.set(intArray16);
         util.Histogram histogram19 = null; // flaky: new util.Histogram(intArray16, (int) (short) 100);
         util.Histogram histogram21 = null; // flaky: new util.Histogram(intArray16, 97);
         util.Histogram histogram23 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram23.setSize((int) (short) 10);
-// flaky:         histogram23.setSize((int) (byte) 100);
+        // flaky: histogram23.setSize((int) (short) 10);
+        // flaky: histogram23.setSize((int) (byte) 100);
         java.lang.Integer[] intArray30 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList31 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean32 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList31, intArray30);
-// flaky:         histogram23.set((java.util.List<java.lang.Integer>) intList31);
-        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList31, (int) 'a');
-// flaky:         histogram21.set((java.util.List<java.lang.Integer>) intList31);
+        boolean boolean32 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList31,
+                                                         intArray30);
+        // flaky: histogram23.set((java.util.List<java.lang.Integer>) intList31);
+        util.Histogram histogram35 = new util.Histogram((java.util.List<java.lang.Integer>) intList31,
+                                                        (int) 'a');
+        // flaky: histogram21.set((java.util.List<java.lang.Integer>) intList31);
         int[] intArray37 = null; // flaky: histogram21.getData();
         try {
             util.Histogram histogram40 = null; // flaky: new util.Histogram(intArray37, (int) (byte) -1, (int) (short) 10);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
-// flaky:         org.junit.Assert.assertNotNull(intArray16);
+        // flaky: org.junit.Assert.assertNotNull(intArray16);
         org.junit.Assert.assertNotNull(intArray30);
-        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + true + "'", boolean32 == true);
-// flaky:         org.junit.Assert.assertNotNull(intArray37);
+        org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + true + "'",
+                                    boolean32 == true);
+        // flaky: org.junit.Assert.assertNotNull(intArray37);
     }
 
     @Test
@@ -9795,13 +11314,16 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test494");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray15 = histogram14.getData();
         histogram14.setWidth(97);
         histogram14.setWidth((int) (byte) 1);
@@ -9810,7 +11332,8 @@ public class Regression0Test {
         histogram14.setWidth((int) 'a');
         histogram14.setSize((int) (byte) 0);
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray15);
     }
 
@@ -9819,36 +11342,42 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test495");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
-// flaky:         histogram1.setSize((int) 'a');
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) 'a');
         int int9 = 0; // flaky: histogram1.get((int) '4');
         util.Histogram histogram11 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram11.setSize((int) (short) 10);
-// flaky:         histogram11.setSize((int) (byte) 100);
+        // flaky: histogram11.setSize((int) (short) 10);
+        // flaky: histogram11.setSize((int) (byte) 100);
         java.lang.Integer[] intArray18 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList19 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean20 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList19, intArray18);
-// flaky:         histogram11.set((java.util.List<java.lang.Integer>) intList19);
-        util.Histogram histogram24 = new util.Histogram((java.util.List<java.lang.Integer>) intList19, (int) (short) 10, (int) (byte) 10);
+        boolean boolean20 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList19,
+                                                         intArray18);
+        // flaky: histogram11.set((java.util.List<java.lang.Integer>) intList19);
+        util.Histogram histogram24 = new util.Histogram((java.util.List<java.lang.Integer>) intList19,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray25 = histogram24.getData();
         histogram24.setWidth(97);
         util.Histogram histogram29 = new util.Histogram((int) ' ');
         int[] intArray30 = histogram29.getData();
         histogram24.set(intArray30);
-// flaky:         histogram1.set(intArray30);
-        int[] intArray38 = new int[] { (byte) 1, (short) 10, (byte) -1, '#', (byte) 10 };
+        // flaky: histogram1.set(intArray30);
+        int[] intArray38 = new int[] { (byte) 1, (short) 10, (byte) -1, '#',
+                                       (byte) 10 };
         util.Histogram histogram40 = new util.Histogram(intArray38, (int) 'a');
         util.Histogram histogram42 = new util.Histogram(intArray38, 100);
-// flaky:         histogram1.set(intArray38);
+        // flaky: histogram1.set(intArray38);
         try {
             util.Histogram histogram45 = null; // flaky: new util.Histogram(intArray38, (int) (byte) -1);
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type java.lang.NegativeArraySizeException;
+            // message: null");
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
         org.junit.Assert.assertNotNull(intArray18);
-        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + true + "'", boolean20 == true);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + true + "'",
+                                    boolean20 == true);
         org.junit.Assert.assertNotNull(intArray25);
         org.junit.Assert.assertNotNull(intArray30);
         org.junit.Assert.assertNotNull(intArray38);
@@ -9859,13 +11388,16 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test496");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) (short) 10, (int) (byte) 10);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram14 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) (short) 10,
+                                                        (int) (byte) 10);
         int[] intArray15 = histogram14.getData();
         histogram14.setWidth(97);
         histogram14.setWidth((int) (byte) 1);
@@ -9876,7 +11408,8 @@ public class Regression0Test {
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
         org.junit.Assert.assertNotNull(intArray15);
     }
 
@@ -9885,40 +11418,52 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test497");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         util.Histogram histogram7 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram7.setSize((int) (short) 10);
-// flaky:         histogram7.setSize((int) (byte) 100);
+        // flaky: histogram7.setSize((int) (short) 10);
+        // flaky: histogram7.setSize((int) (byte) 100);
         java.lang.Integer[] intArray14 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList15 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean16 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList15, intArray14);
-// flaky:         histogram7.set((java.util.List<java.lang.Integer>) intList15);
-        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList15, (int) 'a');
-        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList15, 97, 255);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList15);
+        boolean boolean16 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList15,
+                                                         intArray14);
+        // flaky: histogram7.set((java.util.List<java.lang.Integer>) intList15);
+        util.Histogram histogram19 = new util.Histogram((java.util.List<java.lang.Integer>) intList15,
+                                                        (int) 'a');
+        util.Histogram histogram22 = new util.Histogram((java.util.List<java.lang.Integer>) intList15,
+                                                        97, 255);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList15);
         util.Histogram histogram25 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram25.setSize((int) (short) 10);
-// flaky:         histogram25.setSize((int) (byte) 100);
+        // flaky: histogram25.setSize((int) (short) 10);
+        // flaky: histogram25.setSize((int) (byte) 100);
         java.lang.Integer[] intArray32 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList33 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean34 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList33, intArray32);
-// flaky:         histogram25.set((java.util.List<java.lang.Integer>) intList33);
-        util.Histogram histogram37 = new util.Histogram((java.util.List<java.lang.Integer>) intList33, (int) 'a');
-        util.Histogram histogram40 = new util.Histogram((java.util.List<java.lang.Integer>) intList33, (int) '4', (int) 'a');
+        boolean boolean34 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList33,
+                                                         intArray32);
+        // flaky: histogram25.set((java.util.List<java.lang.Integer>) intList33);
+        util.Histogram histogram37 = new util.Histogram((java.util.List<java.lang.Integer>) intList33,
+                                                        (int) 'a');
+        util.Histogram histogram40 = new util.Histogram((java.util.List<java.lang.Integer>) intList33,
+                                                        (int) '4', (int) 'a');
         int[] intArray41 = histogram40.getData();
-        util.Histogram histogram43 = new util.Histogram(intArray41, (int) (short) 10);
-// flaky:         histogram1.set(intArray41);
-        util.Histogram histogram47 = new util.Histogram(intArray41, (int) (byte) 100, (int) '4');
+        util.Histogram histogram43 = new util.Histogram(intArray41,
+                                                        (int) (short) 10);
+        // flaky: histogram1.set(intArray41);
+        util.Histogram histogram47 = new util.Histogram(intArray41,
+                                                        (int) (byte) 100,
+                                                        (int) '4');
         try {
             util.Histogram histogram50 = null; // flaky: new util.Histogram(intArray41, (int) '4', (-1));
-// flaky:             org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: null");
+            // flaky: org.junit.Assert.fail("Expected exception of type
+            // java.lang.ArrayIndexOutOfBoundsException; message: null");
         } catch (java.lang.ArrayIndexOutOfBoundsException e) {
         }
         org.junit.Assert.assertNotNull(intArray14);
-        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'", boolean16 == true);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'",
+                                    boolean16 == true);
         org.junit.Assert.assertNotNull(intArray32);
-        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + true + "'", boolean34 == true);
+        org.junit.Assert.assertTrue("'" + boolean34 + "' != '" + true + "'",
+                                    boolean34 == true);
         org.junit.Assert.assertNotNull(intArray41);
     }
 
@@ -9939,15 +11484,15 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test499");
         util.Histogram histogram2 = null; // flaky: new util.Histogram(0, (int) (short) -1);
-// flaky:         histogram2.setWidth((int) 'a');
+        // flaky: histogram2.setWidth((int) 'a');
         int[] intArray5 = null; // flaky: histogram2.getData();
-// flaky:         histogram2.setOffset((int) (byte) 10);
+        // flaky: histogram2.setOffset((int) (byte) 10);
         int[] intArray8 = null; // flaky: histogram2.getData();
-// flaky:         histogram2.setWidth((int) (byte) 0);
+        // flaky: histogram2.setWidth((int) (byte) 0);
         java.lang.Class<?> wildcardClass11 = null; // flaky: histogram2.getClass();
-// flaky:         org.junit.Assert.assertNotNull(intArray5);
-// flaky:         org.junit.Assert.assertNotNull(intArray8);
-// flaky:         org.junit.Assert.assertNotNull(wildcardClass11);
+        // flaky: org.junit.Assert.assertNotNull(intArray5);
+        // flaky: org.junit.Assert.assertNotNull(intArray8);
+        // flaky: org.junit.Assert.assertNotNull(wildcardClass11);
     }
 
     @Test
@@ -9955,14 +11500,17 @@ public class Regression0Test {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test500");
         util.Histogram histogram1 = null; // flaky: new util.Histogram(0);
-// flaky:         histogram1.setSize((int) (short) 10);
-// flaky:         histogram1.setSize((int) (byte) 100);
+        // flaky: histogram1.setSize((int) (short) 10);
+        // flaky: histogram1.setSize((int) (byte) 100);
         java.lang.Integer[] intArray8 = new java.lang.Integer[] { 1, (-1) };
         java.util.ArrayList<java.lang.Integer> intList9 = new java.util.ArrayList<java.lang.Integer>();
-        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9, intArray8);
-// flaky:         histogram1.set((java.util.List<java.lang.Integer>) intList9);
-        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) 'a');
-        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9, (int) ' ', 100);
+        boolean boolean10 = java.util.Collections.addAll((java.util.Collection<java.lang.Integer>) intList9,
+                                                         intArray8);
+        // flaky: histogram1.set((java.util.List<java.lang.Integer>) intList9);
+        util.Histogram histogram13 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) 'a');
+        util.Histogram histogram16 = new util.Histogram((java.util.List<java.lang.Integer>) intList9,
+                                                        (int) ' ', 100);
         histogram16.setOffset((int) (byte) 100);
         int int20 = histogram16.get((int) (byte) 1);
         histogram16.setSize(97);
@@ -9972,7 +11520,9 @@ public class Regression0Test {
         } catch (java.lang.NegativeArraySizeException e) {
         }
         org.junit.Assert.assertNotNull(intArray8);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
-        org.junit.Assert.assertTrue("'" + int20 + "' != '" + 0 + "'", int20 == 0);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'",
+                                    boolean10 == true);
+        org.junit.Assert.assertTrue("'" + int20 + "' != '" + 0 + "'",
+                                    int20 == 0);
     }
 }
